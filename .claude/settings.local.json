@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(\\(Get-Content \"C:\\\\Users\\\\julia\\\\OneDrive\\\\Documents\\\\Desktop\\\\Connect2 Website Project\\\\connect2nlp_complete.html\" -TotalCount 1\\).Length; \\(Get-Content \"C:\\\\Users\\\\julia\\\\OneDrive\\\\Documents\\\\Desktop\\\\Connect2 Website Project\\\\connect2nlp_complete.html\"\\).Count)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\julia\\\\OneDrive\\\\Documents\\\\Desktop\\\\Connect2 Website Project\" -Recurse | Select-Object FullName, @{N='Size KB';E={[math]::Round\\($_.Length/1KB,1\\)}})",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git add *)"
+    ]
+  }
+}

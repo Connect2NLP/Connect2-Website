@@ -1,0 +1,19 @@
+# Original monolithic file - not needed in version control
+connect2nlp_complete.html
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
