@@ -1,4 +1,31 @@
-﻿// ── PAGE NAVIGATION ──
+﻿// ── COUNT-UP ANIMATION ──
+(function(){
+  const counters = document.querySelectorAll('[data-count]');
+  if(!counters.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 3500;
+      const start = performance.now();
+      function tick(now){
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+        if(progress < 1) requestAnimationFrame(tick);
+        else el.textContent = target.toLocaleString() + suffix;
+      }
+      requestAnimationFrame(tick);
+      obs.unobserve(el);
+    });
+  }, {threshold: 0.3});
+  counters.forEach(el => obs.observe(el));
+})();
+
+// ── PAGE NAVIGATION ──
 function goPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active-nav'));
@@ -283,5 +310,223 @@ function toggleCourse(id) {
     body.style.display = 'block';
     if (arrow) arrow.style.transform = 'rotate(180deg)';
   }
+}
+
+// ── TEAM PORTRAIT CARDS ──
+const trainerData = {
+  simon: {
+    photo: 'images/img-3.png',
+    name: 'Simon Gledhill',
+    role: 'Master Coach and Master Trainer, Founder',
+    loc: 'Cape Town, South Africa and Global',
+    quote: '"Life is a continuous movie, one where you are the lead. I help others craft their story and create a sequel aligned with their deepest aspirations."',
+    bio: 'Simon Gledhill is a founding member of IFNLP and Connect2 NLP. His transformative path began in 1990 during his tenure as an Account Director for SITEL, where influenced by his manager Una McLoughlin, his outlook on what is possible shifted profoundly. As Head of Global Telebusiness for a management consultancy, he applied his expertise in CRM to effect positive change with individuals and businesses globally. His mission is to leave a positive mark on the world with his renowned "Give-A-Damn" ethos.',
+    email: 'simon@connect2nlp.com', phone: '+27 83 704 4810', phoneRaw: '+27837044810',
+    certs: ['IFNLP Founding Member','NLP Master Trainer','Master Coach','ABNLP Certified','Time Line Therapy','Hypnosis Certified'],
+    passions: ['Corporate Transformation','Give-A-Damn Ethos','International Consulting']
+  },
+  angela: {
+    photo: 'images/img-5.png',
+    name: 'Angela Lightfoot Redondo',
+    role: 'Certified Trainer of NLP, Hypnosis and Timeline',
+    loc: 'Puerto Rico, USA',
+    quote: '"My mission is to sow seeds of happiness that yield abundant fruit in the lives of individuals and organisations alike."',
+    bio: 'With over two decades of experience, Angela is a compassionate Happiness Life Coach dedicated to helping clients experience strength, courage and boldness. Her unique Transformation Destination Experience creates a safe space for exploring challenges. She incorporates Equine Assisted Learning and Therapy into her coaching, leveraging horses to provide authentic reflections. She collaborates with Dragon Fly Global DMC, Retention Strategies Puerto Rico and Carabali Rainforest Adventure Park.',
+    email: 'angela@connect2nlp.com', phone: '+1 352 362 8969', phoneRaw: '+13523628969',
+    certs: ['Certified Trainer of NLP','Certified Trainer of Hypnosis','Timeline Techniques Trainer','EAL/T Practitioner','Happiness Coaching'],
+    passions: ['Equine Assisted Learning','Youth Development','Martial Arts','Wellness']
+  },
+  julian: {
+    photo: 'images/img-7.png',
+    name: 'Julian Van Reenen',
+    role: 'NLP Trainer, Master Coach and Public Speaker',
+    loc: 'Cape Town, South Africa',
+    quote: '"People are often capable of far more than they have been conditioned to believe. With the right tools, meaningful change becomes possible."',
+    bio: 'Julian discovered NLP in 2010 and immediately recognised its profound impact. After qualifying as Practitioner and Master Practitioner in 2011, he achieved his NLP Trainer certification in Las Vegas in 2017. Known for his energetic, down-to-earth approach, he is deeply passionate about reaching the younger generation, helping them gain clarity, confidence, emotional resilience and self-understanding through NLP.',
+    email: 'julian@connect2nlp.com', phone: '+27 72 303 4857', phoneRaw: '+27723034857',
+    certs: ['NLP Trainer (Las Vegas 2017)','NLP Master Practitioner','Master Coach','Youth Development','Public Speaking'],
+    passions: ['Classical Music','Youth Empowerment','Nature and Plants','Work-Life Balance']
+  },
+  rachelle: {
+    photo: 'images/img-9.png',
+    name: 'Rachèlle Venter',
+    role: 'NLP Master Practitioner, Gauteng',
+    loc: 'Gauteng, South Africa',
+    quote: '"Meaningful transformation begins with small shifts in perspective, conscious communication and the willingness to grow through life\'s challenges."',
+    bio: 'Rachèlle is an NLP Master Practitioner with a deep passion for personal growth, human connection and emotional resilience. Shaped through motherhood, entrepreneurship and continuous self-discovery, she brings a grounded and authentic approach to personal development. She has explored NLP, Reiki, reflexology, photography, Early Childhood Development, wellness and business management and supports others through lived experience and genuine passion for people.',
+    email: 'rachelle@connect2nlp.com', phone: '+27 83 630 3604', phoneRaw: '+27836303604',
+    certs: ['NLP Master Practitioner','Reiki Practitioner','Early Childhood Development','Reflexology','Business Management'],
+    passions: ['Human Connection','Emotional Resilience','Photography','Wellness']
+  }
+};
+
+let activeTrainer = null;
+let activeTrainerTeam = null;
+
+function openTrainerTeam(id) {
+  if (activeTrainerTeam === id) { closeTrainerTeam(); return; }
+  activeTrainerTeam = id;
+  const d = trainerData[id];
+  const firstName = d.name.split(' ')[0];
+  const emailSvg = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>';
+  const phoneSvg = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
+  const waSvg = '<svg viewBox="0 0 24 24" width="14" height="14" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>';
+  const waMsg = encodeURIComponent(`Hello ${firstName}, I found you on the Connect2 NLP website and would like to book a call with you. Please contact me at your earliest convenience. Thank you`);
+  const waLink = `https://wa.me/${d.phoneRaw.replace(/\D/g,'')}?text=${waMsg}`;
+  document.getElementById('tpc-t-photo').src = d.photo;
+  document.getElementById('tpc-t-photo').alt = d.name;
+  document.getElementById('tpc-t-name').textContent = d.name;
+  document.getElementById('tpc-t-role').textContent = d.role;
+  document.getElementById('tpc-t-loc').textContent = d.loc;
+  document.getElementById('tpc-t-quote').textContent = d.quote;
+  document.getElementById('tpc-t-bio').textContent = d.bio;
+  document.getElementById('tpc-t-contacts').innerHTML =
+    `<a href="${waLink}" target="_blank" class="tc-contact-btn" style="background:linear-gradient(135deg,#25d366,#128c5e);color:#fff;border-color:#25d366;font-weight:600;font-size:12px;padding:10px 18px">${waSvg} Book a Call with ${firstName}</a>
+     <a href="mailto:${d.email}" class="tc-contact-btn tc-contact-email">${emailSvg}${d.email}</a>
+     <a href="tel:${d.phoneRaw}" class="tc-contact-btn tc-contact-phone">${phoneSvg}${d.phone}</a>`;
+  document.getElementById('tpc-t-certs').innerHTML = d.certs.map(c => `<span class="tc-cert">${c}</span>`).join('');
+  document.getElementById('tpc-t-passions').innerHTML = d.passions.map(p => `<span class="tc-passion">${p}</span>`).join('');
+  const panel = document.getElementById('tpc-panel-team');
+  panel.style.display = 'block';
+  setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+}
+
+function closeTrainerTeam() {
+  activeTrainerTeam = null;
+  document.getElementById('tpc-panel-team').style.display = 'none';
+}
+
+function openTrainer(id) {
+  if (activeTrainer === id) { closeTrainer(); return; }
+  activeTrainer = id;
+  const d = trainerData[id];
+  const firstName = d.name.split(' ')[0];
+  const emailSvg = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>';
+  const phoneSvg = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
+  const waSvg = '<svg viewBox="0 0 24 24" width="14" height="14" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>';
+  const waMsg = encodeURIComponent(`Hello ${firstName}, I found you on the Connect2 NLP website and would like to book a call with you. Please contact me at your earliest convenience. Thank you`);
+  const waLink = `https://wa.me/${d.phoneRaw.replace(/\D/g,'')}?text=${waMsg}`;
+  document.getElementById('tpc-p-photo').src = d.photo;
+  document.getElementById('tpc-p-photo').alt = d.name;
+  document.getElementById('tpc-p-name').textContent = d.name;
+  document.getElementById('tpc-p-role').textContent = d.role;
+  document.getElementById('tpc-p-loc').textContent = d.loc;
+  document.getElementById('tpc-p-quote').textContent = d.quote;
+  document.getElementById('tpc-p-bio').textContent = d.bio;
+  document.getElementById('tpc-p-contacts').innerHTML =
+    `<a href="${waLink}" target="_blank" class="tc-contact-btn" style="background:linear-gradient(135deg,#25d366,#128c5e);color:#fff;border-color:#25d366;font-weight:600;font-size:12px;padding:10px 18px">${waSvg} Book a Call with ${firstName}</a>
+     <a href="mailto:${d.email}" class="tc-contact-btn tc-contact-email">${emailSvg}${d.email}</a>
+     <a href="tel:${d.phoneRaw}" class="tc-contact-btn tc-contact-phone">${phoneSvg}${d.phone}</a>`;
+  document.getElementById('tpc-p-certs').innerHTML = d.certs.map(c => `<span class="tc-cert">${c}</span>`).join('');
+  document.getElementById('tpc-p-passions').innerHTML = d.passions.map(p => `<span class="tc-passion">${p}</span>`).join('');
+  const panel = document.getElementById('tpc-panel');
+  panel.style.display = 'block';
+  setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+}
+
+function closeTrainer() {
+  activeTrainer = null;
+  document.getElementById('tpc-panel').style.display = 'none';
+}
+
+// ── READ MORE PERKS ──
+function toggleJpMore() {
+  const content = document.getElementById('jp-more');
+  const btn = document.getElementById('jp-more-btn');
+  const label = document.getElementById('jp-more-label');
+  const isOpen = content.style.display === 'block';
+  content.style.display = isOpen ? 'none' : 'block';
+  label.textContent = isOpen ? 'Read More' : 'Read Less';
+  btn.classList.toggle('open', !isOpen);
+}
+
+// ── COURSE FINDER ──
+const finderAnswers = {};
+
+const finderRecommendations = {
+  certification: {
+    title: 'NLP Practitioner Certification',
+    desc: 'Our internationally accredited Practitioner programme is the ideal starting point for anyone serious about mastering NLP and gaining a recognised qualification.'
+  },
+  advanced: {
+    title: 'NLP Master Practitioner',
+    desc: 'Build on your existing NLP foundation with advanced techniques, deeper models and the skills to facilitate powerful change in yourself and others.'
+  },
+  trainer: {
+    title: 'Trainers Training',
+    desc: 'Designed for certified NLP Practitioners ready to step into the training room. Gain the skills and accreditation to teach NLP to others.'
+  },
+  coaching: {
+    title: 'C2 Coaching Course',
+    desc: 'A practical, hands-on programme developing real coaching competence. Ideal for professionals who want to integrate coaching into their work or practice.'
+  },
+  communication: {
+    title: 'C2 Communication',
+    desc: 'Master the art of communication beyond words. This short course is perfect for professionals wanting to improve relationships, influence and impact.'
+  },
+  personal: {
+    title: 'C2 Your Life',
+    desc: 'A powerful introduction to NLP techniques for personal change. If you are new to NLP and want to experience its impact first, this is your starting point.'
+  },
+  corporate: {
+    title: 'Corporate & Team NLP',
+    desc: 'Tailored NLP programmes for teams and organisations. We work with your specific goals to design a training experience that delivers measurable results.'
+  }
+};
+
+function finderGetRecommendation() {
+  const a1 = finderAnswers[1] || '';
+  const a2 = finderAnswers[2] || '';
+  const a3 = finderAnswers[3] || '';
+  if (a1.includes('team') || a1.includes('organisation')) return 'corporate';
+  if (a3.includes('teach others') || a1.includes('coach or trainer')) return 'trainer';
+  if (a3.includes('advance') || a3.includes('some training')) return 'advanced';
+  if (a2.includes('certification')) return 'certification';
+  if (a2.includes('coaching') || a2.includes('leadership')) return 'coaching';
+  if (a2.includes('communication')) return 'communication';
+  return 'personal';
+}
+
+function finderShowStep(n) {
+  document.querySelectorAll('.finder-step').forEach(s => s.classList.remove('active'));
+  const step = document.getElementById('fstep-' + n);
+  if (step) step.classList.add('active');
+  const progress = n === 'result' ? 100 : (n / 3) * 100;
+  document.getElementById('finder-bar').style.width = progress + '%';
+}
+
+function finderNext(step, answer) {
+  finderAnswers[step] = answer;
+  document.querySelectorAll('#fstep-' + step + ' .finder-opt').forEach(b => b.classList.remove('selected'));
+  event.target.classList.add('selected');
+  setTimeout(() => {
+    if (step < 3) {
+      finderShowStep(step + 1);
+    } else {
+      const rec = finderGetRecommendation();
+      document.getElementById('finder-rec-title').textContent = finderRecommendations[rec].title;
+      document.getElementById('finder-rec-desc').textContent = finderRecommendations[rec].desc;
+      finderShowStep('result');
+    }
+  }, 220);
+}
+
+function finderBack(toStep) {
+  finderShowStep(toStep);
+}
+
+function finderSubmit() {
+  const fname = document.getElementById('finder-fname').value.trim();
+  const lname = document.getElementById('finder-lname').value.trim();
+  const email = document.getElementById('finder-email').value.trim();
+  const phone = document.getElementById('finder-phone').value.trim();
+  if (!fname || !lname || !email || !phone) {
+    alert('Please fill in your name, email and phone number.');
+    return;
+  }
+  // Show success — replace with real form submission when backend is ready
+  document.getElementById('finder-success').style.display = 'block';
+  document.querySelector('#fstep-result .btn-join').style.display = 'none';
+  document.getElementById('finder-back-btn').style.display = 'none';
 }
 
