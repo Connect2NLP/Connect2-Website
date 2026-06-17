@@ -337,7 +337,7 @@ const trainerData = {
     passions: ['Equine Assisted Learning','Youth Development','Martial Arts','Wellness']
   },
   julian: {
-    photo: 'images/img-7.png',
+    photo: 'images/julian-new.webp',
     name: 'Julian Van Reenen',
     role: 'NLP Trainer, Master Coach and Public Speaker',
     loc: 'Cape Town, South Africa',
