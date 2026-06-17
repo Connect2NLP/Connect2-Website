@@ -225,6 +225,24 @@
 </div>
 </section>
 
+<!-- FREE DOWNLOAD -->
+<section id="sec-freedownload" style="padding:72px;background:var(--blue1);position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(200,189,232,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(200,189,232,.018) 1px,transparent 1px);background-size:66px 66px;pointer-events:none"></div>
+  <div style="position:absolute;top:0;right:0;width:500px;height:500px;background:radial-gradient(circle at 80% 20%,rgba(124,111,176,.18),transparent 65%);pointer-events:none"></div>
+  <div style="max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1">
+    <div style="display:inline-flex;align-items:center;gap:8px;padding:5px 16px;border-radius:100px;background:rgba(200,189,232,.1);border:1px solid rgba(200,189,232,.25);font-family:var(--title);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:20px">Free Download</div>
+    <h2 style="font-family:var(--title);font-size:clamp(28px,3.8vw,48px);font-weight:400;color:#fff;line-height:1.1;margin-bottom:16px">An Introduction to <span style="color:var(--gold-bright)">NLP</span></h2>
+    <p style="font-size:15px;color:rgba(200,220,255,.7);line-height:1.82;max-width:540px;margin:0 auto 36px;font-weight:300">Fill in your details and we'll send you a link to download our Introduction to NLP guide — your first step towards understanding how to change the way you think, communicate and lead.</p>
+    <form onsubmit="handleFreeDownload(event)" style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:12px;align-items:center;max-width:860px;margin:0 auto">
+      <input type="text" placeholder="Your Name" required style="padding:13px 16px;border-radius:8px;border:1.5px solid rgba(200,189,232,.25);background:rgba(255,255,255,.07);color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(200,189,232,.6)'" onblur="this.style.borderColor='rgba(200,189,232,.25)'"/>
+      <input type="email" placeholder="Email Address" required style="padding:13px 16px;border-radius:8px;border:1.5px solid rgba(200,189,232,.25);background:rgba(255,255,255,.07);color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(200,189,232,.6)'" onblur="this.style.borderColor='rgba(200,189,232,.25)'"/>
+      <input type="tel" placeholder="Phone Number" style="padding:13px 16px;border-radius:8px;border:1.5px solid rgba(200,189,232,.25);background:rgba(255,255,255,.07);color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(200,189,232,.6)'" onblur="this.style.borderColor='rgba(200,189,232,.25)'"/>
+      <button type="submit" class="btn-primary" style="white-space:nowrap;padding:13px 28px">Send Me the Guide →</button>
+    </form>
+    <p id="freedownload-msg" style="margin-top:16px;font-family:var(--title);font-size:13px;color:var(--gold-bright);display:none">Thank you! Check your inbox shortly.</p>
+  </div>
+</section>
+
 <!-- WHAT IS NLP -->
 <section id="sec-nlp" style="padding:88px 72px;background:#fff">
   <div class="nlp-grid">

@@ -1,4 +1,12 @@
-﻿// ── COUNT-UP ANIMATION ──
+﻿// ── FREE DOWNLOAD FORM ──
+function handleFreeDownload(e) {
+  e.preventDefault();
+  const msg = document.getElementById('freedownload-msg');
+  if(msg){ msg.style.display='block'; }
+  e.target.reset();
+}
+
+// ── COUNT-UP ANIMATION ──
 (function(){
   const counters = document.querySelectorAll('[data-count]');
   if(!counters.length) return;
