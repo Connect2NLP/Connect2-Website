@@ -1,9 +1,29 @@
 ﻿// ── FREE DOWNLOAD FORM ──
-function handleFreeDownload(e) {
+async function handleFreeDownload(e) {
   e.preventDefault();
-  const msg = document.getElementById('freedownload-msg');
-  if(msg){ msg.style.display='block'; }
-  e.target.reset();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/info@connect2nlp.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+    const msg = document.getElementById('freedownload-msg');
+    if(res.ok) {
+      if(msg) msg.style.display = 'block';
+      form.reset();
+    } else {
+      if(msg){ msg.style.color='#ff8080'; msg.textContent='Something went wrong. Please try again.'; msg.style.display='block'; }
+    }
+  } catch(err) {
+    const msg = document.getElementById('freedownload-msg');
+    if(msg){ msg.style.color='#ff8080'; msg.textContent='Something went wrong. Please try again.'; msg.style.display='block'; }
+  }
+  btn.textContent = 'Send Me the Guide →';
+  btn.disabled = false;
 }
 
 // ── COUNT-UP ANIMATION ──
