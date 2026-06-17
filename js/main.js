@@ -3,25 +3,30 @@ async function handleFreeDownload(e) {
   e.preventDefault();
   const form = e.target;
   const btn = form.querySelector('button[type="submit"]');
+  const msg = document.getElementById('freedownload-msg');
   btn.textContent = 'Sending...';
   btn.disabled = true;
+
+  const emails = [
+    'info@connect2nlp.com',
+    'julian@connect2nlp.com',
+    'simon@connect2nlp.com'
+  ];
+
   try {
-    const res = await fetch('https://formsubmit.co/ajax/info@connect2nlp.com', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
-    });
-    const msg = document.getElementById('freedownload-msg');
-    if(res.ok) {
-      if(msg) msg.style.display = 'block';
-      form.reset();
-    } else {
-      if(msg){ msg.style.color='#ff8080'; msg.textContent='Something went wrong. Please try again.'; msg.style.display='block'; }
-    }
+    await Promise.all(emails.map(email =>
+      fetch('https://formsubmit.co/ajax/' + email, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+    ));
+    if(msg){ msg.style.color='var(--gold-bright)'; msg.textContent='Thank you! We will be in touch within 3 days.'; msg.style.display='block'; }
+    form.reset();
   } catch(err) {
-    const msg = document.getElementById('freedownload-msg');
     if(msg){ msg.style.color='#ff8080'; msg.textContent='Something went wrong. Please try again.'; msg.style.display='block'; }
   }
+
   btn.textContent = 'Send Me the Guide →';
   btn.disabled = false;
 }
