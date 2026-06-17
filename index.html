@@ -468,10 +468,56 @@
   <div class="eyebrow ew-gold">Find a Course Near You</div>
   <h2 class="section-title-dark h2s">Global Online Live Trainings<br><span style="font-size:.72em;letter-spacing:.04em;color:var(--blue2)">In Person Trainings</span></h2>
   <div class="lg">
-    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('za',document.querySelectorAll('.loc-ctab')[0]),120)"><div class="lf"><img src="images/flag-za.jpg" alt="South Africa" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div><div class="ln">South Africa</div><div class="lci">Cape Town · Johannesburg</div><div class="lcb">View events</div></div>
-    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('uk',document.querySelectorAll('.loc-ctab')[1]),120)"><div class="lf"><img src="images/flag-uk.jpg" alt="United Kingdom" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div><div class="ln">United Kingdom</div><div class="lci">London &amp; virtual</div><div class="lcb">View events</div></div>
-    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('us',document.querySelectorAll('.loc-ctab')[2]),120)"><div class="lf"><img src="images/flag-us.jpg" alt="United States" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div><div class="ln">United States</div><div class="lci">Multiple cities</div><div class="lcb">View events</div></div>
-    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('pr',document.querySelectorAll('.loc-ctab')[3]),120)"><div class="lf"><img src="images/flag-pr.jpg" alt="Puerto Rico" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div><div class="ln">Puerto Rico</div><div class="lci">San Juan</div><div class="lcb">View events</div></div>
+
+    <!-- South Africa -->
+    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('za',document.querySelectorAll('.loc-ctab')[0]),120)">
+      <div class="lf"><img src="images/flag-za.jpg" alt="South Africa" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div>
+      <div class="ln">South Africa</div>
+      <div class="lci">Cape Town · Johannesburg</div>
+      <div style="margin-top:10px;border-top:1px solid rgba(0,0,0,.07);padding-top:10px;text-align:left">
+        <div style="font-family:var(--title);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Next Events</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:3px">🇿🇦 Cape Town · Practitioner · Aug 3–9</div>
+        <div class="lcd" data-date="2026-08-03" style="font-family:var(--title);font-size:11px;color:var(--blue2);font-weight:500;margin-bottom:8px"></div>
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:3px">🇿🇦 Johannesburg · Practitioner · Nov 23–29</div>
+        <div class="lcd" data-date="2026-11-23" style="font-family:var(--title);font-size:11px;color:var(--blue2);font-weight:500;margin-bottom:8px"></div>
+      </div>
+      <div class="lcb">View events</div>
+    </div>
+
+    <!-- United Kingdom -->
+    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('uk',document.querySelectorAll('.loc-ctab')[1]),120)">
+      <div class="lf"><img src="images/flag-uk.jpg" alt="United Kingdom" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div>
+      <div class="ln">United Kingdom</div>
+      <div class="lci">London &amp; virtual</div>
+      <div style="margin-top:10px;border-top:1px solid rgba(0,0,0,.07);padding-top:10px;text-align:left">
+        <div style="font-family:var(--title);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Next Event</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:3px">🇬🇧 London · Practitioner · Aug 17–23</div>
+        <div class="lcd" data-date="2026-08-17" style="font-family:var(--title);font-size:11px;color:var(--blue2);font-weight:500;margin-bottom:8px"></div>
+      </div>
+      <div class="lcb">View events</div>
+    </div>
+
+    <!-- United States -->
+    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('us',document.querySelectorAll('.loc-ctab')[2]),120)">
+      <div class="lf"><img src="images/flag-us.jpg" alt="United States" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div>
+      <div class="ln">United States</div>
+      <div class="lci">Multiple cities</div>
+      <div class="lcb">View events</div>
+    </div>
+
+    <!-- Puerto Rico -->
+    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('pr',document.querySelectorAll('.loc-ctab')[3]),120)">
+      <div class="lf"><img src="images/flag-pr.jpg" alt="Puerto Rico" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div>
+      <div class="ln">Puerto Rico</div>
+      <div class="lci">San Juan</div>
+      <div style="margin-top:10px;border-top:1px solid rgba(0,0,0,.07);padding-top:10px;text-align:left">
+        <div style="font-family:var(--title);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Next Event</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:3px">🇵🇷 San Juan · Practitioner · Sep 23–29</div>
+        <div class="lcd" data-date="2026-09-23" style="font-family:var(--title);font-size:11px;color:var(--blue2);font-weight:500;margin-bottom:8px"></div>
+      </div>
+      <div class="lcb">View events</div>
+    </div>
+
   </div>
 </section>
 

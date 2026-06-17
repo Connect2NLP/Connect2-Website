@@ -1,4 +1,23 @@
-﻿// ── FREE DOWNLOAD FORM ──
+﻿// ── COUNTDOWN TIMERS ──
+(function(){
+  function updateCountdowns(){
+    document.querySelectorAll('.lcd[data-date]').forEach(el => {
+      const target = new Date(el.dataset.date + 'T00:00:00');
+      const now = new Date();
+      const diff = target - now;
+      if(diff <= 0){ el.textContent = 'Starting now!'; return; }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      el.textContent = d + 'd ' + h + 'h ' + m + 'm ' + s + 's';
+    });
+  }
+  updateCountdowns();
+  setInterval(updateCountdowns, 1000);
+})();
+
+// ── FREE DOWNLOAD FORM ──
 async function handleFreeDownload(e) {
   e.preventDefault();
   const form = e.target;
