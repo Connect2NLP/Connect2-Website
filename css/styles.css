@@ -96,8 +96,8 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 }
 .hero-headline-anim{
   font-family:var(--title);
-  font-size:clamp(14px,2.4vw,36px);
-  font-weight:400;
+  font-size:clamp(20px,3.4vw,52px);
+  font-weight:600;
   color:#fff;
   text-transform:uppercase;
   letter-spacing:.28em;
@@ -107,8 +107,8 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 }
 .hero-sub-anim{
   font-family:var(--title);
-  font-size:clamp(14px,2.4vw,36px);
-  font-weight:400;
+  font-size:clamp(20px,3.4vw,52px);
+  font-weight:600;
   color:#fff;
   text-transform:uppercase;
   letter-spacing:.28em;
