@@ -233,7 +233,7 @@
     <div style="display:inline-flex;align-items:center;gap:8px;padding:5px 16px;border-radius:100px;background:rgba(200,189,232,.1);border:1px solid rgba(200,189,232,.25);font-family:var(--title);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:20px">Free Download</div>
     <h2 style="font-family:var(--title);font-size:clamp(28px,3.8vw,48px);font-weight:400;color:#fff;line-height:1.1;margin-bottom:16px">An Introduction to <span style="color:var(--gold-bright)">NLP</span></h2>
     <p style="font-size:15px;color:rgba(200,220,255,.7);line-height:1.82;max-width:540px;margin:0 auto 36px;font-weight:300">Fill in your details and we'll send you a link to download our Introduction to NLP guide — your first step towards understanding how to change the way you think, communicate and lead.</p>
-    <form id="freedownload-form" onsubmit="handleFreeDownload(event)" style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:12px;align-items:center;max-width:860px;margin:0 auto">
+    <form id="freedownload-form" onsubmit="handleFreeDownload(event)" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center;max-width:860px;margin:0 auto">
       <!-- Formsubmit config -->
       <input type="hidden" name="_cc" value="julian@connect2nlp.com,simon@connect2nlp.com"/>
       <input type="hidden" name="_subject" value="New NLP Download Request from Website"/>
@@ -241,11 +241,84 @@
       <input type="hidden" name="_template" value="table"/>
       <input type="hidden" name="_captcha" value="false"/>
       <input type="hidden" name="message" value="Hello there - I have just completed the Download via your website and would like to be part of your NLP Introductory session. Please contact me."/>
-      <!-- Visible fields -->
+      <!-- Row 1 -->
       <input type="text" name="name" placeholder="Your Name" required style="padding:13px 16px;border-radius:8px;border:1.5px solid rgba(200,189,232,.25);background:rgba(255,255,255,.07);color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(200,189,232,.6)'" onblur="this.style.borderColor='rgba(200,189,232,.25)'"/>
       <input type="email" name="email" placeholder="Email Address" required style="padding:13px 16px;border-radius:8px;border:1.5px solid rgba(200,189,232,.25);background:rgba(255,255,255,.07);color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(200,189,232,.6)'" onblur="this.style.borderColor='rgba(200,189,232,.25)'"/>
-      <input type="tel" name="phone" placeholder="Phone Number" style="padding:13px 16px;border-radius:8px;border:1.5px solid rgba(200,189,232,.25);background:rgba(255,255,255,.07);color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(200,189,232,.6)'" onblur="this.style.borderColor='rgba(200,189,232,.25)'"/>
-      <button type="submit" class="btn-primary" style="white-space:nowrap;padding:13px 28px">Send Me the Guide →</button>
+      <!-- Row 2: Phone with country code -->
+      <div style="display:flex;gap:8px;grid-column:1/-1">
+        <select name="country_code" style="padding:13px 12px;border-radius:8px;border:1.5px solid rgba(200,189,232,.25);background:rgba(26,16,48,.9);color:#fff;font-family:var(--sans);font-size:13px;outline:none;cursor:pointer;min-width:180px">
+          <option value="+27">🇿🇦 South Africa +27</option>
+          <option value="+1">🇺🇸 USA +1</option>
+          <option value="+1">🇨🇦 Canada +1</option>
+          <option value="+44">🇬🇧 UK +44</option>
+          <option value="+61">🇦🇺 Australia +61</option>
+          <option value="+64">🇳🇿 New Zealand +64</option>
+          <option value="+353">🇮🇪 Ireland +353</option>
+          <option value="+49">🇩🇪 Germany +49</option>
+          <option value="+33">🇫🇷 France +33</option>
+          <option value="+31">🇳🇱 Netherlands +31</option>
+          <option value="+32">🇧🇪 Belgium +32</option>
+          <option value="+41">🇨🇭 Switzerland +41</option>
+          <option value="+43">🇦🇹 Austria +43</option>
+          <option value="+34">🇪🇸 Spain +34</option>
+          <option value="+351">🇵🇹 Portugal +351</option>
+          <option value="+39">🇮🇹 Italy +39</option>
+          <option value="+46">🇸🇪 Sweden +46</option>
+          <option value="+47">🇳🇴 Norway +47</option>
+          <option value="+45">🇩🇰 Denmark +45</option>
+          <option value="+358">🇫🇮 Finland +358</option>
+          <option value="+48">🇵🇱 Poland +48</option>
+          <option value="+420">🇨🇿 Czech Republic +420</option>
+          <option value="+36">🇭🇺 Hungary +36</option>
+          <option value="+40">🇷🇴 Romania +40</option>
+          <option value="+30">🇬🇷 Greece +30</option>
+          <option value="+90">🇹🇷 Turkey +90</option>
+          <option value="+7">🇷🇺 Russia +7</option>
+          <option value="+380">🇺🇦 Ukraine +380</option>
+          <option value="+972">🇮🇱 Israel +972</option>
+          <option value="+971">🇦🇪 UAE +971</option>
+          <option value="+966">🇸🇦 Saudi Arabia +966</option>
+          <option value="+974">🇶🇦 Qatar +974</option>
+          <option value="+965">🇰🇼 Kuwait +965</option>
+          <option value="+973">🇧🇭 Bahrain +973</option>
+          <option value="+968">🇴🇲 Oman +968</option>
+          <option value="+91">🇮🇳 India +91</option>
+          <option value="+92">🇵🇰 Pakistan +92</option>
+          <option value="+880">🇧🇩 Bangladesh +880</option>
+          <option value="+94">🇱🇰 Sri Lanka +94</option>
+          <option value="+86">🇨🇳 China +86</option>
+          <option value="+81">🇯🇵 Japan +81</option>
+          <option value="+82">🇰🇷 South Korea +82</option>
+          <option value="+65">🇸🇬 Singapore +65</option>
+          <option value="+60">🇲🇾 Malaysia +60</option>
+          <option value="+66">🇹🇭 Thailand +66</option>
+          <option value="+62">🇮🇩 Indonesia +62</option>
+          <option value="+63">🇵🇭 Philippines +63</option>
+          <option value="+84">🇻🇳 Vietnam +84</option>
+          <option value="+852">🇭🇰 Hong Kong +852</option>
+          <option value="+55">🇧🇷 Brazil +55</option>
+          <option value="+54">🇦🇷 Argentina +54</option>
+          <option value="+56">🇨🇱 Chile +56</option>
+          <option value="+57">🇨🇴 Colombia +57</option>
+          <option value="+51">🇵🇪 Peru +51</option>
+          <option value="+52">🇲🇽 Mexico +52</option>
+          <option value="+234">🇳🇬 Nigeria +234</option>
+          <option value="+254">🇰🇪 Kenya +254</option>
+          <option value="+233">🇬🇭 Ghana +233</option>
+          <option value="+263">🇿🇼 Zimbabwe +263</option>
+          <option value="+260">🇿🇲 Zambia +260</option>
+          <option value="+267">🇧🇼 Botswana +267</option>
+          <option value="+264">🇳🇦 Namibia +264</option>
+          <option value="+230">🇲🇺 Mauritius +230</option>
+          <option value="+256">🇺🇬 Uganda +256</option>
+          <option value="+255">🇹🇿 Tanzania +255</option>
+          <option value="+251">🇪🇹 Ethiopia +251</option>
+          <option value="+212">🇲🇦 Morocco +212</option>
+          <option value="+20">🇪🇬 Egypt +20</option>
+        </select>
+        <input type="tel" name="phone" placeholder="Phone Number" style="flex:1;padding:13px 16px;border-radius:8px;border:1.5px solid rgba(200,189,232,.25);background:rgba(255,255,255,.07);color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(200,189,232,.6)'" onblur="this.style.borderColor='rgba(200,189,232,.25)'"/>
+        <button type="submit" class="btn-primary" style="white-space:nowrap;padding:13px 28px">Send Me the Guide →</button>
+      </div>
     </form>
     <p id="freedownload-msg" style="margin-top:16px;font-family:var(--title);font-size:13px;color:var(--gold-bright);display:none">Thank you! We will be in touch within 3 days.</p>
   </div>
