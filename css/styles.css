@@ -467,6 +467,7 @@ footer{background:var(--blue1);border-top:1px solid rgba(255,255,255,.06);paddin
 .loc-section.active{display:block}
 .loc-layout{display:grid;grid-template-columns:1fr 1.1fr;min-height:540px}
 .loc-layout .loc-info{order:-1}
+#loc-uk .loc-layout,#loc-us .loc-layout,#loc-pr .loc-layout{grid-template-columns:1fr 0.75fr;min-height:460px}
 .loc-layout .loc-scene-overlay{background:linear-gradient(270deg,transparent 55%,rgba(26,16,48,.55) 100%),linear-gradient(0deg,rgba(26,16,48,.45) 0%,transparent 40%)}
 .loc-scene{position:relative;overflow:hidden}
 .loc-scene-overlay{position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,rgba(26,16,48,.55) 100%),linear-gradient(0deg,rgba(26,16,48,.45) 0%,transparent 40%)}
