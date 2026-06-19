@@ -465,7 +465,9 @@ footer{background:var(--blue1);border-top:1px solid rgba(255,255,255,.06);paddin
 .loc-ctab.active{border-color:var(--gold-bright);background:rgba(200,189,232,.09);color:var(--gold-bright)}
 .loc-section{display:none}
 .loc-section.active{display:block}
-.loc-layout{display:grid;grid-template-columns:1.1fr 1fr;min-height:540px}
+.loc-layout{display:grid;grid-template-columns:1fr 1.1fr;min-height:540px}
+.loc-layout .loc-info{order:-1}
+.loc-layout .loc-scene-overlay{background:linear-gradient(270deg,transparent 55%,rgba(26,16,48,.55) 100%),linear-gradient(0deg,rgba(26,16,48,.45) 0%,transparent 40%)}
 .loc-scene{position:relative;overflow:hidden}
 .loc-scene-overlay{position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,rgba(26,16,48,.55) 100%),linear-gradient(0deg,rgba(26,16,48,.45) 0%,transparent 40%)}
 .loc-flag-badge{position:absolute;top:22px;left:22px;z-index:3;background:rgba(26,16,48,.82);backdrop-filter:blur(14px);border:1.5px solid rgba(255,255,255,.13);border-radius:13px;padding:13px 18px;display:flex;align-items:center;gap:11px}
