@@ -346,19 +346,6 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 .g-overlay-title{font-family:var(--title);font-size:13px;color:#fff;font-weight:400}
 .g-cell svg{width:100%;height:100%;display:block}
 
-/* AFFILIATES */
-.affiliates-section{padding:64px 72px;background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.affiliates-track-wrap{overflow:hidden;position:relative;margin-top:32px}
-.affiliates-track-wrap::before{content:'';position:absolute;left:0;top:0;bottom:0;width:80px;background:linear-gradient(90deg,var(--cream),transparent);z-index:2}
-.affiliates-track-wrap::after{content:'';position:absolute;right:0;top:0;bottom:0;width:80px;background:linear-gradient(270deg,var(--cream),transparent);z-index:2}
-.affiliates-track{display:flex;gap:80px;align-items:center;animation:scroll 40s linear infinite;width:max-content}
-.affiliates-track:hover{animation-play-state:paused}
-.aff-item{display:flex;align-items:center;justify-content:center;width:320px;height:180px;filter:grayscale(0%);opacity:.9;transition:all .3s;flex-shrink:0;background:transparent}
-.aff-item:hover{filter:grayscale(0%);opacity:1}
-.aff-item img{max-width:280px;max-height:150px;width:100%;object-fit:contain;display:block}
-.aff-apple{display:flex;align-items:center;justify-content:center;width:160px;height:180px;filter:grayscale(0%);opacity:.75;transition:all .3s;flex-shrink:0;background:transparent}
-.aff-apple:hover{filter:grayscale(0%);opacity:.9}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* RERUN */
 .rerun-wrap{padding:0 72px 56px;background:var(--cream2)}
