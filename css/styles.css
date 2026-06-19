@@ -474,7 +474,7 @@ footer{background:var(--blue1);border-top:1px solid rgba(255,255,255,.06);paddin
 .loc-flag-emoji{font-size:32px;line-height:1}
 .loc-flag-name{font-family:var(--title);font-size:18px;font-weight:400;color:#fff}
 .loc-flag-sub{font-family:var(--title);font-size:9px;color:rgba(200,220,255,.62);letter-spacing:.14em;text-transform:uppercase;margin-top:2px}
-.loc-info{background:linear-gradient(165deg,#362278,var(--blue1));padding:44px 40px;display:flex;flex-direction:column;justify-content:center}
+.loc-info{background:linear-gradient(165deg,#362278,var(--blue1));padding:44px 40px;display:flex;flex-direction:column;justify-content:flex-start}
 .loc-info-eyebrow{font-family:var(--title);font-size:13px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:11px;display:flex;align-items:center;gap:7px}
 .loc-info-eyebrow::before{content:'';width:16px;height:2px;background:var(--gold-bright)}
 .loc-info h2{font-family:var(--title);font-size:clamp(20px,2.4vw,34px);font-weight:400;color:#fff;line-height:1.1;margin-bottom:14px}
