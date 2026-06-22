@@ -1,4 +1,20 @@
-﻿// ── COUNTDOWN TIMERS ──
+﻿// ── MOBILE NAV ──
+function toggleMobileNav() {
+  const nav = document.querySelector('nav');
+  const isOpen = nav.classList.toggle('nav-open');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+function closeMobileNav() {
+  document.querySelector('nav').classList.remove('nav-open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.nav-dd-item, .nav-link').forEach(function(el) {
+    el.addEventListener('click', closeMobileNav);
+  });
+});
+
+// ── COUNTDOWN TIMERS ──
 (function(){
   function updateCountdowns(){
     document.querySelectorAll('.lcd[data-date]').forEach(el => {
