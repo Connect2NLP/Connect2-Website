@@ -703,8 +703,25 @@ footer{background:var(--blue1);border-top:1px solid rgba(255,255,255,.06);paddin
 .tc-card::before{content:'"';position:absolute;top:18px;right:24px;font-family:var(--serif);font-size:72px;line-height:1;color:var(--gold);opacity:.12;font-style:normal}
 
 /* ── SPECIFIC SECTION HEADINGS: gold thin verdana ── */
-.section-title-gold{font-family:var(--title);font-weight:400;color:var(--gold);line-height:1.1}
+.section-title-gold{font-family:var(--title);font-weight:400;line-height:1.1;background:linear-gradient(135deg,#b8b5cc 0%,#dddaf0 22%,#f8f7ff 40%,#ffffff 50%,#e4e1f5 62%,#ccc9dc 80%,#b8b5cc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .section-title-dark{font-family:var(--title);font-weight:400;color:var(--black);line-height:1.1}
+
+/* ── DARK SECTION TEXT: all headings metallic silver, all body text white ── */
+.s-dark h1,.s-dark h2,.s-dark h3,
+.s-navy h1,.s-navy h2,.s-navy h3,
+.s-blue h1,.s-blue h2,.s-blue h3,
+.values-section h1,.values-section h2,.values-section h3{
+  background:linear-gradient(135deg,#b8b5cc 0%,#dddaf0 22%,#f8f7ff 40%,#ffffff 50%,#e4e1f5 62%,#ccc9dc 80%,#b8b5cc 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.s-dark p,.s-dark li,.s-dark .jp-text,.s-dark .path-desc,
+.s-navy p,.s-navy li,.s-navy .jp-text,.s-navy .path-desc,
+.s-blue p,.s-blue li,.s-blue .jp-text,.s-blue .path-desc,
+.values-section p,.values-section li{
+  color:rgba(255,255,255,.9)!important;
+}
 
 /* ── MANDELA NLP SECTION (next to Science of Human Excellence) ── */
 .mandela-nlp-wrap{position:relative;border-radius:18px;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;background:var(--blue1)}
