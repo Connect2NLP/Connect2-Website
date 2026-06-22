@@ -981,5 +981,56 @@ footer{background:var(--blue1);border-top:1px solid rgba(255,255,255,.06);paddin
     min-height: 220px !important;
     height: 220px !important;
   }
+
+  /* ══ TRAINING PAGE ══ */
+
+  /* Course page hero & section paddings (div, not section) */
+  div[style*="padding:88px 72px"],
+  div[style*="padding:64px 72px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 44px !important;
+  }
+
+  /* Course card header — reduce horizontal padding */
+  div[style*="padding:36px 40px 32px"] {
+    padding: 20px 16px 18px !important;
+  }
+
+  /* Badge pill row — allow wrapping on narrow screens */
+  div[style*="display:flex;align-items:center;gap:9px;margin-bottom:4px"] {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  /* Expanded course content — 3-column → 1 column */
+  div[style*="grid-template-columns:1fr 1fr 1fr;gap:0"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Column borders become top borders when stacked */
+  div[style*="grid-template-columns:1fr 1fr 1fr;gap:0"] > div[style*="border-right"] {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border) !important;
+  }
+
+  /* Expanded quote bar & footer CTA — reduce horizontal padding */
+  div[style*="padding:20px 40px"],
+  div[style*="padding:22px 40px"] {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Inner column padding within expanded 3-col */
+  div[style*="grid-template-columns:1fr 1fr 1fr;gap:0"] > div[style*="padding:28px 32px"] {
+    padding: 20px 16px !important;
+  }
+
+  /* Cert section wrapper — reduce padding */
+  div[style*="padding:80px 72px"],
+  div[style*="padding:72px 72px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
 }
 
