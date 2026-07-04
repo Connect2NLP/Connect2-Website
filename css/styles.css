@@ -7,6 +7,11 @@
   --blue2:#6350b0;        /* rich purple: buttons, accents, primary CTA */
   --blue-light:#e2dbf5;   /* soft lavender: card backgrounds, tags */
   --blue-pale:#f0edf9;    /* near-white lavender: alternate sections */
+  /* Cerise accent — blended subtly into the dark purple backgrounds */
+  --cerise:#de3163;       /* cerise: accent for purple gradient blends */
+  --cerise-deep:#8a2a63;  /* deep cerise-magenta: gradient blend stop */
+  --cerise-glow:rgba(222,49,99,.42);   /* cerise glow overlay */
+  --cerise-glow-soft:rgba(222,49,99,.28);
   /* Off-white tones */
   --cream:#faf9fc;        /* warm champagne-white: main page background */
   --cream2:#f2eff8;       /* soft ecru-lavender: section alternate */
@@ -75,7 +80,7 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 .btn-flash-nav:hover{opacity:.88;animation:none}
 
 /* HERO */
-.hero{position:relative;min-height:30vh;overflow:hidden;display:flex;align-items:center;background:var(--blue1)}
+.hero{position:relative;min-height:30vh;overflow:hidden;display:flex;align-items:center;background:radial-gradient(95% 120% at 95% 100%,var(--cerise-glow) 0%,transparent 60%),linear-gradient(150deg,var(--blue1) 0%,var(--cerise-deep) 135%)}
 .hero-video{position:absolute;inset:0;z-index:0}
 .hero-video video{width:100%;height:100%;object-fit:cover;display:block}
 .hero-video-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(35,21,66,.72) 0%,rgba(54,34,120,.5) 55%,rgba(35,21,66,.65) 100%)}
@@ -146,12 +151,12 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 .tdiv{width:1px;height:22px;background:var(--border)}
 
 /* SECTION SHELLS */
-.s-dark{padding:88px 72px;background:linear-gradient(160deg,var(--blue1) 0%,#362278 100%)}
+.s-dark{padding:88px 72px;background:radial-gradient(120% 95% at 90% 0%,var(--cerise-glow) 0%,transparent 58%),linear-gradient(150deg,var(--blue1) 0%,#3d2168 42%,var(--cerise-deep) 112%)}
 .s-white{padding:88px 72px;background:var(--cream)}
 .s-light{padding:88px 72px;background:var(--blue-pale)}
 .s-cream{padding:88px 72px;background:var(--cream2)}
-.s-blue{padding:88px 72px;background:linear-gradient(160deg,var(--blue2),var(--blue1))}
-.s-navy{padding:88px 72px;background:linear-gradient(160deg,var(--blue1),#362278)}
+.s-blue{padding:88px 72px;background:radial-gradient(120% 100% at 8% 100%,var(--cerise-glow) 0%,transparent 58%),linear-gradient(150deg,var(--blue2) 0%,#5b2f8f 45%,var(--cerise-deep) 118%)}
+.s-navy{padding:88px 72px;background:radial-gradient(120% 95% at 88% 0%,var(--cerise-glow) 0%,transparent 58%),linear-gradient(150deg,var(--blue1) 0%,#3d2168 42%,var(--cerise-deep) 114%)}
 
 /* EYEBROWS */
 .eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:12px;font-family:var(--title);font-size:14px;font-weight:400;letter-spacing:.2em;text-transform:uppercase}
@@ -193,7 +198,7 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 .path-desc{font-size:12px;color:rgba(200,225,250,.75);line-height:1.65}
 
 /* VALUES FLIP CARDS */
-.values-section{padding:88px 72px;background:linear-gradient(160deg,var(--blue1),#362278);position:relative;overflow:hidden}
+.values-section{padding:88px 72px;background:radial-gradient(115% 90% at 12% 0%,var(--cerise-glow) 0%,transparent 56%),linear-gradient(150deg,var(--blue1) 0%,#3d2168 48%,var(--cerise-deep) 120%);position:relative;overflow:hidden}
 .values-section::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(200,189,232,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(200,189,232,.015) 1px,transparent 1px);background-size:66px 66px;pointer-events:none}
 .values-tagline{font-family:var(--title);font-size:clamp(14px,1.7vw,19px);font-weight:400;color:var(--gold-bright);margin-top:8px}
 .values-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -418,7 +423,7 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 .accred-item{font-family:var(--title);font-size:10px;font-weight:400;letter-spacing:.12em;padding:5px 13px;border:1.5px solid var(--border);border-radius:6px;color:var(--text-muted);background:var(--blue-pale)}
 
 /* FOOTER */
-footer{background:var(--blue1);border-top:1px solid rgba(255,255,255,.06);padding:52px 72px 26px}
+footer{background:radial-gradient(70% 120% at 100% 0%,var(--cerise-glow-soft) 0%,transparent 55%),var(--blue1);border-top:1px solid rgba(255,255,255,.06);padding:52px 72px 26px}
 .fg-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:44px;margin-bottom:36px}
 .fb-brand{font-family:var(--title);font-size:16px;font-weight:400;color:#fff;margin-bottom:9px}
 .fb-brand span{color:var(--gold-bright)}
@@ -536,7 +541,7 @@ footer{background:var(--blue1);border-top:1px solid rgba(255,255,255,.06);paddin
 .biz-intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .biz-intro-text h2{font-family:var(--title);font-size:clamp(20px,2.6vw,32px);font-weight:400;color:var(--black);line-height:1.15;margin-bottom:16px}
 .biz-intro-text p{font-size:14px;color:var(--text-muted);line-height:1.82;margin-bottom:12px;font-weight:300}
-.biz-quote-panel{background:linear-gradient(145deg,#362278,var(--blue1));border-radius:14px;padding:32px;border:1.5px solid rgba(200,189,232,.16)}
+.biz-quote-panel{background:radial-gradient(130% 110% at 100% 0%,var(--cerise-glow) 0%,transparent 62%),linear-gradient(145deg,#3d2168 0%,var(--blue1) 52%,#6e2a5e 122%);border-radius:14px;padding:32px;border:1.5px solid rgba(222,49,99,.22)}
 .biz-quote-text{font-family:var(--title);font-size:1.08rem;font-weight:400;font-style:normal;color:rgba(255,255,255,.96);line-height:1.7;margin-bottom:16px}
 .biz-quote-attr{font-family:var(--title);font-size:10px;color:rgba(160,200,220,.4);letter-spacing:.12em;text-transform:uppercase}
 .biz-quick-wins{display:flex;flex-direction:column;gap:11px;margin-top:22px}
@@ -577,7 +582,7 @@ footer{background:var(--blue1);border-top:1px solid rgba(255,255,255,.06);paddin
 .biz-acc.open .biz-acc-body{max-height:260px}
 .biz-acc-body p{font-size:14px;color:var(--text-mid);line-height:1.72;font-weight:400;margin:0;padding:0 20px 18px 64px}
 .biz-sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
-.biz-sector{background:linear-gradient(145deg,#362278,var(--blue1));border:1.5px solid rgba(255,255,255,.07);border-radius:13px;padding:24px;text-align:center;transition:all .22s}
+.biz-sector{background:radial-gradient(135% 115% at 100% 0%,var(--cerise-glow) 0%,transparent 62%),linear-gradient(145deg,#3d2168 0%,var(--blue1) 62%,#5e2856 125%);border:1.5px solid rgba(222,49,99,.16);border-radius:13px;padding:24px;text-align:center;transition:all .22s}
 .biz-sector:hover{border-color:rgba(200,189,232,.28);transform:translateY(-2px)}
 .biz-sector-icon{font-size:28px;margin-bottom:11px;display:block}
 .biz-sector h3{font-family:var(--title);font-size:15px;font-weight:400;color:#fff;margin-bottom:6px}
@@ -722,8 +727,12 @@ footer{background:var(--blue1);border-top:1px solid rgba(255,255,255,.06);paddin
 .tc-card::before{content:'"';position:absolute;top:18px;right:24px;font-family:var(--serif);font-size:72px;line-height:1;color:var(--gold);opacity:.12;font-style:normal}
 
 /* ── SPECIFIC SECTION HEADINGS: gold thin verdana ── */
-.section-title-gold{font-family:var(--title);font-weight:400;line-height:1.1;background:linear-gradient(135deg,#b8b5cc 0%,#dddaf0 22%,#f8f7ff 40%,#ffffff 50%,#e4e1f5 62%,#ccc9dc 80%,#b8b5cc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-title-gold{font-family:var(--title);font-weight:400;line-height:1.1;background:linear-gradient(135deg,#b81e50 0%,#e0348c 22%,#ff8fbb 40%,#fff0f6 50%,#ff8fbb 60%,#e0348c 78%,#b81e50 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .section-title-dark{font-family:var(--title);font-weight:400;color:var(--black);line-height:1.1}
+.section-title-cerise{font-family:var(--title);font-weight:400;color:#cf2765;line-height:1.1}
+/* Other Benefits of NLP editorial section — all text white, Verdana purple-to-cerise headings */
+#nlp-benefits p,#nlp-benefits span,#nlp-benefits div{color:#ffffff!important}
+#nlp-benefits h3{font-family:var(--title)!important;background:linear-gradient(115deg,#9b82e6 0%,#e0348c 52%,#de3163 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent!important}
 
 /* ── DARK SECTION TEXT: all headings metallic silver, all body text white ── */
 .s-dark h1,.s-dark h2,.s-dark h3,
@@ -731,6 +740,13 @@ footer{background:var(--blue1);border-top:1px solid rgba(255,255,255,.06);paddin
 .s-blue h1,.s-blue h2,.s-blue h3,
 .values-section h1,.values-section h2,.values-section h3{
   background:linear-gradient(135deg,#b8b5cc 0%,#dddaf0 22%,#f8f7ff 40%,#ffffff 50%,#e4e1f5 62%,#ccc9dc 80%,#b8b5cc 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+/* Main dark-section titles rendered in metallic cerise (overrides the silver above) */
+.s-dark .section-title-gold,.s-navy .section-title-gold,.s-blue .section-title-gold,.values-section .section-title-gold{
+  background:linear-gradient(135deg,#b81e50 0%,#e0348c 22%,#ff8fbb 40%,#fff0f6 50%,#ff8fbb 60%,#e0348c 78%,#b81e50 100%);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
