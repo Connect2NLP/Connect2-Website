@@ -163,6 +163,7 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 .eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:12px;font-family:var(--title);font-size:14px;font-weight:400;letter-spacing:.2em;text-transform:uppercase}
 .ew-gold{color:var(--gold)}.ew-gold::before{content:'';width:18px;height:2px;background:var(--gold)}
 .ew-cerise{color:#e91e63;font-weight:600}.ew-cerise::before{content:'';width:18px;height:2px;background:#e91e63}
+#nlp-benefits div.ew-cerise{color:#e91e63!important}
 .ew-blue{color:var(--blue2)}.ew-blue::before{content:'';width:18px;height:2px;background:var(--blue2)}
 .ew-white{color:rgba(255,255,255,.55)}.ew-white::before{content:'';width:18px;height:2px;background:rgba(255,255,255,.4)}
 .ew-cream{color:var(--cream2)}.ew-cream::before{content:'';width:18px;height:2px;background:var(--cream2)}
