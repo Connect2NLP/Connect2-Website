@@ -1067,6 +1067,11 @@ footer{background:radial-gradient(70% 120% at 100% 0%,var(--cerise-glow-soft) 0%
 .credits-roll .credits-final{color:#e91e63;font-weight:400;text-shadow:0 2px 20px rgba(0,0,0,.6)}
 @keyframes creditsRoll{from{transform:translateY(0)}to{transform:translateY(calc(-100% - 72vh))}}
 
+/* ── CLARIFY REVEAL — text sharpens into focus on scroll ── */
+.clarify{opacity:0;filter:blur(9px);transition:opacity 1.1s ease,filter 1.1s ease}
+.clarify.clarified{opacity:1;filter:blur(0)}
+#sec-nlp .nlp-body h3{font-weight:600!important}
+
 /* ── TESTIMONIAL MYSTERIOUS REVEAL ── */
 @keyframes tqReveal{from{opacity:0;filter:blur(7px)}to{opacity:1;filter:blur(0)}}
 .tq-ch{opacity:0;animation:tqReveal .9s ease-out forwards}

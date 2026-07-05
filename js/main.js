@@ -93,6 +93,25 @@ async function handleFreeDownload(e) {
   counters.forEach(el => obs.observe(el));
 })();
 
+// ── CLARIFY REVEAL — blurred text sharpens into focus when scrolled into view ──
+(function(){
+  const els = document.querySelectorAll('.clarify');
+  if(!els.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+      const el = entry.target;
+      obs.unobserve(el);
+      // Stagger siblings within the same section for a cascading focus effect
+      const section = el.closest('section') || document.body;
+      const group = [...section.querySelectorAll('.clarify')];
+      el.style.transitionDelay = (group.indexOf(el) * 0.22) + 's';
+      el.classList.add('clarified');
+    });
+  }, {threshold: 0.4});
+  els.forEach(el => obs.observe(el));
+})();
+
 // ── TESTIMONIAL MYSTERIOUS REVEAL (home page Attendee Stories) ──
 // Quote area is blank; hovering the card makes the quote materialise
 // character by character, each fading in from a blur. Leaving fades it
