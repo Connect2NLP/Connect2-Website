@@ -93,6 +93,35 @@ async function handleFreeDownload(e) {
   counters.forEach(el => obs.observe(el));
 })();
 
+// ── TESTIMONIAL TYPEWRITER (home page Attendee Stories) ──
+(function(){
+  const quotes = document.querySelectorAll('#sec-testi .type-quote');
+  if(!quotes.length) return;
+  const SPEED = 32; // ms per character — deliberate, not too fast
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+      const el = entry.target;
+      obs.unobserve(el);
+      const full = el.textContent;
+      // Lock the height so the card doesn't grow while typing
+      el.style.minHeight = el.offsetHeight + 'px';
+      el.textContent = '';
+      el.classList.add('typing');
+      let i = 0;
+      const timer = setInterval(() => {
+        i++;
+        el.textContent = full.slice(0, i);
+        if(i >= full.length){
+          clearInterval(timer);
+          el.classList.remove('typing');
+        }
+      }, SPEED);
+    });
+  }, {threshold: 0.35});
+  quotes.forEach(el => obs.observe(el));
+})();
+
 // ── PAGE NAVIGATION ──
 function goPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
