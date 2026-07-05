@@ -384,15 +384,21 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 
 /* ACCRED */
 .accred{background:var(--cream);padding:24px 72px;border-top:1px solid var(--border)}
-.accred-label{font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:rgba(100,130,150,.38);text-align:center;margin-bottom:14px}
+.accred-label{font-family:var(--title);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#e91e63;text-align:center;margin-bottom:14px}
 .accred-logos{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap}
-.accred-item{font-family:var(--title);font-size:10px;font-weight:400;letter-spacing:.12em;padding:5px 13px;border:1.5px solid var(--border);border-radius:6px;color:var(--text-muted);background:var(--blue-pale)}
+.accred-item{font-family:var(--title);font-size:11px;font-weight:500;letter-spacing:.12em;padding:6px 14px;border:1.5px solid var(--blue2);border-radius:6px;color:var(--blue1);background:var(--blue-pale)}
 
 /* FOOTER */
 footer{background:radial-gradient(70% 120% at 100% 0%,var(--cerise-glow-soft) 0%,transparent 55%),var(--blue1);border-top:1px solid rgba(255,255,255,.06);padding:52px 72px 26px}
 .fg-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:44px;margin-bottom:36px}
 .fb-brand{font-family:var(--title);font-size:16px;font-weight:400;color:#fff;margin-bottom:9px}
 .fb-brand span{color:var(--gold-bright)}
+/* Footer brand — same triangle mark and wordmark as the nav, light metallic fill for dark backgrounds */
+.fbrand-wrap{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.fbrand-img{width:46px;height:40px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(200,189,232,.35))}
+.fbrand-txt{display:inline-flex;flex-direction:column;align-items:stretch}
+.fbrand-name{display:block;font-family:var(--sans);font-size:21px;font-weight:300;letter-spacing:.045em;text-transform:uppercase;line-height:1;background:linear-gradient(135deg,#f6f4fc 0%,#d4cdea 28%,#a29ac4 46%,#e9e4f7 62%,#beb5da 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.fbrand-sub{display:flex;justify-content:space-between;font-family:var(--sans);font-size:8px;font-weight:400;color:#c8bde8;text-transform:uppercase;margin-top:3px}
 .fb-brand-sub{font-size:13px;color:rgba(160,200,230,.38);line-height:1.8;max-width:220px}
 .fcol h4{font-family:var(--title);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(130,175,210,.32);font-weight:400;margin-bottom:11px}
 .fcol a{display:block;font-size:13px;color:rgba(200,225,245,.65);text-decoration:none;margin-bottom:7px;cursor:pointer;transition:color .2s}
