@@ -93,13 +93,14 @@ async function handleFreeDownload(e) {
   counters.forEach(el => obs.observe(el));
 })();
 
-// ── TESTIMONIAL TYPEWRITER (home page Attendee Stories) ──
-// Quote area is blank; hovering the card types the quote in, leaving
-// clears it again so it retypes on every hover. Tap triggers it on touch.
+// ── TESTIMONIAL MYSTERIOUS REVEAL (home page Attendee Stories) ──
+// Quote area is blank; hovering the card makes the quote materialise
+// character by character, each fading in from a blur. Leaving fades it
+// out so it reveals again on every hover. Tap triggers it on touch.
 (function(){
   const quotes = document.querySelectorAll('#sec-testi .type-quote');
   if(!quotes.length) return;
-  const SPEED = 32; // ms per character — deliberate, not too fast
+  const SPEED = 45; // ms between characters — unhurried
   quotes.forEach(el => {
     const card = el.closest('.tc-card') || el;
     const full = el.textContent;
@@ -107,28 +108,28 @@ async function handleFreeDownload(e) {
     el.style.minHeight = el.offsetHeight + 'px';
     el.textContent = '';
     let timer = null;
-    const type = () => {
+    const reveal = () => {
       clearInterval(timer);
+      el.classList.remove('tq-fadeout');
       el.textContent = '';
-      el.classList.add('typing');
       let i = 0;
       timer = setInterval(() => {
+        const span = document.createElement('span');
+        span.className = 'tq-ch';
+        span.textContent = full[i];
+        el.appendChild(span);
         i++;
-        el.textContent = full.slice(0, i);
-        if(i >= full.length){
-          clearInterval(timer);
-          el.classList.remove('typing');
-        }
+        if(i >= full.length) clearInterval(timer);
       }, SPEED);
     };
     const clear = () => {
       clearInterval(timer);
-      el.classList.remove('typing');
-      el.textContent = '';
+      el.classList.add('tq-fadeout');
+      setTimeout(() => { el.textContent = ''; el.classList.remove('tq-fadeout'); }, 300);
     };
-    card.addEventListener('mouseenter', type);
+    card.addEventListener('mouseenter', reveal);
     card.addEventListener('mouseleave', clear);
-    card.addEventListener('touchstart', type, {passive:true});
+    card.addEventListener('touchstart', reveal, {passive:true});
   });
 })();
 
