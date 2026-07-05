@@ -1092,6 +1092,13 @@ footer{background:radial-gradient(70% 120% at 100% 0%,var(--cerise-glow-soft) 0%
   }
 }
 
+/* ── ABOUT US CINEMATIC HERO — movie-credits text roll ── */
+.credits-wrap{position:absolute;inset:0;overflow:hidden;display:flex;justify-content:center;z-index:2;pointer-events:none}
+.credits-roll{position:absolute;top:100%;width:100%;max-width:880px;text-align:center;padding:0 30px;animation:creditsRoll 42s linear infinite}
+.credits-roll p{font-family:var(--title);font-weight:300;font-size:clamp(17px,2.1vw,28px);color:#fff;letter-spacing:.045em;line-height:1.55;margin:0 0 36px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.credits-roll .credits-final{color:#e91e63;font-weight:400;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+@keyframes creditsRoll{from{transform:translateY(0)}to{transform:translateY(calc(-100% - 72vh))}}
+
 /* ── TESTIMONIAL MYSTERIOUS REVEAL ── */
 @keyframes tqReveal{from{opacity:0;filter:blur(7px)}to{opacity:1;filter:blur(0)}}
 .tq-ch{opacity:0;animation:tqReveal .9s ease-out forwards}

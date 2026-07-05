@@ -52,12 +52,12 @@
 
     <!-- ABOUT US -->
     <li class="nav-item">
-      <span class="nav-link" onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-about').scrollIntoView({behavior:'smooth'}),120)">
+      <span class="nav-link" onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-about-hero').scrollIntoView({behavior:'smooth'}),120)">
         About Us <svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg>
       </span>
       <div class="nav-dropdown">
         <div class="nav-dd-label">About Connect2</div>
-        <span class="nav-dd-item" onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-about').scrollIntoView({behavior:'smooth'}),120)">Our Story</span>
+        <span class="nav-dd-item" onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-about-hero').scrollIntoView({behavior:'smooth'}),120)">Our Story</span>
         <span class="nav-dd-item" onclick="goPage('page-team')">Meet the Team</span>
         <span class="nav-dd-item" onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-values').scrollIntoView({behavior:'smooth'}),120)">Our Values</span>
         <span class="nav-dd-item" onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-accred').scrollIntoView({behavior:'smooth'}),120)">Accreditations</span>
@@ -163,6 +163,23 @@
   <div style="position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:0 40px 5vh">
     <div class="hero-headline-anim">Change the way you think.</div>
     <div class="hero-sub-anim" style="margin-top:14px">Change everything that follows.</div>
+  </div>
+</section>
+
+<!-- ABOUT US CINEMATIC HERO -->
+<section id="sec-about-hero" style="position:relative;height:72vh;overflow:hidden;background:var(--blue1)">
+  <video autoplay muted loop playsinline preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    <source src="images/own-your-week.mp4" type="video/mp4"/>
+  </video>
+  <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(35,21,66,.72) 0%,rgba(35,21,66,.3) 45%,rgba(35,21,66,.5) 100%);z-index:1"></div>
+  <div class="credits-wrap">
+    <div class="credits-roll">
+      <p>Take control of your day, and your week follows.</p>
+      <p>Own your week, and your month aligns.</p>
+      <p>Direct your months, and your year takes shape.</p>
+      <p>Shape your year, and you shape your life.</p>
+      <p class="credits-final">One focused day at a time.</p>
+    </div>
   </div>
 </section>
 
