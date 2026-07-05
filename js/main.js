@@ -94,23 +94,25 @@ async function handleFreeDownload(e) {
 })();
 
 // ── TESTIMONIAL TYPEWRITER (home page Attendee Stories) ──
-// Quote shows normally; the first hover (or tap on touch devices) retypes it.
+// Quote area is blank; hovering the card types the quote in, leaving
+// clears it again so it retypes on every hover. Tap triggers it on touch.
 (function(){
   const quotes = document.querySelectorAll('#sec-testi .type-quote');
   if(!quotes.length) return;
   const SPEED = 32; // ms per character — deliberate, not too fast
   quotes.forEach(el => {
     const card = el.closest('.tc-card') || el;
-    const start = () => {
-      card.removeEventListener('mouseenter', start);
-      card.removeEventListener('touchstart', start);
-      const full = el.textContent;
-      // Lock the height so the card doesn't grow while typing
-      el.style.minHeight = el.offsetHeight + 'px';
+    const full = el.textContent;
+    // Reserve the full height up front so the card never resizes
+    el.style.minHeight = el.offsetHeight + 'px';
+    el.textContent = '';
+    let timer = null;
+    const type = () => {
+      clearInterval(timer);
       el.textContent = '';
       el.classList.add('typing');
       let i = 0;
-      const timer = setInterval(() => {
+      timer = setInterval(() => {
         i++;
         el.textContent = full.slice(0, i);
         if(i >= full.length){
@@ -119,8 +121,14 @@ async function handleFreeDownload(e) {
         }
       }, SPEED);
     };
-    card.addEventListener('mouseenter', start);
-    card.addEventListener('touchstart', start, {passive:true});
+    const clear = () => {
+      clearInterval(timer);
+      el.classList.remove('typing');
+      el.textContent = '';
+    };
+    card.addEventListener('mouseenter', type);
+    card.addEventListener('mouseleave', clear);
+    card.addEventListener('touchstart', type, {passive:true});
   });
 })();
 
