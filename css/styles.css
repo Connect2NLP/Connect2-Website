@@ -47,8 +47,8 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 .logo-wrap{display:flex;align-items:center;gap:14px;text-decoration:none;cursor:pointer;flex-shrink:0;background:transparent}
 .logo-img{width:54px;height:54px;object-fit:contain;filter:drop-shadow(0 2px 10px rgba(200,189,232,.3));background:transparent}
 .logo-txt{display:inline-flex;flex-direction:column;align-items:stretch}
-.logo-name{display:block;font-family:var(--sans);font-size:24px;font-weight:300;letter-spacing:.045em;text-transform:uppercase;line-height:1;background:linear-gradient(135deg,#0f0f13 0%,#3c3c44 28%,#74747e 46%,#2e2e35 62%,#0c0c10 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.logo-sub{display:flex;justify-content:space-between;font-family:var(--sans);font-size:9px;font-weight:400;color:#101014;text-transform:uppercase;margin-top:4px}
+.logo-name{display:block;font-family:var(--sans);font-size:32px;font-weight:300;letter-spacing:.045em;text-transform:uppercase;line-height:1;background:linear-gradient(135deg,#0f0f13 0%,#3c3c44 28%,#74747e 46%,#2e2e35 62%,#0c0c10 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.logo-sub{display:flex;justify-content:space-between;font-family:var(--sans);font-size:12px;font-weight:400;color:#101014;text-transform:uppercase;margin-top:4px}
 
 /* Hamburger — hidden on desktop */
 .nav-hamburger{display:none}
@@ -105,7 +105,7 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 }
 .hero-headline-anim{
   font-family:var(--title);
-  font-size:clamp(20px,3.4vw,52px);
+  font-size:clamp(10px,1.7vw,26px);
   font-weight:600;
   color:#fff;
   text-transform:uppercase;
@@ -116,7 +116,7 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 }
 .hero-sub-anim{
   font-family:var(--title);
-  font-size:clamp(16px,2.6vw,42px);
+  font-size:clamp(8px,1.3vw,21px);
   font-weight:600;
   color:#fff;
   text-transform:uppercase;
@@ -881,8 +881,8 @@ footer{background:radial-gradient(70% 120% at 100% 0%,var(--cerise-glow-soft) 0%
   /* ── Nav ── */
   nav{padding:0 18px;height:60px}
   .logo-img{width:42px;height:42px}
-  .logo-name{font-size:18px}
-  .logo-sub{font-size:7px}
+  .logo-name{font-size:24px}
+  .logo-sub{font-size:9px}
 
   /* Hamburger button */
   .nav-hamburger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px;flex-shrink:0}
@@ -905,7 +905,7 @@ footer{background:radial-gradient(70% 120% at 100% 0%,var(--cerise-glow-soft) 0%
   /* ── Hero ── */
   .hero{min-height:60vh}
   .hero-content{padding:0 20px;max-width:100%}
-  .hero-headline-anim,.hero-sub-anim{white-space:normal;letter-spacing:.1em;font-size:clamp(22px,7vw,36px)}
+  .hero-headline-anim,.hero-sub-anim{white-space:normal;letter-spacing:.1em;font-size:clamp(11px,3.5vw,18px)}
   .hero-h1{font-size:clamp(28px,8vw,48px)}
   .hero-sub{font-size:15px}
   .hero-stats-bar{position:static;grid-template-columns:repeat(2,1fr)}
