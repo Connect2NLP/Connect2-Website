@@ -1090,3 +1090,6 @@ footer{background:radial-gradient(70% 120% at 100% 0%,var(--cerise-glow-soft) 0%
   }
 }
 
+/* ── HEADINGS: Lato Thin 100 site-wide ── */
+h1,h2,h3{font-family:'Lato','DM Sans','Segoe UI',sans-serif!important;font-weight:100!important}
+
