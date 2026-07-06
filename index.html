@@ -68,7 +68,7 @@
 
     <!-- TRAINING -->
     <li class="nav-item">
-      <span class="nav-link" onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">
+      <span class="nav-link" onclick="goPage('page-courses')">
         Training <svg viewBox="0 0 12 12"><polyline points="2,4 6,8 10,4"/></svg>
       </span>
       <div class="nav-dropdown" style="min-width:280px">
@@ -448,149 +448,6 @@
   </div>
 </section>
 
-<!-- COURSES -->
-<section id="sec-courses" style="background:var(--blue1);padding:88px 0 0">
-
-  <!-- Section header -->
-  <div style="padding:0 72px 64px;max-width:900px">
-    <div class="eyebrow ew-cerise" style="margin-bottom:14px">Internationally Accredited Training</div>
-    <h2 style="font-family:var(--title);font-size:clamp(28px,3.8vw,52px);font-weight:400;color:#fff;line-height:1.06;margin-bottom:20px">Training that transforms.<br><span style="color:var(--gold-bright)">Results that last.</span></h2>
-    <p style="font-size:16px;color:#fff;line-height:1.82;max-width:680px;font-weight:300;margin:0">For over 25 years, Connect2 has delivered NLP training that changes lives, not just in the classroom but in careers, relationships and personal growth. Whether you are starting your journey or advancing to the highest international levels, every programme is designed to give you tools you can use from day one.</p>
-  </div>
-
-  <!-- Two-column overview panels -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(200,189,232,.15)">
-
-    <!-- SHORT COURSES panel -->
-    <div style="padding:64px 72px 72px;border-right:1px solid rgba(200,189,232,.15);background:rgba(255,255,255,.03)">
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.3);border-radius:100px;padding:5px 14px;margin-bottom:28px">
-        <span style="font-family:var(--title);font-size:10px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-bright)">Short Courses</span>
-      </div>
-      <h3 style="font-family:var(--title);font-size:clamp(20px,2.2vw,30px);font-weight:400;color:#fff;line-height:1.1;margin-bottom:18px">Accessible. Practical.<br>Immediately Applicable.</h3>
-      <p style="font-size:15px;color:rgba(200,225,255,.65);line-height:1.82;font-weight:300;margin-bottom:32px">Our short courses are designed for anyone ready to make a meaningful shift. No prior experience is required. Each programme is accredited by the International Federation of NLP (IFNLP) and delivered live by expert Master Trainers. You leave with techniques you can use the very same day.</p>
-      <ul style="list-style:none;padding:0;margin:0 0 40px;display:flex;flex-direction:column;gap:14px">
-        <li style="display:flex;align-items:flex-start;gap:14px">
-          <div style="width:28px;height:28px;border-radius:8px;background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><span style="font-family:var(--title);font-size:13px;color:#fff;font-weight:400;display:block;margin-bottom:3px">C2 Your Life</span><span style="font-size:13px;color:rgba(200,225,255,.55);line-height:1.65">2-day immersive using NLP to break through limitations and create real, lasting change in any area of your life.</span></div>
-        </li>
-        <li style="display:flex;align-items:flex-start;gap:14px">
-          <div style="width:28px;height:28px;border-radius:8px;background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><span style="font-family:var(--title);font-size:13px;color:#fff;font-weight:400;display:block;margin-bottom:3px">C2 Communication</span><span style="font-size:13px;color:rgba(200,225,255,.55);line-height:1.65">Master the science of human communication: influence, rapport, and precision language in 2 powerful days.</span></div>
-        </li>
-        <li style="display:flex;align-items:flex-start;gap:14px">
-          <div style="width:28px;height:28px;border-radius:8px;background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><span style="font-family:var(--title);font-size:13px;color:#fff;font-weight:400;display:block;margin-bottom:3px">C2 Values · C2 Presenting · C2 Coaching · C2 Hypnosis</span><span style="font-size:13px;color:rgba(200,225,255,.55);line-height:1.65">Focused programmes for deeper personal insight, professional presence, coaching skills, and the art of hypnosis.</span></div>
-        </li>
-      </ul>
-      <div style="display:flex;align-items:center;gap:10px;padding-top:8px;border-top:1px solid rgba(200,189,232,.12)">
-        <span style="font-size:13px;color:rgba(200,225,255,.5)">All courses available Live and Online · No prerequisites</span>
-      </div>
-      <button onclick="goPage('page-courses');setTimeout(()=>{document.getElementById('courses-short').scrollIntoView({behavior:'smooth'});},180)" style="margin-top:32px;display:inline-flex;align-items:center;gap:9px;background:var(--gold-bright);color:var(--blue1);font-family:var(--title);font-size:11px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;border:none;border-radius:100px;padding:14px 28px;cursor:pointer;transition:opacity .2s" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">Explore Short Courses <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
-    </div>
-
-    <!-- CERTIFICATION TRAININGS panel -->
-    <div style="padding:64px 72px 72px;background:rgba(255,255,255,.015)">
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(79,61,140,.3);border:1px solid rgba(200,189,232,.3);border-radius:100px;padding:5px 14px;margin-bottom:28px">
-        <span style="font-family:var(--title);font-size:10px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:rgba(200,189,232,.9)">Certification Trainings</span>
-      </div>
-      <h3 style="font-family:var(--title);font-size:clamp(20px,2.2vw,30px);font-weight:400;color:#fff;line-height:1.1;margin-bottom:18px">Internationally Recognised.<br>Career-Defining Credentials.</h3>
-      <p style="font-size:15px;color:rgba(200,225,255,.65);line-height:1.82;font-weight:300;margin-bottom:32px">Our certification pathway takes you from NLP Practitioner to Master Trainer, the highest qualification available in the field. Each level builds on the last, combining deep personal transformation with professional competence. Certifications are dual-accredited by IFNLP and ABNLP, recognised globally.</p>
-      <ul style="list-style:none;padding:0;margin:0 0 40px;display:flex;flex-direction:column;gap:16px">
-        <li style="display:flex;align-items:flex-start;gap:14px">
-          <div style="width:28px;height:28px;border-radius:8px;background:rgba(200,189,232,.12);border:1px solid rgba(200,189,232,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-family:var(--title);font-size:11px;color:rgba(200,189,232,.8);font-weight:400">1</div>
-          <div><span style="font-family:var(--title);font-size:13px;color:#fff;font-weight:400;display:block;margin-bottom:3px">NLP Practitioner: Level 1</span><span style="font-size:13px;color:rgba(200,225,255,.55);line-height:1.65">5 days · 4 internationally recognised certificates. The most comprehensive Practitioner programme available.</span></div>
-        </li>
-        <li style="display:flex;align-items:flex-start;gap:14px">
-          <div style="width:28px;height:28px;border-radius:8px;background:rgba(200,189,232,.12);border:1px solid rgba(200,189,232,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-family:var(--title);font-size:11px;color:rgba(200,189,232,.8);font-weight:400">2</div>
-          <div><span style="font-family:var(--title);font-size:13px;color:#fff;font-weight:400;display:block;margin-bottom:3px">NLP Master Practitioner: Level 2</span><span style="font-size:13px;color:rgba(200,225,255,.55);line-height:1.65">Advanced NLP, Timeline Therapy and Hypnotherapy. Transform your practice and deepen your results with others.</span></div>
-        </li>
-        <li style="display:flex;align-items:flex-start;gap:14px">
-          <div style="width:28px;height:28px;border-radius:8px;background:rgba(200,189,232,.12);border:1px solid rgba(200,189,232,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-family:var(--title);font-size:11px;color:rgba(200,189,232,.8);font-weight:400">3</div>
-          <div><span style="font-family:var(--title);font-size:13px;color:#fff;font-weight:400;display:block;margin-bottom:3px">Trainers Training: Level 3</span><span style="font-size:13px;color:rgba(200,225,255,.55);line-height:1.65">Become a certified NLP Trainer. Design and deliver powerful NLP programmes to others.</span></div>
-        </li>
-        <li style="display:flex;align-items:flex-start;gap:14px">
-          <div style="width:28px;height:28px;border-radius:8px;background:rgba(200,189,232,.12);border:1px solid rgba(200,189,232,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-family:var(--title);font-size:11px;color:rgba(200,189,232,.8);font-weight:400">4</div>
-          <div><span style="font-family:var(--title);font-size:13px;color:#fff;font-weight:400;display:block;margin-bottom:3px">Master Trainer: Level 4</span><span style="font-size:13px;color:rgba(200,225,255,.55);line-height:1.65">The pinnacle of NLP training. Certify other trainers and operate at the highest international standard.</span></div>
-        </li>
-      </ul>
-      <div style="display:flex;align-items:center;gap:10px;padding-top:8px;border-top:1px solid rgba(200,189,232,.12)">
-        <span style="font-size:13px;color:rgba(200,225,255,.5)">IFNLP &amp; ABNLP accredited · Re-run guarantee included</span>
-      </div>
-      <button onclick="goPage('page-courses');setTimeout(()=>{document.getElementById('courses-cert').scrollIntoView({behavior:'smooth'});},180)" style="margin-top:32px;display:inline-flex;align-items:center;gap:9px;background:transparent;color:#fff;font-family:var(--title);font-size:11px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid rgba(200,189,232,.4);border-radius:100px;padding:13px 28px;cursor:pointer;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='rgba(200,189,232,.8)';this.style.background='rgba(200,189,232,.08)'" onmouseout="this.style.borderColor='rgba(200,189,232,.4)';this.style.background='transparent'">View Certification Pathways <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
-    </div>
-
-  </div>
-
-  <!-- Bottom strip CTA -->
-  <div style="background:rgba(212,175,55,.08);border-top:1px solid rgba(212,175,55,.18);padding:28px 72px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
-    <p style="font-size:14px;color:rgba(200,225,255,.6);margin:0;line-height:1.6">Not sure which programme is right for you? Our Course Finder takes 2 minutes.</p>
-    <button onclick="document.getElementById('sec-finder').scrollIntoView({behavior:'smooth'})" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--gold-bright);font-family:var(--title);font-size:10px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(212,175,55,.4);border-radius:100px;padding:10px 22px;cursor:pointer;white-space:nowrap">Find My Course <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
-  </div>
-
-</section>
-
-<!-- LOCATIONS STRIP -->
-<section class="s-white">
-  <div class="eyebrow ew-cerise">Find a Course Near You</div>
-  <h2 class="section-title-dark h2s">Global Online Live Trainings<br><span style="font-size:.72em;letter-spacing:.04em;color:var(--blue2)">In Person Trainings</span></h2>
-  <div class="lg">
-
-    <!-- South Africa -->
-    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('za',document.querySelectorAll('.loc-ctab')[0]),120)">
-      <div class="lf"><img src="images/flag-za.jpg" alt="South Africa" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div>
-      <div class="ln">South Africa</div>
-      <div class="lci">Cape Town · Johannesburg</div>
-      <div style="margin-top:10px;border-top:1px solid rgba(0,0,0,.07);padding-top:10px;text-align:left">
-        <div style="font-family:var(--title);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Next Events</div>
-        <div style="font-size:11px;color:var(--text-muted);margin-bottom:3px">🇿🇦 Cape Town · Practitioner · Aug 3–9</div>
-        <div class="lcd" data-date="2026-08-03" style="font-family:var(--title);font-size:11px;color:var(--blue2);font-weight:500;margin-bottom:4px"></div>
-        <span onclick="event.stopPropagation();goPage('page-courses');setTimeout(()=>{document.getElementById('course-practitioner').scrollIntoView({behavior:'smooth'});toggleCourse('practitioner');},200)" style="font-family:var(--title);font-size:10px;color:var(--gold);cursor:pointer;letter-spacing:.04em;text-decoration:underline;display:inline-block;margin-bottom:10px">Take me to this event →</span>
-        <div style="font-size:11px;color:var(--text-muted);margin-bottom:3px">🇿🇦 Johannesburg · Practitioner · Nov 23–29</div>
-        <div class="lcd" data-date="2026-11-23" style="font-family:var(--title);font-size:11px;color:var(--blue2);font-weight:500;margin-bottom:4px"></div>
-        <span onclick="event.stopPropagation();goPage('page-courses');setTimeout(()=>{document.getElementById('course-practitioner').scrollIntoView({behavior:'smooth'});toggleCourse('practitioner');},200)" style="font-family:var(--title);font-size:10px;color:var(--gold);cursor:pointer;letter-spacing:.04em;text-decoration:underline;display:inline-block;margin-bottom:4px">Take me to this event →</span>
-      </div>
-      <div class="lcb">View events</div>
-    </div>
-
-    <!-- United Kingdom -->
-    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('uk',document.querySelectorAll('.loc-ctab')[1]),120)">
-      <div class="lf"><img src="images/flag-uk.jpg" alt="United Kingdom" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div>
-      <div class="ln">United Kingdom</div>
-      <div class="lci">London &amp; virtual</div>
-      <div style="margin-top:10px;border-top:1px solid rgba(0,0,0,.07);padding-top:10px;text-align:left">
-        <div style="font-family:var(--title);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Next Event</div>
-        <div style="font-size:11px;color:var(--text-muted);margin-bottom:3px">🇬🇧 London · Practitioner · Aug 17–23</div>
-        <div class="lcd" data-date="2026-08-17" style="font-family:var(--title);font-size:11px;color:var(--blue2);font-weight:500;margin-bottom:4px"></div>
-        <span onclick="event.stopPropagation();goPage('page-courses');setTimeout(()=>{document.getElementById('course-practitioner').scrollIntoView({behavior:'smooth'});toggleCourse('practitioner');},200)" style="font-family:var(--title);font-size:10px;color:var(--gold);cursor:pointer;letter-spacing:.04em;text-decoration:underline;display:inline-block;margin-bottom:4px">Take me to this event →</span>
-      </div>
-      <div class="lcb">View events</div>
-    </div>
-
-    <!-- United States -->
-    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('us',document.querySelectorAll('.loc-ctab')[2]),120)">
-      <div class="lf"><img src="images/flag-us.jpg" alt="United States" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div>
-      <div class="ln">United States</div>
-      <div class="lci">Multiple cities</div>
-      <div class="lcb">View events</div>
-    </div>
-
-    <!-- Puerto Rico -->
-    <div class="lc" onclick="goPage('page-locations');setTimeout(()=>showLocation('pr',document.querySelectorAll('.loc-ctab')[3]),120)">
-      <div class="lf"><img src="images/flag-pr.jpg" alt="Puerto Rico" style="width:56px;height:38px;object-fit:cover;border-radius:5px;display:block;margin:0 auto"/></div>
-      <div class="ln">Puerto Rico</div>
-      <div class="lci">San Juan</div>
-      <div style="margin-top:10px;border-top:1px solid rgba(0,0,0,.07);padding-top:10px;text-align:left">
-        <div style="font-family:var(--title);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Next Event</div>
-        <div style="font-size:11px;color:var(--text-muted);margin-bottom:3px">🇵🇷 San Juan · Practitioner · Sep 23–29</div>
-        <div class="lcd" data-date="2026-09-23" style="font-family:var(--title);font-size:11px;color:var(--blue2);font-weight:500;margin-bottom:4px"></div>
-        <span onclick="event.stopPropagation();goPage('page-courses');setTimeout(()=>{document.getElementById('course-practitioner').scrollIntoView({behavior:'smooth'});toggleCourse('practitioner');},200)" style="font-family:var(--title);font-size:10px;color:var(--gold);cursor:pointer;letter-spacing:.04em;text-decoration:underline;display:inline-block;margin-bottom:4px">Take me to this event →</span>
-      </div>
-      <div class="lcb">View events</div>
-    </div>
-
-  </div>
-</section>
-
 <!-- TEAM -->
 <section class="about-section" id="sec-team" style="padding:80px 72px;background:var(--cream)">
   <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;justify-content:center;max-width:1100px;margin:0 auto">
@@ -769,7 +626,7 @@
 <div class="rerun-wrap">
   <div class="rerun">
     <div><div class="rerun-badge">🔄 Our Guarantee</div><h3>The Connect2 Re-Run Guarantee</h3><p>We are so confident in your transformation that if you do not achieve the results you seek, you are welcome to re-attend any programme, at no additional cost. Your success is our success and we stand fully behind every training we deliver.</p></div>
-    <div class="rerun-btns"><span class="btn-rerun" onclick="document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'})">View Programmes</span><a href="https://calendar.google.com/calendar/u/0/r" class="btn-rerun-ghost" target="_blank">Schedule a Call</a></div>
+    <div class="rerun-btns"><span class="btn-rerun" onclick="goPage('page-courses')">View Programmes</span><a href="https://calendar.google.com/calendar/u/0/r" class="btn-rerun-ghost" target="_blank">Schedule a Call</a></div>
   </div>
 </div>
 
@@ -1098,22 +955,6 @@
   </div>
 </section>
 
-<!-- MANDELA QUOTE -->
-<section class="mandela-section">
-  <div class="mandela-inner">
-    <div class="mandela-img-wrap">
-      <img src="images/mandela.jpg" alt="Nelson Mandela" class="mandela-img"/>
-    </div>
-    <div class="mandela-quote-overlay">
-      <div class="mandela-rule"></div>
-      <blockquote class="mandela-quote">
-        "The greatest glory in living lies not in never falling,<br>but in rising every time we fall."
-      </blockquote>
-      <div class="mandela-attr">— Nelson Mandela</div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="s-light">
   <div class="eyebrow ew-cerise">Common Questions</div>
@@ -1147,7 +988,7 @@
   <h2 style="font-family:var(--title);font-weight:400;color:var(--gold-bright);font-size:clamp(34px,4.2vw,58px);line-height:1.1">Kickstart your path into excellence today</h2>
   <p class="sw" style="margin:16px auto 0;text-align:center">Certified live NLP training, short courses and free coaching, for individuals, teams and coaches worldwide.</p>
   <div class="cta-btns">
-    <span class="btn-primary" onclick="document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'})">View All Programmes</span>
+    <span class="btn-primary" onclick="goPage('page-courses')">View All Programmes</span>
     <a class="btn-outline-gold" href="https://calendar.google.com/calendar/u/0/r" target="_blank">Schedule a Free Call</a>
     <span class="btn-outline-gold" onclick="goPage('page-glossary')" style="border-color:rgba(29,185,84,.4);color:#4ade80">NLP Terminology →</span>
   </div>
@@ -1168,7 +1009,7 @@
       <div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div>
       <div class="fb-brand-sub">A global team with over 80 years of combined NLP expertise, transforming lives since 1998.</div>
     </div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Master Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses')">NLP Practitioner</a><a onclick="goPage('page-courses')">Master Practitioner</a><a onclick="goPage('page-courses')">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-glossary')">NLP Terminology</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -1580,7 +1421,7 @@
       <div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div>
       <div class="fb-brand-sub">A global team with over 80 years of combined NLP expertise, transforming lives since 1998.</div>
     </div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Master Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses')">NLP Practitioner</a><a onclick="goPage('page-courses')">Master Practitioner</a><a onclick="goPage('page-courses')">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-glossary')">NLP Terminology</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -2203,7 +2044,7 @@
       <div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div>
       <div class="fb-brand-sub">A global team with over 80 years of combined NLP expertise, transforming lives since 1998.</div>
     </div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Master Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses')">NLP Practitioner</a><a onclick="goPage('page-courses')">Master Practitioner</a><a onclick="goPage('page-courses')">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-glossary')">NLP Terminology</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -2483,7 +2324,7 @@
       <div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div>
       <div class="fb-brand-sub">A global team with over 80 years of combined NLP expertise, transforming lives since 1998.</div>
     </div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Master Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses')">NLP Practitioner</a><a onclick="goPage('page-courses')">Master Practitioner</a><a onclick="goPage('page-courses')">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-glossary')">NLP Terminology</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -2660,7 +2501,7 @@
     <p style="font-size:15px;color:var(--text-muted);margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto">The real transformation happens in the room. Join us for a free session to experience NLP firsthand, no commitment required.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
       <a class="btn-primary" href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="display:inline-flex">Book a Free Coaching Call</a>
-      <span class="btn-outline-gold" onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)" style="display:inline-block;padding:14px 28px;border-radius:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid rgba(201,153,42,.4);color:var(--gold);cursor:pointer">View Courses →</span>
+      <span class="btn-outline-gold" onclick="goPage('page-courses')" style="display:inline-block;padding:14px 28px;border-radius:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid rgba(201,153,42,.4);color:var(--gold);cursor:pointer">View Courses →</span>
     </div>
   </div>
 </div>
@@ -2672,7 +2513,7 @@
       <div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div>
       <div class="fb-brand-sub">A global team with over 80 years of combined NLP expertise, transforming lives since 1998.</div>
     </div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Master Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses')">NLP Practitioner</a><a onclick="goPage('page-courses')">Master Practitioner</a><a onclick="goPage('page-courses')">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-glossary')">NLP Terminology</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -2965,7 +2806,7 @@
           <div style="font-size:13px;color:rgba(255,255,255,0.58);max-width:400px;line-height:1.8;margin-bottom:24px">Our internationally accredited Practitioner programme awards you <span style="color:#d4af37">4 certifications in just 7 days</span> — delivered by ABNLP Master Trainers with 80+ years of combined experience.</div>
           <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
             <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="background:#d4af37;border:none;color:#1a0f35;padding:12px 26px;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;text-decoration:none;display:inline-block">Book a Free Call →</a>
-            <span onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);color:#fff;padding:12px 26px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;display:inline-block">View Programmes</span>
+            <span onclick="goPage('page-courses')" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);color:#fff;padding:12px 26px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;display:inline-block">View Programmes</span>
           </div>
         </div>
       </div>
@@ -3010,7 +2851,7 @@
       <div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div>
       <div class="fb-brand-sub">A global team with over 80 years of combined NLP expertise, transforming lives since 1998.</div>
     </div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Master Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses')">NLP Practitioner</a><a onclick="goPage('page-courses')">Master Practitioner</a><a onclick="goPage('page-courses')">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-glossary')">NLP Terminology</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank">WhatsApp</a><a href="https://calendar.google.com/calendar/u/0/r" target="_blank">Book a Call</a></div>
   </div>
@@ -3133,7 +2974,7 @@
       <div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div>
       <div class="fb-brand-sub">A global team with over 80 years of combined NLP expertise, transforming lives since 1998.</div>
     </div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Master Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses')">NLP Practitioner</a><a onclick="goPage('page-courses')">Master Practitioner</a><a onclick="goPage('page-courses')">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-glossary')">NLP Terminology</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -3257,7 +3098,7 @@
       <div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div>
       <div class="fb-brand-sub">A global team with over 80 years of combined NLP expertise, transforming lives since 1998.</div>
     </div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Master Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses')">NLP Practitioner</a><a onclick="goPage('page-courses')">Master Practitioner</a><a onclick="goPage('page-courses')">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-glossary')">NLP Terminology</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -3366,7 +3207,7 @@
       <div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div>
       <div class="fb-brand-sub">A global team with over 80 years of combined NLP expertise, transforming lives since 1998.</div>
     </div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Master Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses')">NLP Practitioner</a><a onclick="goPage('page-courses')">Master Practitioner</a><a onclick="goPage('page-courses')">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-glossary')">NLP Terminology</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -3466,7 +3307,7 @@
       <div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div>
       <div class="fb-brand-sub">A global team with over 80 years of combined NLP expertise, transforming lives since 1998.</div>
     </div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Master Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses')">NLP Practitioner</a><a onclick="goPage('page-courses')">Master Practitioner</a><a onclick="goPage('page-courses')">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-glossary')">NLP Terminology</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -3694,7 +3535,7 @@
 <footer>
   <div class="fg-grid">
     <div><div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div><div class="fb-brand-sub">Transforming lives through NLP since 1998.</div></div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-coaching')">Coaching</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses');setTimeout(()=>document.getElementById('courses-cert').scrollIntoView({behavior:'smooth'}),200)">NLP Practitioner</a><a onclick="goPage('page-courses');setTimeout(()=>document.getElementById('courses-short').scrollIntoView({behavior:'smooth'}),200)">Short Courses</a><a onclick="goPage('page-coaching')">Coaching</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -3872,7 +3713,7 @@
 <footer>
   <div class="fg-grid">
     <div><div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div><div class="fb-brand-sub">A global team with over 80 years of combined NLP expertise, transforming lives since 1998.</div></div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Master Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses')">NLP Practitioner</a><a onclick="goPage('page-courses')">Master Practitioner</a><a onclick="goPage('page-courses')">Short Courses</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-locations')">Locations</a><a onclick="goPage('page-glossary')">NLP Terminology</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>WhatsApp</a><a href="tel:+27837044810">+27 83 704 4810</a><a href="https://calendar.google.com/calendar/u/0/r" target="_blank">Book a Call</a></div>
   </div>
@@ -4260,7 +4101,7 @@
     <p style="font-size:15px;color:rgba(200,225,255,.65);margin-bottom:28px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.78;font-weight:300">Join the thousands of people who made the decision to invest in how they think, communicate and lead.</p>
     <div style="display:flex;gap:13px;justify-content:center;flex-wrap:wrap">
       <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="btn-primary" style="display:inline-flex">Book a Call</a>
-      <span class="btn-outline-gold" onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)" style="display:inline-block;cursor:pointer">View Programmes</span>
+      <span class="btn-outline-gold" onclick="goPage('page-courses')" style="display:inline-block;cursor:pointer">View Programmes</span>
     </div>
   </div>
 </section>
@@ -4270,7 +4111,7 @@
 <footer>
   <div class="fg-grid">
     <div><div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div><div class="fb-brand-sub">Transforming lives through NLP since 1998.</div></div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-coaching')">Coaching</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses');setTimeout(()=>document.getElementById('courses-cert').scrollIntoView({behavior:'smooth'}),200)">NLP Practitioner</a><a onclick="goPage('page-courses');setTimeout(()=>document.getElementById('courses-short').scrollIntoView({behavior:'smooth'}),200)">Short Courses</a><a onclick="goPage('page-coaching')">Coaching</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-team')">Our Team</a><a onclick="goPage('page-results')">Results</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -4300,7 +4141,7 @@
     <p style="font-size:17px;color:rgba(200,225,255,.65);line-height:1.82;max-width:600px;font-weight:300;margin-bottom:40px">Whether you are leading a business, building a career, training to coach others, or simply ready for something more, Connect2 NLP gives you the mental frameworks, practical tools and real-world experience to create lasting change.</p>
     <div style="display:flex;gap:13px;flex-wrap:wrap">
       <span onclick="document.getElementById('change-paths').scrollIntoView({behavior:'smooth'})" class="btn-primary" style="display:inline-flex;cursor:pointer">Find your path →</span>
-      <span onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)" class="btn-outline-white" style="display:inline-block;cursor:pointer">Explore training</span>
+      <span onclick="goPage('page-courses')" class="btn-outline-white" style="display:inline-block;cursor:pointer">Explore training</span>
     </div>
   </div>
 
@@ -4380,7 +4221,7 @@
       <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:rgba(130,195,255,.7);margin-bottom:12px">For Coaches and Aspiring Coaches</div>
       <h3 style="font-family:var(--title);font-size:22px;font-weight:400;color:#fff;margin-bottom:12px;line-height:1.2">Coach at a deeper level.</h3>
       <p style="font-size:14px;color:rgba(200,225,255,.62);line-height:1.82;font-weight:300;margin-bottom:20px">If you want to build a coaching career from scratch, or deepen an existing practice, our internationally accredited NLP Practitioner, Master Practitioner and Coach certification programmes will transform what you can do.</p>
-      <span onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)" style="display:inline-flex;align-items:center;gap:6px;font-family:var(--title);font-size:10px;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:rgba(130,195,255,.8);cursor:pointer">Explore training →</span>
+      <span onclick="goPage('page-courses')" style="display:inline-flex;align-items:center;gap:6px;font-family:var(--title);font-size:10px;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:rgba(130,195,255,.8);cursor:pointer">Explore training →</span>
     </div>
 
     <div style="background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.1);border-radius:16px;padding:32px;transition:all .26s;cursor:pointer;position:relative;overflow:hidden" onmouseover="this.style.borderColor='var(--gold-bright)';this.style.background='rgba(200,189,232,.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,.1)';this.style.background='rgba(255,255,255,.04)'">
@@ -4444,7 +4285,7 @@
         <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(200,225,255,.72)"><div style="width:14px;height:14px;border-radius:50%;background:rgba(200,189,232,.12);border:1.5px solid rgba(200,189,232,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div>NLP Master Practitioner</div>
         <div style="display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(200,225,255,.72)"><div style="width:14px;height:14px;border-radius:50%;background:rgba(200,189,232,.12);border:1.5px solid rgba(200,189,232,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div>NLP Coach and Trainer Certification</div>
       </div>
-      <span onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)" style="display:inline-flex;align-items:center;gap:5px;font-family:var(--title);font-size:10px;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:var(--gold-bright);cursor:pointer">View programmes →</span>
+      <span onclick="goPage('page-courses')" style="display:inline-flex;align-items:center;gap:5px;font-family:var(--title);font-size:10px;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:var(--gold-bright);cursor:pointer">View programmes →</span>
     </div>
   </div>
 </section>
@@ -4510,7 +4351,7 @@
     <p style="font-size:16px;color:rgba(200,225,255,.62);line-height:1.82;font-weight:300;margin-bottom:36px">Book a free 30-minute discovery call. Tell us where you are, where you want to be and we will tell you exactly how we can help.</p>
     <div style="display:flex;gap:13px;justify-content:center;flex-wrap:wrap">
       <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="btn-primary" style="display:inline-flex">Book a Free Discovery Call</a>
-      <span onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)" class="btn-outline-gold" style="display:inline-block;cursor:pointer">View All Programmes</span>
+      <span onclick="goPage('page-courses')" class="btn-outline-gold" style="display:inline-block;cursor:pointer">View All Programmes</span>
     </div>
   </div>
 </section>
@@ -4519,7 +4360,7 @@
 <footer>
   <div class="fg-grid">
     <div><div class="fbrand-wrap"><img class="fbrand-img" src="images/logo-mark-silver-v3.png" alt="Connect2 International Logo"/><span class="fbrand-txt"><span class="fbrand-name">CONNECT2</span><span class="fbrand-sub"><span>I</span><span>N</span><span>T</span><span>E</span><span>R</span><span>N</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>A</span><span>L</span></span></span></div><div class="fb-brand-sub">Transforming lives through NLP since 1998.</div></div>
-    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">NLP Practitioner</a><a onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)">Short Courses</a><a onclick="goPage('page-coaching')">Coaching</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
+    <div class="fcol"><h4>Programmes</h4><a onclick="goPage('page-courses');setTimeout(()=>document.getElementById('courses-cert').scrollIntoView({behavior:'smooth'}),200)">NLP Practitioner</a><a onclick="goPage('page-courses');setTimeout(()=>document.getElementById('courses-short').scrollIntoView({behavior:'smooth'}),200)">Short Courses</a><a onclick="goPage('page-coaching')">Coaching</a><a onclick="goPage('page-business')">Corporate</a><a onclick="goPage('page-nlp')">What is NLP?</a></div>
     <div class="fcol"><h4>Company</h4><a onclick="goPage('page-home')">Home</a><a onclick="goPage('page-change')">The Change I Seek</a><a onclick="goPage('page-results')">Results</a><a onclick="goPage('page-terms')">Terms of Service</a><a onclick="goPage('page-privacy')">Privacy Policy</a></div>
     <div class="fcol"><h4>Connect</h4><a href="mailto:info@connect2nlp.com">info@connect2nlp.com</a><a href="tel:+27723034857">+27 72 303 4857</a><a href="https://wa.me/27723034857?text=Hello%20there%2C%20I%20am%20contacting%20directly%20from%20CONNECT2%20Website%20and%20would%20like%20to%20chat%20regarding%20the%20training%20and%20coaching%20you%20offer.%20Thank%20you" target="_blank" style="display:inline-flex;align-items:center;gap:5px">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="#25d366" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -4574,7 +4415,7 @@
       <!-- CTA -->
       <div style="display:flex;gap:14px;flex-wrap:wrap">
         <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="btn-primary" style="display:inline-flex">Book a Call with Simon</a>
-        <span onclick="goPage('page-home');setTimeout(()=>document.getElementById('sec-courses').scrollIntoView({behavior:'smooth'}),120)" class="btn-outline-gold" style="display:inline-block;cursor:pointer">View Programmes</span>
+        <span onclick="goPage('page-courses')" class="btn-outline-gold" style="display:inline-block;cursor:pointer">View Programmes</span>
       </div>
     </div>
 
