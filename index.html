@@ -193,7 +193,7 @@
     <!-- RIGHT: Simon photo -->
     <div style="position:relative">
       <div style="border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(26,16,48,.22);border:2px solid var(--border)">
-        <img src="images/simon-new.jpg" alt="Simon Gledhill, Connect2 NLP" style="width:100%;display:block;object-fit:cover;background:var(--cream)"/>
+        <img src="images/simon-hero.jpg" alt="Simon Gledhill, Connect2 NLP" style="width:100%;display:block;object-fit:cover;background:var(--cream)"/>
       </div>
       <!-- Floating caption -->
       <div style="position:absolute;bottom:-1px;left:0;right:0;background:linear-gradient(0deg,rgba(26,16,48,.88) 0%,transparent 100%);border-radius:0 0 16px 16px;padding:28px 22px 18px">
@@ -230,21 +230,51 @@
 </div>
 </section>
 
-<!-- FREE DOWNLOAD -->
+<!-- FREE TASTER SESSION -->
+<style>
+@keyframes ceriseShimmer{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes softFlash{0%,100%{opacity:1}50%{opacity:.62}}
+.cerise-metallic{
+  background:linear-gradient(100deg,#a91f4a 0%,#de3163 22%,#ff8fb3 40%,#ffe3ec 50%,#ff8fb3 60%,#de3163 78%,#a91f4a 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:#de3163;
+  animation:ceriseShimmer 3.5s linear infinite,softFlash 2.6s ease-in-out infinite;
+}
+.flash-soft{animation:softFlash 2.6s ease-in-out infinite}
+</style>
 <section id="sec-freedownload" style="padding:72px;background:var(--blue1);position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(200,189,232,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(200,189,232,.018) 1px,transparent 1px);background-size:66px 66px;pointer-events:none"></div>
   <div style="position:absolute;top:0;right:0;width:500px;height:500px;background:radial-gradient(circle at 80% 20%,rgba(124,111,176,.18),transparent 65%);pointer-events:none"></div>
   <div style="max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1">
-    <div style="display:inline-flex;align-items:center;gap:8px;padding:5px 16px;border-radius:100px;background:rgba(200,189,232,.1);border:1px solid rgba(200,189,232,.25);font-family:var(--title);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:20px">Free Download</div>
-    <h2 style="font-family:var(--title);font-size:clamp(28px,3.8vw,48px);font-weight:400;color:#fff;line-height:1.1;margin-bottom:16px">An Introduction to <span style="color:var(--gold-bright)">NLP</span></h2>
-    <p style="font-size:15px;color:rgba(200,220,255,.7);line-height:1.82;max-width:540px;margin:0 auto 36px;font-weight:300">Fill in your details and we'll send you a link to download our Introduction to NLP guide, your first step towards understanding how to change the way you think, communicate and lead.</p>
+    <div style="display:inline-flex;align-items:center;gap:8px;padding:5px 16px;border-radius:100px;background:rgba(200,189,232,.1);border:1px solid rgba(200,189,232,.25);font-family:var(--title);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:20px">Free Taster Session</div>
+    <h2 class="cerise-metallic" style="font-family:var(--title);font-size:clamp(28px,3.8vw,48px);font-weight:400;line-height:1.1;margin-bottom:16px">Interested in a complimentary taster session?</h2>
+    <p style="font-size:15px;color:rgba(200,220,255,.7);line-height:1.82;max-width:540px;margin:0 auto 28px;font-weight:300">We're running an online NLP Practitioner Teaser on the following date &mdash; it is <strong style="color:#fff;font-weight:600">FREE</strong> to join!</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:0 auto 14px">
+      <div style="display:inline-flex;align-items:center;gap:9px;padding:11px 22px;border-radius:100px;background:rgba(255,255,255,.06);border:1px solid rgba(200,189,232,.25);font-family:var(--title);font-size:14px;letter-spacing:.05em;color:#fff"><span style="color:var(--gold-bright)">&#9679;</span>Tues 14th July</div>
+      <div style="display:inline-flex;align-items:center;gap:9px;padding:11px 22px;border-radius:100px;background:rgba(255,255,255,.06);border:1px solid rgba(200,189,232,.25);font-family:var(--title);font-size:14px;letter-spacing:.05em;color:#fff"><span style="color:var(--gold-bright)">&#9679;</span>12:00pm &ndash; 1:30pm</div>
+      <div style="display:inline-flex;align-items:center;gap:9px;padding:11px 22px;border-radius:100px;background:rgba(255,255,255,.06);border:1px solid rgba(200,189,232,.25);font-family:var(--title);font-size:14px;letter-spacing:.05em;color:#fff"><span style="color:var(--gold-bright)">&#9679;</span>Online via Zoom</div>
+    </div>
+    <!-- Countdown to event -->
+    <div id="taster-countdown-wrap" style="margin:26px auto 8px">
+      <p style="font-family:var(--title);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,220,255,.55);margin:0 0 12px">Time to go until the event</p>
+      <div id="taster-countdown" style="display:flex;gap:12px;justify-content:center">
+        <div style="width:78px;padding:13px 0 11px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(200,189,232,.25)"><div id="cd-days" style="font-family:var(--title);font-size:30px;font-weight:400;color:var(--gold-bright);line-height:1">00</div><div style="font-family:var(--title);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(200,220,255,.6);margin-top:6px">Days</div></div>
+        <div style="width:78px;padding:13px 0 11px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(200,189,232,.25)"><div id="cd-hours" style="font-family:var(--title);font-size:30px;font-weight:400;color:var(--gold-bright);line-height:1">00</div><div style="font-family:var(--title);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(200,220,255,.6);margin-top:6px">Hours</div></div>
+        <div style="width:78px;padding:13px 0 11px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(200,189,232,.25)"><div id="cd-mins" style="font-family:var(--title);font-size:30px;font-weight:400;color:var(--gold-bright);line-height:1">00</div><div style="font-family:var(--title);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(200,220,255,.6);margin-top:6px">Minutes</div></div>
+        <div style="width:78px;padding:13px 0 11px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(200,189,232,.25)"><div id="cd-secs" style="font-family:var(--title);font-size:30px;font-weight:400;color:var(--gold-bright);line-height:1">00</div><div style="font-family:var(--title);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(200,220,255,.6);margin-top:6px">Seconds</div></div>
+      </div>
+      <p id="taster-live" style="display:none;font-family:var(--title);font-size:16px;color:var(--gold-bright);margin:0"></p>
+    </div>
+
+    <p style="font-family:var(--title);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-bright);margin:0 auto 30px">Register to reserve your seat</p>
     <form id="freedownload-form" onsubmit="handleFreeDownload(event)" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center;max-width:860px;margin:0 auto">
       <!-- Formsubmit config -->
-      <input type="hidden" name="_subject" value="New NLP Download Request from Website"/>
-      <input type="hidden" name="_autoresponse" value="Thank you for contacting Connect2. We are happy for you to be joining us and will be in touch in the next 3 days to arrange everything for you. Many Thanks The Connect2 Team"/>
+      <input type="hidden" name="_subject" value="New Free NLP Taster Session Registration from Website"/>
+      <input type="hidden" name="_autoresponse" value="Thank you for registering for our free online NLP Practitioner Taster Session on Tuesday 14th July, 12:00pm - 1:30pm. Your seat is reserved and we will send you the Zoom link before the session. Many Thanks The Connect2 Team"/>
       <input type="hidden" name="_template" value="table"/>
       <input type="hidden" name="_captcha" value="false"/>
-      <input type="hidden" name="message" value="hello there - i have just completed the Download via your website and would like to be part of your NLP Introductory session. Please contact me."/>
+      <input type="hidden" name="message" value="Hello - I have just registered via your website for the free online NLP Practitioner Taster Session on Tuesday 14th July, 12:00pm - 1:30pm. Please reserve my seat and send me the Zoom link."/>
       <!-- Row 1 -->
       <input type="text" name="name" placeholder="Your Name" required style="padding:13px 16px;border-radius:8px;border:1.5px solid rgba(200,189,232,.25);background:rgba(255,255,255,.07);color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(200,189,232,.6)'" onblur="this.style.borderColor='rgba(200,189,232,.25)'"/>
       <input type="email" name="email" placeholder="Email Address" required style="padding:13px 16px;border-radius:8px;border:1.5px solid rgba(200,189,232,.25);background:rgba(255,255,255,.07);color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(200,189,232,.6)'" onblur="this.style.borderColor='rgba(200,189,232,.25)'"/>
@@ -321,11 +351,41 @@
           <option value="+20">🇪🇬 Egypt +20</option>
         </select>
         <input type="tel" name="phone" placeholder="Phone Number" style="flex:1;padding:13px 16px;border-radius:8px;border:1.5px solid rgba(200,189,232,.25);background:rgba(255,255,255,.07);color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(200,189,232,.6)'" onblur="this.style.borderColor='rgba(200,189,232,.25)'"/>
-        <button type="submit" class="btn-primary" style="white-space:nowrap;padding:13px 28px">Send Me the Guide →</button>
+        <button type="submit" class="btn-primary flash-soft" style="white-space:nowrap;padding:13px 28px">Reserve My Seat →</button>
       </div>
     </form>
-    <p id="freedownload-msg" style="margin-top:16px;font-family:var(--title);font-size:13px;color:var(--gold-bright);display:none">Thank you! We will be in touch within 3 days.</p>
+    <p id="freedownload-msg" style="margin-top:16px;font-family:var(--title);font-size:13px;color:var(--gold-bright);display:none">Thank you! Your seat is reserved. We will send your Zoom link before the session.</p>
   </div>
+  <script>
+  (function(){
+    var start = new Date('2026-07-14T12:00:00+02:00').getTime();
+    var end = new Date('2026-07-14T13:30:00+02:00').getTime();
+    var boxes = document.getElementById('taster-countdown');
+    var label = document.querySelector('#taster-countdown-wrap > p');
+    var live = document.getElementById('taster-live');
+    var d = document.getElementById('cd-days'), h = document.getElementById('cd-hours'),
+        m = document.getElementById('cd-mins'), s = document.getElementById('cd-secs');
+    function pad(n){ return (n < 10 ? '0' : '') + n; }
+    function tick(){
+      var now = Date.now();
+      if (now >= start) {
+        boxes.style.display = 'none';
+        label.style.display = 'none';
+        live.style.display = 'block';
+        live.textContent = now <= end ? "We're live right now — see you on Zoom!" : "This session has ended. Register below and we'll invite you to the next one.";
+        clearInterval(iv);
+        return;
+      }
+      var t = Math.floor((start - now) / 1000);
+      d.textContent = pad(Math.floor(t / 86400));
+      h.textContent = pad(Math.floor(t % 86400 / 3600));
+      m.textContent = pad(Math.floor(t % 3600 / 60));
+      s.textContent = pad(t % 60);
+    }
+    var iv = setInterval(tick, 1000);
+    tick();
+  })();
+  </script>
 </section>
 
 <!-- WHAT IS NLP -->
@@ -350,8 +410,8 @@
       <!-- Quotes -->
       <div style="padding:22px 26px 28px;text-align:center;border-top:1px solid rgba(0,0,0,.08)">
         <div style="width:36px;height:2px;background:var(--gold);margin:0 auto 18px;opacity:.8"></div>
-        <blockquote style="font-family:var(--title);font-size:clamp(14px,1.4vw,17px);font-style:normal;color:#1a1a1a;line-height:1.85;margin:0 0 6px;font-weight:400">"In the middle of difficulty lies opportunity.<br><br>The only source of knowledge is experience."</blockquote>
-        <div style="font-family:var(--title);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:14px">— Albert Einstein</div>
+        <blockquote style="font-family:var(--title);font-size:clamp(15.5px,1.55vw,19px);font-style:normal;color:#1a1a1a;line-height:1.85;margin:0 0 6px;font-weight:400">"In the middle of difficulty lies opportunity.<br>The only source of knowledge is experience."</blockquote>
+        <div style="font-family:var(--title);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cerise);margin-top:14px">— Albert Einstein</div>
       </div>
     </div>
   </div>
@@ -532,38 +592,42 @@
 
 <!-- TEAM -->
 <section class="about-section" id="sec-team" style="padding:80px 72px;background:var(--cream)">
-  <div style="display:grid;grid-template-columns:380px 1fr;gap:72px;align-items:center;max-width:1100px;margin:0 auto">
+  <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;justify-content:center;max-width:1100px;margin:0 auto">
 
-    <!-- Simon's photo -->
-    <div style="position:relative;border-radius:18px;overflow:hidden;box-shadow:0 12px 48px rgba(26,16,48,.18);height:100%;min-height:600px">
-      <img src="images/img-3.png" alt="Simon Gledhill" style="width:100%;height:100%;display:block;object-fit:cover;object-position:center top;position:absolute;inset:0"/>
-      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(26,16,48,.55) 0%,transparent 45%)"></div>
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:24px 24px 22px">
-        <div style="font-family:var(--title);font-size:16px;font-weight:400;color:#fff;margin-bottom:3px">Simon Gledhill</div>
-        <div style="font-family:var(--title);font-size:10px;color:var(--gold-bright);letter-spacing:.1em;text-transform:uppercase">Master Trainer · Founder</div>
+    <!-- LEFT: Simon's photo + Ubuntu -->
+    <div style="flex:0 1 440px;min-width:300px">
+      <div style="position:relative;border-radius:18px;overflow:hidden;box-shadow:0 12px 48px rgba(26,16,48,.18)">
+        <img src="images/simon-team.jpg" alt="Simon Gledhill" style="width:100%;height:auto;display:block"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(26,16,48,.55) 0%,transparent 45%)"></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:24px 24px 22px">
+          <div style="font-family:var(--title);font-size:16px;font-weight:400;color:#fff;margin-bottom:3px">Simon Gledhill</div>
+          <div style="font-family:var(--title);font-size:10px;color:var(--gold-bright);letter-spacing:.1em;text-transform:uppercase">Master Trainer · Founder</div>
+        </div>
       </div>
-    </div>
-
-    <!-- Write-up -->
-    <div>
-      <div class="eyebrow ew-cerise" style="margin-bottom:14px">Our Trainers</div>
-      <h2 class="section-title-cerise h2s" style="margin-bottom:22px">The Team Behind the Transformation</h2>
-
-      <p style="font-size:15.5px;color:var(--text);line-height:1.88;margin-bottom:18px;font-weight:400">Simon Gledhill has spent more than two decades building not just a training company, but a family of people who are deeply committed to the same mission: changing lives through the power of NLP. He has extraordinary faith in his team. Not blind faith, but the kind earned through years of working side by side, witnessing the breakthroughs they have sparked in clients, and seeing the calibre of human beings they choose to be every single day.</p>
-
-      <p style="font-size:15.5px;color:var(--text);line-height:1.88;margin-bottom:18px;font-weight:400">Simon's team works alongside him at every step. They are not just colleagues. They are dedicated practitioners who hold the same standard of excellence, the same hunger to grow, and the same unshakeable belief in the people they serve. Together they have certified thousands of coaches, trainers and leaders across the globe, and every one of those results is a shared victory.</p>
-
-      <p style="font-size:15.5px;color:var(--text);line-height:1.88;margin-bottom:24px;font-weight:400">At Connect2, we live by the African philosophy of <strong>Ubuntu</strong> — a word from the Nguni Bantu languages of Southern Africa that carries a meaning no single English word can fully capture.</p>
 
       <!-- Ubuntu callout -->
-      <div style="border-left:3px solid var(--gold);padding:16px 22px;background:rgba(212,175,55,.06);border-radius:0 10px 10px 0;margin-bottom:24px">
+      <div style="border-left:3px solid var(--gold);padding:16px 22px;background:rgba(212,175,55,.06);border-radius:0 10px 10px 0;margin:26px 0 20px">
         <p style="font-family:var(--serif);font-size:20px;font-style:italic;color:var(--blue2);line-height:1.55;margin:0 0 8px">"Umuntu ngumuntu ngabantu."</p>
         <p style="font-size:13px;color:var(--text-muted);margin:0;line-height:1.65"><strong>Ubuntu</strong> — A person is a person through other people. I am because we are. No one rises alone. We grow together, we succeed together, and we celebrate together.</p>
       </div>
 
-      <p style="font-size:15.5px;color:var(--text);line-height:1.88;margin-bottom:28px;font-weight:400">This is not a philosophy we hang on the wall. It is how we train, how we lead, and how we show up for every single client who walks through our doors.</p>
+      <p style="font-size:15.5px;color:var(--text);line-height:1.88;margin-bottom:24px;font-weight:400">This is not a philosophy we hang on the wall. It is how we train, how we lead, and how we show up for every single client who walks through our doors.</p>
 
       <span class="btn-primary" onclick="goPage('page-team')" style="display:inline-flex;cursor:pointer">Meet the Full Team →</span>
+    </div>
+
+    <!-- RIGHT: Write-up -->
+    <div style="flex:1 1 480px;min-width:0">
+      <div class="eyebrow ew-cerise" style="margin-bottom:14px">Our Trainers</div>
+      <h2 class="section-title-cerise h2s" style="margin-bottom:22px">The Team Behind the Transformation</h2>
+
+      <p style="font-size:15.5px;color:var(--text);line-height:1.88;margin-bottom:18px;font-weight:400">I&rsquo;m really proud to lead an amazing team of dedicated and passionate people who all share the same mission &mdash; changing lives through the power of NLP.</p>
+
+      <p style="font-size:15.5px;color:var(--text);line-height:1.88;margin-bottom:18px;font-weight:400">They&rsquo;re not just colleagues to me &mdash; they&rsquo;re genuinely exceptional humans. Every day, they bring high standards, real care, and a strong belief in the potential of every single person we work with. Together, we combine our skills, experience, and heart to help coaches, trainers, leaders, and individuals break through their barriers and create meaningful, lasting growth.</p>
+
+      <p style="font-size:15.5px;color:var(--text);line-height:1.88;margin-bottom:18px;font-weight:400">We&rsquo;ve now certified thousands of practitioners around the world, and every success story feels like a shared victory that reflects how committed this team truly is.</p>
+
+      <p style="font-size:15.5px;color:var(--text);line-height:1.88;margin-bottom:0;font-weight:400">At Connect2, we live by the African philosophy of <strong>Ubuntu</strong> — a word from the Nguni Bantu languages of Southern Africa that carries a meaning no single English word can fully capture.</p>
     </div>
 
   </div>
@@ -3891,19 +3955,19 @@
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
       <div style="background:var(--cream);border:1.5px solid var(--border);border-radius:14px;padding:28px;position:relative;overflow:hidden;transition:all .24s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
         <div style="font-family:var(--title);font-size:38px;font-weight:400;color:#000000;line-height:1;position:absolute;top:16px;right:20px">01</div>
-        <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Principle One</div>
+        <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:10px">Principle One</div>
         <div style="font-family:var(--title);font-size:16px;font-weight:400;color:var(--black);margin-bottom:10px">Start with the Outcome</div>
         <div style="font-size:13.5px;color:var(--text-muted);line-height:1.78;font-weight:300">Before anything else, we get crystal clear on what success looks like for you, in specific, measurable, real-world terms. Not what you want to feel. What you want to achieve.</div>
       </div>
       <div style="background:var(--cream);border:1.5px solid var(--border);border-radius:14px;padding:28px;position:relative;overflow:hidden;transition:all .24s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
         <div style="font-family:var(--title);font-size:38px;font-weight:400;color:#000000;line-height:1;position:absolute;top:16px;right:20px">02</div>
-        <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Principle Two</div>
+        <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:10px">Principle Two</div>
         <div style="font-family:var(--title);font-size:16px;font-weight:400;color:var(--black);margin-bottom:10px">Work at the Right Level</div>
         <div style="font-size:13.5px;color:var(--text-muted);line-height:1.78;font-weight:300">Most problems presented as strategy, skills or process challenges are actually rooted in beliefs, values or identity. We identify the real level and work there.</div>
       </div>
       <div style="background:var(--cream);border:1.5px solid var(--border);border-radius:14px;padding:28px;position:relative;overflow:hidden;transition:all .24s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
         <div style="font-family:var(--title);font-size:38px;font-weight:400;color:#000000;line-height:1;position:absolute;top:16px;right:20px">03</div>
-        <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Principle Three</div>
+        <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:10px">Principle Three</div>
         <div style="font-family:var(--title);font-size:16px;font-weight:400;color:var(--black);margin-bottom:10px">Use Proven Tools Precisely</div>
         <div style="font-size:13.5px;color:var(--text-muted);line-height:1.78;font-weight:300">NLP, Timeline Techniques, Hypnosis and Breakthrough Sessions are not applied generically. Each tool is chosen deliberately for each situation and person.</div>
       </div>
@@ -4340,7 +4404,7 @@
     <!-- Coaching -->
     <div style="background:var(--cream);border:1.5px solid var(--border);border-radius:16px;padding:36px;border-top:4px solid var(--gold);transition:all .26s;position:relative;overflow:hidden" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 44px rgba(124,111,176,.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
       <div style="font-size:36px;margin-bottom:18px">🧠</div>
-      <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Service One</div>
+      <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:8px">Service One</div>
       <h3 style="font-family:var(--title);font-size:21px;font-weight:400;color:var(--black);margin-bottom:13px">NLP Coaching</h3>
       <p style="font-size:14px;color:var(--text-muted);line-height:1.82;margin-bottom:20px;font-weight:300">One-to-one and group coaching using NLP, Timeline Techniques and Breakthrough Sessions to create rapid, lasting personal transformation.</p>
       <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:22px">
@@ -4658,41 +4722,41 @@
   </div>
 
   <!-- COURSE 0: NLP Demystified -->
-  <div id="course-demystified" style="scroll-margin-top:80px;background:linear-gradient(135deg,var(--blue1),#362278);border:1.5px solid rgba(212,175,55,.35);border-radius:16px;overflow:hidden;margin-bottom:20px;box-shadow:0 4px 24px rgba(26,16,48,.18)">
+  <div id="course-demystified" style="scroll-margin-top:80px;background:#fff;border:1.5px solid rgba(233,30,99,.35);border-radius:16px;overflow:hidden;margin-bottom:20px;box-shadow:0 2px 14px rgba(26,16,48,.06)">
     <div style="display:grid;grid-template-columns:1fr auto;align-items:start;padding:36px 40px 32px;cursor:pointer;gap:20px" onclick="toggleCourse('demystified')">
       <div>
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
-          <div style="width:48px;height:48px;border-radius:12px;background:rgba(212,175,55,.15);border:1.5px solid rgba(212,175,55,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+          <div style="width:48px;height:48px;border-radius:12px;background:var(--blue-light);border:1.5px solid rgba(79,61,140,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue2)" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
           <div>
             <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
-              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:rgba(212,175,55,.15);color:var(--gold-bright);border:1px solid rgba(212,175,55,.35);letter-spacing:.08em;text-transform:uppercase">Introductory</span>
-              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:rgba(255,255,255,.07);color:rgba(200,220,255,.8);border:1px solid rgba(255,255,255,.12);letter-spacing:.06em">2-Day Immersive</span>
-              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:rgba(212,175,55,.1);color:var(--gold-bright);border:1px solid rgba(212,175,55,.25);letter-spacing:.06em">Not Sure Where to Start?</span>
+              <span style="font-family:var(--title);font-size:10px;font-weight:600;padding:3px 10px;border-radius:100px;background:rgba(233,30,99,.08);color:#e91e63;border:1px solid rgba(233,30,99,.35);letter-spacing:.08em;text-transform:uppercase">Introductory</span>
+              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:var(--blue-light);color:var(--blue2);border:1px solid rgba(79,61,140,.18);letter-spacing:.06em">2-Day Immersive</span>
+              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:rgba(79,61,140,.06);color:var(--blue2);border:1px solid rgba(79,61,140,.2);letter-spacing:.06em">Not Sure Where to Start?</span>
             </div>
-            <h3 style="font-family:var(--title);font-size:clamp(18px,2vw,24px);font-weight:400;color:#fff;margin:0;line-height:1.12">NLP Demystified</h3>
+            <h3 style="font-family:var(--title);font-size:clamp(18px,2vw,24px);font-weight:400;color:var(--black);margin:0;line-height:1.12">NLP Demystified</h3>
           </div>
         </div>
-        <p style="font-size:14.5px;color:rgba(200,220,255,.75);line-height:1.82;margin-bottom:0;max-width:680px;font-weight:300">This course will introduce and guide you through a range of techniques from the basic levels of NLP to the advanced. During this immersive experience, you will uncover how Neuro-Linguistic Programming works beneath the surface, transforming how you think, feel and act in real time. The ideal starting point for anyone curious about NLP.</p>
+        <p style="font-size:14.5px;color:var(--text-muted);line-height:1.82;margin-bottom:0;max-width:680px;font-weight:300">This course will introduce and guide you through a range of techniques from the basic levels of NLP to the advanced. During this immersive experience, you will uncover how Neuro-Linguistic Programming works beneath the surface, transforming how you think, feel and act in real time. The ideal starting point for anyone curious about NLP.</p>
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-top:4px">
-        <div id="demystified-arrow" style="width:36px;height:36px;border-radius:50%;background:rgba(212,175,55,.15);border:1.5px solid rgba(212,175,55,.35);display:flex;align-items:center;justify-content:center;transition:transform .25s;flex-shrink:0"><svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="var(--gold-bright)" stroke-width="2"><polyline points="2,4 6,8 10,4"/></svg></div>
-        <span style="font-family:var(--title);font-size:10px;color:var(--gold-bright);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid rgba(212,175,55,.4);padding-bottom:1px;white-space:nowrap">Explore Course</span>
+        <div id="demystified-arrow" style="width:36px;height:36px;border-radius:50%;background:var(--blue-light);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:transform .25s;flex-shrink:0"><svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="var(--blue2)" stroke-width="2"><polyline points="2,4 6,8 10,4"/></svg></div>
+        <span style="font-family:var(--title);font-size:10px;color:#e91e63;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid rgba(233,30,99,.4);padding-bottom:1px;white-space:nowrap">Explore Course</span>
       </div>
     </div>
-    <div id="demystified-body" style="display:none;border-top:1.5px solid rgba(212,175,55,.2)">
+    <div id="demystified-body" style="display:none;border-top:1.5px solid var(--border)">
       <!-- Welcome intro -->
-      <div style="background:rgba(212,175,55,.08);padding:24px 40px;border-bottom:1px solid rgba(212,175,55,.15)">
+      <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:24px 40px;border-bottom:1px solid rgba(200,189,232,.15)">
         <p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.78;margin:0;font-style:italic">&#8220;Welcome to NLP Demystified. This course will introduce and guide you through a range of techniques from the basic levels of NLP to the advanced. Whether you are new to personal development or simply curious, this is your ideal first step.&#8221;</p>
       </div>
       <!-- Topic accordions -->
       <div style="padding:32px 40px;display:flex;flex-direction:column;gap:0">
 
         <!-- Topic 1 -->
-        <div class="da-item open" onclick="toggleDa(this)" style="border-color:rgba(200,189,232,.15)">
+        <div class="da-item open" onclick="toggleDa(this)">
           <div class="da-q">
-            <div class="da-num" style="background:rgba(212,175,55,.15);color:var(--gold-bright);border-color:rgba(212,175,55,.3)">1</div>
-            <div class="da-qlabel" style="color:#fff">Presuppositions of NLP</div>
-            <div class="da-icon" style="color:var(--gold-bright)">+</div>
+            <div class="da-num">1</div>
+            <div class="da-qlabel">Presuppositions of NLP</div>
+            <div class="da-icon">+</div>
           </div>
           <div class="da-body">
             <p>At Connect2, we believe that respect for other individuals' models of the world is integral to all our work. Every person you encounter is doing the best they can with the resources available to them. People often fail to recognise that the answers they seek are within reach. This module aims to unlock that hidden potential, shifting how you see yourself and those around you.</p>
@@ -4701,11 +4765,11 @@
         </div>
 
         <!-- Topic 2 -->
-        <div class="da-item" onclick="toggleDa(this)" style="border-color:rgba(200,189,232,.15)">
+        <div class="da-item" onclick="toggleDa(this)">
           <div class="da-q">
-            <div class="da-num" style="background:rgba(212,175,55,.15);color:var(--gold-bright);border-color:rgba(212,175,55,.3)">2</div>
-            <div class="da-qlabel" style="color:#fff">The Success Mindset</div>
-            <div class="da-icon" style="color:var(--gold-bright)">+</div>
+            <div class="da-num">2</div>
+            <div class="da-qlabel">The Success Mindset</div>
+            <div class="da-icon">+</div>
           </div>
           <div class="da-body">
             <p>The success mindset sets the foundation for achieving your personal goals. This module explores the internal frames that separate people who consistently achieve from those who do not. You will examine and begin to shift your own patterns around the following:</p>
@@ -4714,11 +4778,11 @@
         </div>
 
         <!-- Topic 3 -->
-        <div class="da-item" onclick="toggleDa(this)" style="border-color:rgba(200,189,232,.15)">
+        <div class="da-item" onclick="toggleDa(this)">
           <div class="da-q">
-            <div class="da-num" style="background:rgba(212,175,55,.15);color:var(--gold-bright);border-color:rgba(212,175,55,.3)">3</div>
-            <div class="da-qlabel" style="color:#fff">Prime Directives of the Unconscious Mind</div>
-            <div class="da-icon" style="color:var(--gold-bright)">+</div>
+            <div class="da-num">3</div>
+            <div class="da-qlabel">Prime Directives of the Unconscious Mind</div>
+            <div class="da-icon">+</div>
           </div>
           <div class="da-body">
             <p>The unconscious mind is the seat of all emotion, habit and automatic behaviour. Its primary functions are to store and organise memories and to maintain the integrity and wellbeing of the body. Understanding how the unconscious operates — and how to work with it rather than against it — is one of the most profound insights NLP offers. In this module you will discover the key directives that drive behaviour beneath your awareness and learn how to align your unconscious with your conscious goals.</p>
@@ -4726,11 +4790,11 @@
         </div>
 
         <!-- Topic 4 -->
-        <div class="da-item" onclick="toggleDa(this)" style="border-color:rgba(200,189,232,.15)">
+        <div class="da-item" onclick="toggleDa(this)">
           <div class="da-q">
-            <div class="da-num" style="background:rgba(212,175,55,.15);color:var(--gold-bright);border-color:rgba(212,175,55,.3)">4</div>
-            <div class="da-qlabel" style="color:#fff">The NLP Model of Communication</div>
-            <div class="da-icon" style="color:var(--gold-bright)">+</div>
+            <div class="da-num">4</div>
+            <div class="da-qlabel">The NLP Model of Communication</div>
+            <div class="da-icon">+</div>
           </div>
           <div class="da-body">
             <p>Before experience is processed by the conscious mind, it passes through a rich set of neurological and linguistic filters. These filters impose deletions, distortions and generalisations on everything we perceive, creating our unique internal map of reality. NLP pioneer John Grinder referred to raw sensory experience before conscious labelling as <em>first access</em>. Understanding this model reveals why two people can experience the same event entirely differently — and gives you the tools to expand your own map of the world.</p>
@@ -4738,11 +4802,11 @@
         </div>
 
         <!-- Topic 5 -->
-        <div class="da-item" onclick="toggleDa(this)" style="border-color:rgba(200,189,232,.15)">
+        <div class="da-item" onclick="toggleDa(this)">
           <div class="da-q">
-            <div class="da-num" style="background:rgba(212,175,55,.15);color:var(--gold-bright);border-color:rgba(212,175,55,.3)">5</div>
-            <div class="da-qlabel" style="color:#fff">Clarity, Direction &amp; SMART Goals</div>
-            <div class="da-icon" style="color:var(--gold-bright)">+</div>
+            <div class="da-num">5</div>
+            <div class="da-qlabel">Clarity, Direction &amp; SMART Goals</div>
+            <div class="da-icon">+</div>
           </div>
           <div class="da-body">
             <p>This module takes you through a structured process of personal discovery and goal-setting. You will work through three interconnected stages:</p>
@@ -4757,11 +4821,11 @@
         </div>
 
         <!-- Topic 6 -->
-        <div class="da-item" onclick="toggleDa(this)" style="border-color:rgba(200,189,232,.15)">
+        <div class="da-item" onclick="toggleDa(this)">
           <div class="da-q">
-            <div class="da-num" style="background:rgba(212,175,55,.15);color:var(--gold-bright);border-color:rgba(212,175,55,.3)">6</div>
-            <div class="da-qlabel" style="color:#fff">Values &amp; The Dickens Process</div>
-            <div class="da-icon" style="color:var(--gold-bright)">+</div>
+            <div class="da-num">6</div>
+            <div class="da-qlabel">Values &amp; The Dickens Process</div>
+            <div class="da-icon">+</div>
           </div>
           <div class="da-body">
             <p>Sociologist Morris Massey identified three major periods during which our core values are formed:</p>
@@ -4775,11 +4839,11 @@
         </div>
 
         <!-- Topic 7 -->
-        <div class="da-item" onclick="toggleDa(this)" style="border-color:rgba(200,189,232,.15)">
+        <div class="da-item" onclick="toggleDa(this)">
           <div class="da-q">
-            <div class="da-num" style="background:rgba(212,175,55,.15);color:var(--gold-bright);border-color:rgba(212,175,55,.3)">7</div>
-            <div class="da-qlabel" style="color:#fff">Representational Systems (V · K · A · Ad)</div>
-            <div class="da-icon" style="color:var(--gold-bright)">+</div>
+            <div class="da-num">7</div>
+            <div class="da-qlabel">Representational Systems (V · K · A · Ad)</div>
+            <div class="da-icon">+</div>
           </div>
           <div class="da-body">
             <p>We each have a preferred way of processing and making sense of the world. NLP identifies four primary representational systems:</p>
@@ -4795,8 +4859,8 @@
 
       </div>
       <!-- Footer -->
-      <div style="padding:24px 40px;background:rgba(255,255,255,.04);border-top:1px solid rgba(200,189,232,.12);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
-        <div style="font-size:13px;color:rgba(200,220,255,.6)">Live &amp; Online · Introductory Level · No Prerequisites</div>
+      <div style="padding:24px 40px;background:var(--blue-pale);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
+        <div style="font-size:13px;color:var(--text-mid)">Live &amp; Online · Introductory Level · No Prerequisites</div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <span class="btn-sm-gold" style="cursor:pointer">Enrol Now</span>
           <a href="https://calendar.google.com/calendar/u/0/r" class="btn-sm-ghost" target="_blank">Ask a Question</a>
@@ -4830,7 +4894,7 @@
       <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;Imagine having the resources, the resilience, and proven techniques to step out of your comfort zone and begin experiencing more of whatever you know you can have — from this moment on.&#8221;</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">What You Will Learn</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">What You Will Learn</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The NLP model of communication</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Empowerment: being at cause vs effect</li>
@@ -4841,7 +4905,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Tools & Techniques</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Tools & Techniques</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Rapport building and reading people</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The power of state and how to shift it</li>
@@ -4852,7 +4916,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Who It Is For</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Who It Is For</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Anyone ready to create real change</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>People feeling stuck or limited</li>
@@ -4895,7 +4959,7 @@
       <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;What is important to us determines what we do or do not do, and ultimately determines our results. An understanding of this field will assist incredibly in all areas of life.&#8221;</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Core Concepts</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Core Concepts</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Understanding values systems and thinking levels</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Why people behave the way they do</li>
@@ -4906,7 +4970,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Applications</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Applications</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Family and intimate relationships</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Business and leadership communication</li>
@@ -4917,7 +4981,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Outcomes</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Outcomes</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Read and match any person's values system</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Communicate with anyone at their level</li>
@@ -4960,7 +5024,7 @@
       <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;Increasingly, the world demands that we communicate powerfully and effectively. Whether in meetings, public speaking or online. The ability to differentiate yourself is key to succeeding.&#8221;</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">What You Will Master</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">What You Will Master</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Presence, state and performance on stage</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Voice, tonality and delivery mastery</li>
@@ -4971,7 +5035,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Advanced Skills</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Advanced Skills</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Reading audience states in real time</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Adjusting your communication mid-presentation</li>
@@ -4982,7 +5046,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Ideal For</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Ideal For</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Business leaders and executives</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Sales professionals</li>
@@ -5025,7 +5089,7 @@
       <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;If you are looking to increase your coaching ability within your current role or are considering coaching as a part-time or full-time career, this is the essential step before your first real client session.&#8221;</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Core Coaching Skills</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Core Coaching Skills</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The coaching framework and methodology</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Asking powerful, transformative questions</li>
@@ -5036,7 +5100,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">NLP Coaching Techniques</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">NLP Coaching Techniques</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Timeline coaching for lasting change</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Values-based coaching conversations</li>
@@ -5047,7 +5111,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Career Outcomes</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Career Outcomes</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Confidence to take on paying clients</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>A complete coaching process from intake to close</li>
@@ -5090,7 +5154,7 @@
       <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;The demand for hypnosis interventions is increasing rapidly. This course equips you to help yourself and others create lasting change using one of the most powerful tools in the human change arena.&#8221;</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">What You Will Learn</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">What You Will Learn</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>History and science of hypnosis</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Dave Elman induction method</li>
@@ -5101,7 +5165,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Practical Skills</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Practical Skills</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Conducting a full hypnosis session</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Identifying and working with trance states</li>
@@ -5112,7 +5176,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Who Benefits</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Who Benefits</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>NLP Practitioners wanting expanded tools</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Coaches adding hypnotherapy to their practice</li>
@@ -5178,7 +5242,7 @@
 
       <!-- Why Attend -->
       <div style="padding:32px 40px;border-bottom:1.5px solid var(--border)">
-        <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px">Why Attend</div>
+        <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:18px">Why Attend</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
           <div style="padding:18px 20px;border:1px solid var(--border);border-radius:10px;background:var(--blue-pale)">
             <div style="font-family:var(--title);font-size:13px;color:var(--black);margin-bottom:6px">Foundations of NLP &amp; Its Underlying Models</div>
@@ -5201,7 +5265,7 @@
 
       <!-- Course Modules -->
       <div style="padding:32px 40px;border-bottom:1.5px solid var(--border)">
-        <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px">What You Will Learn</div>
+        <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:18px">What You Will Learn</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
 
           <div>
@@ -5296,7 +5360,7 @@
 
       <!-- How It Works -->
       <div style="padding:28px 40px;border-bottom:1.5px solid var(--border);background:var(--blue-pale)">
-        <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">How Can You Learn This in Just 7 Days?</div>
+        <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:16px">How Can You Learn This in Just 7 Days?</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start">
           <div>
             <div style="font-family:var(--title);font-size:14px;color:var(--black);margin-bottom:8px">Pre-Study Programme — Included in the Price</div>
@@ -5312,7 +5376,7 @@
       <!-- 3-Column: Certifications | Programme Details | Who Is It For -->
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">4 Certifications Included</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">4 Certifications Included</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>NLP Practitioner</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Time Line Therapy®</li>
@@ -5321,7 +5385,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Programme Details</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Programme Details</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>7 days live in-person training</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>~70 hours pre-study included (audio + books)</li>
@@ -5333,7 +5397,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Who Is This For</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Who Is This For</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Coaches, therapists, and counsellors</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Business leaders and sales professionals</li>
@@ -5380,7 +5444,7 @@
       <!-- 3 Phases -->
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Phase 1</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:6px">Phase 1</div>
           <div style="font-family:var(--title);font-size:13px;font-weight:400;color:var(--black);margin-bottom:10px">5 Days · Live In-Person</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>NLP Material serves as Pre-Course Training</li>
@@ -5391,7 +5455,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Phase 2</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:6px">Phase 2</div>
           <div style="font-family:var(--title);font-size:13px;font-weight:400;color:var(--black);margin-bottom:10px">Virtual Live · Weekly Sessions</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Weekly live online lectures with your trainer</li>
@@ -5402,7 +5466,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Phase 3</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:6px">Phase 3</div>
           <div style="font-family:var(--title);font-size:13px;font-weight:400;color:var(--black);margin-bottom:10px">5 Days · Live In-Person</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Advanced NLP modelling and excellence</li>
@@ -5419,7 +5483,7 @@
         <div style="display:flex;align-items:flex-start;gap:24px">
           <div style="font-size:40px;flex-shrink:0;line-height:1">🪵</div>
           <div>
-            <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">The Highlight of the Programme</div>
+            <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:8px">The Highlight of the Programme</div>
             <h4 style="font-family:var(--title);font-size:20px;font-weight:400;color:#fff;margin:0 0 14px;line-height:1.2">The Board Breaking Breakthrough Session</h4>
             <p style="font-size:14px;color:rgba(200,220,255,.8);line-height:1.85;margin-bottom:12px;font-weight:300">On the final day of Phase 3, every participant takes part in one of the most powerful and memorable moments of their NLP journey — the Board Breaking Breakthrough Session. In this extraordinary live experience, each participant physically breaks through a solid wooden board with their bare hand.</p>
             <p style="font-size:14px;color:rgba(200,220,255,.8);line-height:1.85;margin-bottom:12px;font-weight:300">But this is far more than a physical act. The board represents every limitation, fear, self-doubt and story that has ever held you back. Written on the board before the break are the words of your limitation. On the other side — the life you are stepping into. In the moment you break through, you are not just breaking a board. You are making a declaration to yourself, witnessed by your peers, that those limitations no longer have power over you.</p>
@@ -5430,7 +5494,7 @@
 
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Who This Is For</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Who This Is For</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Certified NLP Practitioners</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Professional coaches wanting deeper tools</li>
@@ -5473,7 +5537,7 @@
       <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;The skills you will learn, practise and demonstrate will give you the confidence and mastery to develop and deliver world-class interventions, workshops, speeches and seminars in any arena.&#8221;</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Training Mastery</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Training Mastery</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>State management for training and presenting</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Designing and delivering NLP trainings</li>
@@ -5484,7 +5548,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Communication Excellence</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Communication Excellence</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Mastery of all NLP language patterns</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Teaching complex concepts simply</li>
@@ -5495,7 +5559,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Professional Outcomes</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Professional Outcomes</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>IFNLP Certified Trainer of NLP</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Authority to certify Practitioners</li>
@@ -5538,7 +5602,7 @@
       <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;Work with masters in the field who are dedicated to ensuring your development and success — supporting you at all times and ensuring optimum transfer of skills and knowledge.&#8221;</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Master Trainer Standards</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Master Trainer Standards</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Demonstrating mastery across all NLP levels</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Training and certifying NLP Trainers</li>
@@ -5549,7 +5613,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Programme Structure</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Programme Structure</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Tailored to your existing experience</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>One-to-one mentorship sessions</li>
@@ -5560,7 +5624,7 @@
           </ul>
         </div>
         <div style="padding:28px 32px">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Recognition & Authority</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Recognition & Authority</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>IFNLP Master Trainer certification</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Authority to certify NLP Trainers</li>
@@ -5957,7 +6021,7 @@
     <!-- ④ COURSE MODULES -->
     <div style="margin-bottom:72px">
       <div class="eyebrow ew-cerise" style="margin-bottom:12px">The Full Curriculum</div>
-      <h2 style="font-family:var(--title);font-size:clamp(24px,3vw,38px);font-weight:400;color:var(--black);margin-bottom:10px;line-height:1.15">What You Will Learn</h2>
+      <h2 style="font-family:var(--title);font-size:clamp(24px,3vw,38px);font-weight:400;color:var(--blue2);margin-bottom:10px;line-height:1.15">What You Will Learn</h2>
       <p style="font-size:15px;color:var(--text-muted);line-height:1.85;max-width:700px;font-weight:300;margin-bottom:48px">The Connect2 NLP Practitioner covers the complete internationally recognised curriculum, and goes further, integrating Time Line Therapy®, NLP Coaching and Hypnosis into a unified fast-change methodology you can apply from day one. Every topic is taught and practised live, so you leave with genuine competence and confidence.</p>
 
       <!-- Module 1 -->
@@ -6485,7 +6549,7 @@
     <!-- ③ CURRICULUM -->
     <div style="margin-bottom:72px">
       <div class="eyebrow ew-cerise" style="margin-bottom:12px">The Full Curriculum</div>
-      <h2 style="font-family:var(--title);font-size:clamp(24px,3vw,38px);font-weight:400;color:var(--black);margin-bottom:10px;line-height:1.15">What You Will Learn</h2>
+      <h2 style="font-family:var(--title);font-size:clamp(24px,3vw,38px);font-weight:400;color:var(--blue2);margin-bottom:10px;line-height:1.15">What You Will Learn</h2>
       <p style="font-size:15px;color:var(--text-muted);line-height:1.85;max-width:700px;font-weight:300;margin-bottom:48px">The Connect2 NLP Trainers Training curriculum covers every dimension of exceptional NLP training — from the inner game of the trainer to the outer craft of training design, group leadership and business development. Nothing is left out.</p>
 
       <div style="margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--border)">
@@ -6598,7 +6662,7 @@
         <div style="display:flex;align-items:flex-start;gap:24px">
           <div style="font-size:40px;flex-shrink:0;line-height:1">🎤</div>
           <div>
-            <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Throughout the Programme</div>
+            <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:8px">Throughout the Programme</div>
             <h4 style="font-family:var(--title);font-size:20px;font-weight:400;color:#fff;margin:0 0 14px;line-height:1.2">Present Every Day. Improve Every Day.</h4>
             <p style="font-size:14px;color:rgba(200,220,255,.8);line-height:1.85;margin-bottom:12px;font-weight:300">Every day of the Trainers Training, you present. Every day, you receive personal feedback from a Connect2 Trainer. Every day, you improve. This is a programme where you develop excellence in real time, in front of your peers and your trainer.</p>
             <p style="font-size:14px;color:rgba(200,220,255,.8);line-height:1.85;margin-bottom:0;font-weight:300">On completion you will not just know how to train NLP. You will be a trainer of NLP in every fibre of your being.</p>
@@ -6658,7 +6722,7 @@
       <!-- Entry Requirement -->
       <div style="border:1.5px solid var(--border);border-radius:14px;overflow:hidden;background:#fff">
         <div style="padding:20px 28px;background:var(--blue-pale);border-bottom:1.5px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">Entry Requirement</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:4px">Entry Requirement</div>
           <div style="font-family:var(--title);font-size:15px;color:var(--black)">NLP Master Practitioner Certification Required</div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
@@ -7042,7 +7106,7 @@
     <!-- ④ COURSE MODULES -->
     <div style="margin-bottom:72px">
       <div class="eyebrow ew-cerise" style="margin-bottom:12px">The Full Curriculum</div>
-      <h2 style="font-family:var(--title);font-size:clamp(24px,3vw,38px);font-weight:400;color:var(--black);margin-bottom:10px;line-height:1.15">What You Will Learn</h2>
+      <h2 style="font-family:var(--title);font-size:clamp(24px,3vw,38px);font-weight:400;color:var(--blue2);margin-bottom:10px;line-height:1.15">What You Will Learn</h2>
       <p style="font-size:15px;color:var(--text-muted);line-height:1.85;max-width:700px;font-weight:300;margin-bottom:48px">The Connect2 NLP Master Practitioner curriculum goes beyond a review of Practitioner content. Every module introduces new and advanced material — much of it not available at any other level of NLP training — and integrates it with what you already know to create a complete, unified master-level methodology.</p>
 
       <div style="margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--border)">
@@ -7166,7 +7230,7 @@
         <div style="display:flex;align-items:flex-start;gap:24px">
           <div style="font-size:40px;flex-shrink:0;line-height:1">🪵</div>
           <div>
-            <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">The Experience That Changes Everything</div>
+            <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:8px">The Experience That Changes Everything</div>
             <h4 style="font-family:var(--title);font-size:20px;font-weight:400;color:#fff;margin:0 0 14px;line-height:1.2">Your Personal Breakthrough &amp; Board Breaking Session</h4>
             <p style="font-size:14px;color:rgba(200,220,255,.8);line-height:1.85;margin-bottom:12px;font-weight:300">On the final day of Phase 3, every participant takes part in one of the most powerful moments of their NLP journey. Each participant physically breaks through a solid wooden board with their bare hand. The board represents every limitation, fear, self-doubt and story that has ever held you back. Written on the board before the break are the words of your limitation. On the other side — the life you are stepping into.</p>
             <p style="font-size:14px;color:rgba(200,220,255,.8);line-height:1.85;margin-bottom:0;font-weight:300">Graduates consistently describe this as the single most transformative experience of their lives. Immediately following, participants receive their certificates in a formal Certification Ceremony — a celebration of the person they have become.</p>
@@ -7236,7 +7300,7 @@
       <!-- Entry Requirement -->
       <div style="border:1.5px solid var(--border);border-radius:14px;overflow:hidden;background:#fff">
         <div style="padding:20px 28px;background:var(--blue-pale);border-bottom:1.5px solid var(--border)">
-          <div style="font-family:var(--title);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">Entry Requirement</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:4px">Entry Requirement</div>
           <div style="font-family:var(--title);font-size:15px;color:var(--black)">NLP Practitioner Certification Required</div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
