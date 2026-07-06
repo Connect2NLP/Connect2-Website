@@ -75,9 +75,10 @@
         <div class="nav-dd-label">Short Courses</div>
         <span class="nav-dd-item" onclick="goPage('page-courses');setTimeout(()=>{document.getElementById('course-demystified').scrollIntoView({behavior:'smooth'});toggleCourse('demystified');},200)">NLP Demystified</span>
         <span class="nav-dd-item" onclick="goPage('page-courses');setTimeout(()=>{document.getElementById('course-c2life').scrollIntoView({behavior:'smooth'});toggleCourse('c2life');},200)">C2 Your Life (2 Days)</span>
+        <span class="nav-dd-item" onclick="goPage('page-courses');setTimeout(()=>{document.getElementById('course-communication').scrollIntoView({behavior:'smooth'});toggleCourse('communication');},200)">C2 Communication (2 Days)</span>
         <span class="nav-dd-item" onclick="goPage('page-courses');setTimeout(()=>{document.getElementById('course-values').scrollIntoView({behavior:'smooth'});toggleCourse('values');},200)">C2 Values</span>
         <span class="nav-dd-item" onclick="goPage('page-courses');setTimeout(()=>{document.getElementById('course-presenting').scrollIntoView({behavior:'smooth'});toggleCourse('presenting');},200)">C2 Presenting</span>
-        <span class="nav-dd-item" onclick="goPage('page-courses');setTimeout(()=>{document.getElementById('course-coaching').scrollIntoView({behavior:'smooth'});toggleCourse('coaching-course');},200)">C2 Coaching</span>
+        <span class="nav-dd-item" onclick="goPage('page-courses');setTimeout(()=>{document.getElementById('course-coaching').scrollIntoView({behavior:'smooth'});toggleCourse('coaching');},200)">C2 Coaching (3 Days)</span>
         <span class="nav-dd-item" onclick="goPage('page-courses');setTimeout(()=>{document.getElementById('course-hypnosis').scrollIntoView({behavior:'smooth'});toggleCourse('hypnosis');},200)">C2 Hypnosis (3 Days)</span>
         <div class="nav-dd-divider"></div>
         <div class="nav-dd-label">Certification Training</div>
@@ -4887,11 +4888,11 @@
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-top:4px">
         <div id="c2life-arrow" style="width:36px;height:36px;border-radius:50%;background:var(--blue-light);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:transform .25s;flex-shrink:0"><svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="var(--blue2)" stroke-width="2"><polyline points="2,4 6,8 10,4"/></svg></div>
-        <a href="https://connect2nlp.com/c2-your-life/" target="_blank" onclick="event.stopPropagation()" style="font-family:var(--title);font-size:10px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap">View Course ↗</a>
+        <span onclick="event.stopPropagation();toggleCourse('c2life')" style="font-family:var(--title);font-size:10px;color:var(--blue2);letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap;cursor:pointer">View Course</span>
       </div>
     </div>
     <div id="c2life-body" style="display:none;border-top:1.5px solid var(--border)">
-      <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;Imagine having the resources, the resilience, and proven techniques to step out of your comfort zone and begin experiencing more of whatever you know you can have — from this moment on.&#8221;</p></div>
+      <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;Choose an area of your life in which you are determined to make a change, know why you want this, be ready to play at 100% &mdash; and then all you have to do is make the decision to join us for 2 life-changing days.&#8221;</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
           <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">What You Will Learn</div>
@@ -4907,29 +4908,94 @@
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
           <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Tools & Techniques</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Rapport building and reading people</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The power of state and how to shift it</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Goal-setting using NLP outcomes</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Anchoring positive states</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Submodalities: reprogramming your mind</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Parts integration for inner conflict</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>How the unconscious mind drives behaviour</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Clearing negative thinking about past events</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Understanding your motivation direction</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Silencing negative self-talk loops</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Results-oriented goal-setting: commit to a real goal during the course</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Optional accountability group after the course</li>
           </ul>
         </div>
         <div style="padding:28px 32px">
           <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Who It Is For</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Anyone ready to create real change</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>People feeling stuck or limited</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Those wanting more from life</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>People who sense they can achieve more</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Those curious about their potential in career, relationships or health</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Anyone who wishes certain areas of life were different</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Those feeling life is simply happening to them</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Coaches expanding their toolkit</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Leaders seeking self-mastery</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Complete beginners: no experience needed</li>
           </ul>
         </div>
       </div>
       <div style="padding:22px 40px;border-top:1.5px solid var(--border);display:flex;gap:14px;align-items:center;background:var(--blue-pale)">
-        <a href="https://connect2nlp.com/c2-your-life/" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">View Full Course Details ↗</a>
-        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Book a Call to Enrol</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">Enrol Now →</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Ask a Question</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COURSE 1B: C2 Communication -->
+  <div id="course-communication" style="scroll-margin-top:80px;background:var(--cream);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:20px;box-shadow:0 2px 14px rgba(26,16,48,.05)">
+    <div style="display:grid;grid-template-columns:1fr auto;align-items:start;padding:36px 40px 32px;cursor:pointer;gap:20px" onclick="toggleCourse('communication')">
+      <div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
+          <div style="width:48px;height:48px;border-radius:12px;background:var(--blue-light);border:1.5px solid rgba(79,61,140,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue2)" stroke-width="1.7"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
+          <div>
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:var(--blue-light);color:var(--blue2);border:1px solid rgba(79,61,140,.18);letter-spacing:.08em;text-transform:uppercase">Short Course</span>
+              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:rgba(79,61,140,.06);color:var(--text-muted);border:1px solid var(--border);letter-spacing:.06em">2 Days</span>
+            </div>
+            <h3 style="font-family:var(--title);font-size:clamp(17px,1.8vw,22px);font-weight:400;color:var(--black);margin:0;line-height:1.12">C2 Communication</h3>
+          </div>
+        </div>
+        <p style="font-size:14.5px;color:var(--text-muted);line-height:1.82;margin-bottom:0;max-width:680px;font-weight:300">Effective communication is often the difference between accomplishing what you set out to achieve or not. Learn how great communicators work at both the conscious and unconscious level, and gain the skills to consistently achieve the outcomes you want.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-top:4px">
+        <div id="communication-arrow" style="width:36px;height:36px;border-radius:50%;background:var(--blue-light);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:transform .25s;flex-shrink:0"><svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="var(--blue2)" stroke-width="2"><polyline points="2,4 6,8 10,4"/></svg></div>
+        <span onclick="event.stopPropagation();toggleCourse('communication')" style="font-family:var(--title);font-size:10px;color:var(--blue2);letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap;cursor:pointer">View Course</span>
+      </div>
+    </div>
+    <div id="communication-body" style="display:none;border-top:1.5px solid var(--border)">
+      <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;The meaning of your communication is the response that you get. It's a key factor that determines whether you get what you want in life &mdash; or what you don't want.&#8221;</p></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
+        <div style="padding:28px 32px;border-right:1px solid var(--border)">
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Fundamentals</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The NLP model of communication: how we run our mind</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Empowerment: be at cause or effect</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Reasons vs Results</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Empowering beliefs and ways of thinking</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Rapport: conscious and unconscious</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The 4 subsets of verbal communication</li>
+          </ul>
+        </div>
+        <div style="padding:28px 32px;border-right:1px solid var(--border)">
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Advanced Communication</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Albert Mehrabian's 7-38-55 rule</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Beyond basic body language</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Presuppositions in language</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Hypnotic language patterns to gain buy-in</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Meta-model questioning to get to specifics</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Reframing (content and context) and the 3 fundamental meta programs</li>
+          </ul>
+        </div>
+        <div style="padding:28px 32px">
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Who It Is For</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Absolutely everyone: no prerequisites</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Professionals facing communication challenges</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Leaders, managers and sales professionals</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Parents, partners and families</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Anyone wanting to build connections faster and stronger</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Those wanting to communicate beyond just words</li>
+          </ul>
+        </div>
+      </div>
+      <div style="padding:22px 40px;border-top:1.5px solid var(--border);display:flex;gap:14px;align-items:center;background:var(--blue-pale)">
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">Enrol Now →</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Ask a Question</a>
       </div>
     </div>
   </div>
@@ -4952,49 +5018,49 @@
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-top:4px">
         <div id="values-arrow" style="width:36px;height:36px;border-radius:50%;background:var(--blue-light);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:transform .25s;flex-shrink:0"><svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="var(--blue2)" stroke-width="2"><polyline points="2,4 6,8 10,4"/></svg></div>
-        <a href="https://connect2nlp.com/c2-values/" target="_blank" onclick="event.stopPropagation()" style="font-family:var(--title);font-size:10px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap">View Course ↗</a>
+        <span onclick="event.stopPropagation();toggleCourse('values')" style="font-family:var(--title);font-size:10px;color:var(--blue2);letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap;cursor:pointer">View Course</span>
       </div>
     </div>
     <div id="values-body" style="display:none;border-top:1.5px solid var(--border)">
-      <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;What is important to us determines what we do or do not do, and ultimately determines our results. An understanding of this field will assist incredibly in all areas of life.&#8221;</p></div>
+      <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;Whatever you set out to achieve, if it is humanly possible, it is achievable. The question to ask is: how come others can, and yet something holds me back? Your values, stored in the subconscious mind, operate automatically &mdash; and may be unconsciously sabotaging your goals.&#8221;</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Core Concepts</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Fundamentals</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Understanding values systems and thinking levels</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The NLP model of communication</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Empowerment: be at cause or effect</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Empowering beliefs and ways of thinking</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The Happiness vs Success Equation</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Why people behave the way they do</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Spiral Dynamics and human development</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Values elicitation techniques</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The hierarchy of values</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Conflict resolution through values alignment</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>How values in the subconscious mind run automatically</li>
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Applications</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Values &amp; Human Consciousness</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Family and intimate relationships</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Business and leadership communication</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Sales, marketing and persuasion</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Team building and organisational culture</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Career and life decisions</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Coaching and therapy contexts</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The 8 levels of human consciousness and their evolution</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Based on Don Beck, Richard Cowan and Dr Clare Graves</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Assessment to identify your personal barriers</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Identify the values levels of others</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Communicate with anyone at their level</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Raise your own level of thinking</li>
           </ul>
         </div>
         <div style="padding:28px 32px">
-          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Outcomes</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Values in Every Area of Life</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Read and match any person's values system</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Communicate with anyone at their level</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Resolve conflict through values alignment</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Build deeper, lasting rapport instantly</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Lead, sell and influence more effectively</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Transform relationships in all areas of life</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Identify your top 10 values in each area of life</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Uncover conflicting values sabotaging your success</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Reframe values to support your goals</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Establish business values and team buy-in</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Family, relationships, sales and marketing applications</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Career and life decisions</li>
           </ul>
         </div>
       </div>
       <div style="padding:22px 40px;border-top:1.5px solid var(--border);display:flex;gap:14px;align-items:center;background:var(--blue-pale)">
-        <a href="https://connect2nlp.com/c2-values/" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">View Full Course Details ↗</a>
-        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Book a Call to Enrol</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">Enrol Now →</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Ask a Question</a>
       </div>
     </div>
   </div>
@@ -5008,7 +5074,7 @@
           <div>
             <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
               <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:var(--blue-light);color:var(--blue2);border:1px solid rgba(79,61,140,.18);letter-spacing:.08em;text-transform:uppercase">Short Course</span>
-              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:rgba(79,61,140,.06);color:var(--text-muted);border:1px solid var(--border);letter-spacing:.06em">2–3 Days</span>
+              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:rgba(79,61,140,.06);color:var(--text-muted);border:1px solid var(--border);letter-spacing:.06em">2 Days</span>
             </div>
             <h3 style="font-family:var(--title);font-size:clamp(17px,1.8vw,22px);font-weight:400;color:var(--black);margin:0;line-height:1.12">C2 Presenting</h3>
           </div>
@@ -5017,32 +5083,32 @@
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-top:4px">
         <div id="presenting-arrow" style="width:36px;height:36px;border-radius:50%;background:var(--blue-light);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:transform .25s;flex-shrink:0"><svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="var(--blue2)" stroke-width="2"><polyline points="2,4 6,8 10,4"/></svg></div>
-        <a href="https://connect2nlp.com/c2-presenting/" target="_blank" onclick="event.stopPropagation()" style="font-family:var(--title);font-size:10px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap">View Course ↗</a>
+        <span onclick="event.stopPropagation();toggleCourse('presenting')" style="font-family:var(--title);font-size:10px;color:var(--blue2);letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap;cursor:pointer">View Course</span>
       </div>
     </div>
     <div id="presenting-body" style="display:none;border-top:1.5px solid var(--border)">
-      <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;Increasingly, the world demands that we communicate powerfully and effectively. Whether in meetings, public speaking or online. The ability to differentiate yourself is key to succeeding.&#8221;</p></div>
+      <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;People generally form 90% of their lasting impression of us in the first 90 seconds of meeting us. Great speakers and presenters are not born &mdash; they are made.&#8221;</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">What You Will Master</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Fundamentals</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Presence, state and performance on stage</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The NLP model of communication</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Confidence presenting in any situation</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>How to teach directly to the unconscious mind</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Voice, tonality and delivery mastery</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Structuring presentations for maximum impact</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Anchoring your audience's attention</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Master body language and the five cross-cultural symbolic gestures</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Handling nerves using NLP techniques</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Storytelling that moves people to action</li>
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Advanced Skills</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Presenting Mastery</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Reading audience states in real time</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Adjusting your communication mid-presentation</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Creating compelling openings and closings</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Metaphor and language for influence</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Presenting via video and online platforms</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Building your personal speaker brand</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Control and manage audience energy and state</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Create rapport with groups and large audiences</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Incorporate humour while maintaining professionalism</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Incident-Point-Benefit statements</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Metaphor to strengthen the impact of your message</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Construct presentations spontaneously when called upon</li>
           </ul>
         </div>
         <div style="padding:28px 32px">
@@ -5051,15 +5117,15 @@
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Business leaders and executives</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Sales professionals</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Coaches and trainers</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Speakers and facilitators</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Anyone who presents in any context</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Those wanting a career in speaking</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Speakers, facilitators and anyone presenting live or online</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Those presenting on Zoom and video platforms</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Those wanting a career in speaking or training</li>
           </ul>
         </div>
       </div>
       <div style="padding:22px 40px;border-top:1.5px solid var(--border);display:flex;gap:14px;align-items:center;background:var(--blue-pale)">
-        <a href="https://connect2nlp.com/c2-presenting/" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">View Full Course Details ↗</a>
-        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Book a Call to Enrol</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">Enrol Now →</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Ask a Question</a>
       </div>
     </div>
   </div>
@@ -5073,58 +5139,59 @@
           <div>
             <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
               <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:var(--blue-light);color:var(--blue2);border:1px solid rgba(79,61,140,.18);letter-spacing:.08em;text-transform:uppercase">Short Course</span>
-              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:rgba(79,61,140,.06);color:var(--text-muted);border:1px solid var(--border);letter-spacing:.06em">2 Days</span>
+              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:rgba(79,61,140,.06);color:var(--text-muted);border:1px solid var(--border);letter-spacing:.06em">3 Days</span>
+              <span style="font-family:var(--title);font-size:10px;font-weight:400;padding:3px 10px;border-radius:100px;background:rgba(79,61,140,.06);color:var(--text-muted);border:1px solid var(--border);letter-spacing:.06em">Prerequisite: NLP Practitioner</span>
             </div>
             <h3 style="font-family:var(--title);font-size:clamp(17px,1.8vw,22px);font-weight:400;color:var(--black);margin:0;line-height:1.12">C2 Coaching</h3>
           </div>
         </div>
-        <p style="font-size:14.5px;color:var(--text-muted);line-height:1.82;margin-bottom:0;max-width:680px;font-weight:300">Coaching is one of the most sought-after skill sets globally. Having completed NLP Practitioner, this course adds practical, real-world coaching experience, being coached and coaching others.</p>
+        <p style="font-size:14.5px;color:var(--text-muted);line-height:1.82;margin-bottom:0;max-width:680px;font-weight:300">Coaching is one of the most sought-after skill sets globally. Having completed NLP Practitioner, this 3-day course adds practical, real-world coaching experience &mdash; being coached and coaching others &mdash; for your current role or a part-time or full-time coaching career.</p>
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-top:4px">
         <div id="coaching-arrow" style="width:36px;height:36px;border-radius:50%;background:var(--blue-light);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:transform .25s;flex-shrink:0"><svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="var(--blue2)" stroke-width="2"><polyline points="2,4 6,8 10,4"/></svg></div>
-        <a href="https://connect2nlp.com/c2-coaching-foundations/" target="_blank" onclick="event.stopPropagation()" style="font-family:var(--title);font-size:10px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap">View Course ↗</a>
+        <span onclick="event.stopPropagation();toggleCourse('coaching')" style="font-family:var(--title);font-size:10px;color:var(--blue2);letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap;cursor:pointer">View Course</span>
       </div>
     </div>
     <div id="coaching-body" style="display:none;border-top:1.5px solid var(--border)">
       <div style="background:linear-gradient(135deg,var(--blue1),#362278);padding:20px 40px;border-bottom:1px solid rgba(200,189,232,.15)"><p style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,.9);line-height:1.75;margin:0;font-style:italic">&#8220;If you are looking to increase your coaching ability within your current role or are considering coaching as a part-time or full-time career, this is the essential step before your first real client session.&#8221;</p></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0">
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Core Coaching Skills</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Fundamentals</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The coaching framework and methodology</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Asking powerful, transformative questions</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Active listening beyond the words</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Establishing outcomes and coaching agreements</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Creating accountability in clients</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Coaching ethics and boundaries</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Coaching philosophy and mindset</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Coaching frames and agreements</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Boundaries and ethics</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Rapport and deep listening</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Powerful, transformative questioning</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Values and strategies in coaching</li>
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
-          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">NLP Coaching Techniques</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Going Deeper</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Timeline coaching for lasting change</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Values-based coaching conversations</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Belief change in a coaching context</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Metaphor and language patterns</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>State elicitation and management</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Parts work and integration</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Self-care for the coach</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Using humour in coaching</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Running breakthrough sessions</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Business coaching applications</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Coaching via Zoom and online platforms</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Creating accountability in clients</li>
           </ul>
         </div>
         <div style="padding:28px 32px">
-          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Career Outcomes</div>
+          <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Practical Intervention</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Two-way peer coaching practice: up to 4 hours each as coach and client</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Experience real breakthroughs from both chairs</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Confidence to take on paying clients</li>
             <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>A complete coaching process from intake to close</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Tools to coach across all life areas</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Foundation for professional certification</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Online and in-person coaching skills</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Business set-up basics for coaches</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The essential step before your first real client session</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Foundation for a part-time or full-time coaching career</li>
           </ul>
         </div>
       </div>
       <div style="padding:22px 40px;border-top:1.5px solid var(--border);display:flex;gap:14px;align-items:center;background:var(--blue-pale)">
-        <a href="https://connect2nlp.com/c2-coaching-foundations/" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">View Full Course Details ↗</a>
-        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Book a Call to Enrol</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">Enrol Now →</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Ask a Question</a>
       </div>
     </div>
   </div>
@@ -5143,11 +5210,11 @@
             <h3 style="font-family:var(--title);font-size:clamp(17px,1.8vw,22px);font-weight:400;color:var(--black);margin:0;line-height:1.12">C2 Hypnosis</h3>
           </div>
         </div>
-        <p style="font-size:14.5px;color:var(--text-muted);line-height:1.82;margin-bottom:0;max-width:680px;font-weight:300">A 3-day hands-on course covering the history, fundamentals and techniques of Dave Elman and Milton Erickson, combined with progressive relaxation and tailored scripting. A powerful addition to any coaching toolkit.</p>
+        <p style="font-size:14.5px;color:var(--text-muted);line-height:1.82;margin-bottom:0;max-width:680px;font-weight:300">A 3-day hands-on course covering the history, fundamentals and techniques of Milton Erickson and Krazner, combined with progressive relaxation inductions and personalised script writing. A powerful addition to any coaching toolkit.</p>
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-top:4px">
         <div id="hypnosis-arrow" style="width:36px;height:36px;border-radius:50%;background:var(--blue-light);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:transform .25s;flex-shrink:0"><svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="var(--blue2)" stroke-width="2"><polyline points="2,4 6,8 10,4"/></svg></div>
-        <a href="https://connect2nlp.com/c2-hypnosis/" target="_blank" onclick="event.stopPropagation()" style="font-family:var(--title);font-size:10px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap">View Course ↗</a>
+        <span onclick="event.stopPropagation();toggleCourse('hypnosis')" style="font-family:var(--title);font-size:10px;color:var(--blue2);letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap;cursor:pointer">View Course</span>
       </div>
     </div>
     <div id="hypnosis-body" style="display:none;border-top:1.5px solid var(--border)">
@@ -5156,23 +5223,23 @@
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
           <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">What You Will Learn</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>History and science of hypnosis</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Dave Elman induction method</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Milton Erickson conversational hypnosis</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Progressive relaxation techniques</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Writing tailored hypnosis scripts</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Deepening techniques and testing</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>History, origins and applications of hypnosis</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>The conscious and subconscious minds</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>How hypnosis works</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Suggestibility testing</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Trance levels required for change</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Deepening techniques and contra-indications</li>
           </ul>
         </div>
         <div style="padding:28px 32px;border-right:1px solid var(--border)">
           <div style="font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:14px">Practical Skills</div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0">
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Conducting a full hypnosis session</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Identifying and working with trance states</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Regression and timeline work in hypnosis</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Smoking cessation and weight management protocols</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Confidence and performance enhancement</li>
-            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Integrating hypnosis with NLP and coaching</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Two Milton Erickson inductions</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Krazner inductions</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Progressive relaxation induction</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Writing personalised hypnosis scripts</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Creating multiple changes per induction</li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;line-height:1.65"><span style="color:var(--blue2);flex-shrink:0">·</span>Weight loss, smoking cessation, performance and relationship applications</li>
           </ul>
         </div>
         <div style="padding:28px 32px">
@@ -5188,8 +5255,8 @@
         </div>
       </div>
       <div style="padding:22px 40px;border-top:1.5px solid var(--border);display:flex;gap:14px;align-items:center;background:var(--blue-pale)">
-        <a href="https://connect2nlp.com/c2-hypnosis/" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">View Full Course Details ↗</a>
-        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Book a Call to Enrol</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">Enrol Now →</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Ask a Question</a>
       </div>
     </div>
   </div>
@@ -5595,7 +5662,7 @@
       </div>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-top:4px">
         <div id="mastertrainer-arrow" style="width:36px;height:36px;border-radius:50%;background:var(--blue-light);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:transform .25s;flex-shrink:0"><svg width="13" height="13" viewBox="0 0 12 12" fill="none" stroke="var(--blue2)" stroke-width="2"><polyline points="2,4 6,8 10,4"/></svg></div>
-        <a href="https://connect2nlp.com/master-trainer-certification/" target="_blank" onclick="event.stopPropagation()" style="font-family:var(--title);font-size:10px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap">View Course ↗</a>
+        <span onclick="event.stopPropagation();toggleCourse('mastertrainer')" style="font-family:var(--title);font-size:10px;color:var(--blue2);letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px;white-space:nowrap;cursor:pointer">View Course</span>
       </div>
     </div>
     <div id="mastertrainer-body" style="display:none;border-top:1.5px solid var(--border)">
@@ -5636,7 +5703,7 @@
         </div>
       </div>
       <div style="padding:22px 40px;border-top:1.5px solid var(--border);display:flex;gap:14px;align-items:center;background:var(--blue-pale)">
-        <a href="https://connect2nlp.com/master-trainer-certification/" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">View Full Course Details ↗</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="btn-primary" style="display:inline-flex;text-decoration:none">Enrol Now →</a>
         <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" style="font-family:var(--title);font-size:11px;color:var(--blue2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--blue2);padding-bottom:1px">Book a Call to Enrol</a>
       </div>
     </div>

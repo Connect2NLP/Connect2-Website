@@ -425,7 +425,7 @@ function toggleCourse(id) {
   if (!body) return;
   const isOpen = body.style.display === 'block';
   // Close all first
-  ['c2life','values','presenting','coaching-course','hypnosis',
+  ['demystified','c2life','communication','values','presenting','coaching','hypnosis',
    'practitioner','master','trainers','mastertrainer'].forEach(cid => {
     const b = document.getElementById(cid + '-body');
     const a = document.getElementById(cid + '-arrow');
