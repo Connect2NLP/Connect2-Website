@@ -4151,8 +4151,12 @@
 <div id="page-courses" class="page" style="background:var(--cream);min-height:100vh">
 
 <!-- HERO -->
-<div style="background:linear-gradient(145deg,var(--blue1),#362278);padding:88px 72px 0;position:relative;overflow:hidden">
-  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(200,189,232,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(200,189,232,.018) 1px,transparent 1px);background-size:66px 66px;pointer-events:none"></div>
+<div style="background:var(--blue1);padding:88px 72px 0;position:relative;overflow:hidden">
+  <video autoplay muted loop playsinline preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0">
+    <source src="images/training-hero.mp4" type="video/mp4"/>
+  </video>
+  <div style="position:absolute;inset:0;background:linear-gradient(145deg,rgba(35,21,66,.9) 0%,rgba(54,34,120,.82) 60%,rgba(35,21,66,.92) 100%);z-index:1"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(200,189,232,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(200,189,232,.018) 1px,transparent 1px);background-size:66px 66px;pointer-events:none;z-index:1"></div>
   <div style="position:relative;z-index:2;max-width:760px;margin-bottom:52px">
     <div class="eyebrow ew-gold" style="margin-bottom:14px">Globally Recognised Training Programmes</div>
     <h1 style="font-family:var(--title);font-size:clamp(30px,4.5vw,56px);font-weight:400;color:#fff;line-height:1.06;margin-bottom:18px">Short Courses and<br><span style="color:var(--gold-bright)">Certification Trainings</span></h1>
