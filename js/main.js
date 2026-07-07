@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     wrap.style.cssText = 'opacity:.6;margin-left:4px';
     wrap.appendChild(document.createTextNode('· Created and designed by '));
     var link = document.createElement('a');
-    link.href = 'https://www.instagram.com/jovialjulian_';
+    link.href = 'https://www.instagram.com/jovialjulian_?igsh=YmJucDd4OXN0ZWQ3';
     link.target = '_blank';
     link.rel = 'noopener';
     link.textContent = '@jovialjulian_';
