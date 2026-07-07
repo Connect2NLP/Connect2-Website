@@ -66,6 +66,53 @@ async function handleFreeDownload(e) {
   btn.disabled = false;
 }
 
+// ── ASK A QUESTION MODAL ──
+function openAskQuestion() {
+  const ov = document.getElementById('askq-overlay');
+  if (!ov) return;
+  ov.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  ov.scrollTop = 0;
+}
+function closeAskQuestion() {
+  const ov = document.getElementById('askq-overlay');
+  if (!ov) return;
+  ov.classList.remove('open');
+  document.body.style.overflow = '';
+}
+async function handleAskQuestionSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const msg = document.getElementById('askq-msg');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  const emails = [
+    'info@connect2nlp.com',
+    'julian@connect2nlp.com',
+    'simon@connect2nlp.com'
+  ];
+
+  try {
+    await Promise.all(emails.map(email =>
+      fetch('https://formsubmit.co/ajax/' + email, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+    ));
+    if (msg) { msg.style.color = 'var(--blue2)'; msg.textContent = 'Thank you! We will get back to you within 24 hours.'; msg.style.display = 'block'; }
+    form.reset();
+    setTimeout(closeAskQuestion, 3000);
+  } catch (err) {
+    if (msg) { msg.style.color = '#c62828'; msg.textContent = 'Something went wrong. Please try again or email info@connect2nlp.com.'; msg.style.display = 'block'; }
+  }
+
+  btn.textContent = 'Send My Question →';
+  btn.disabled = false;
+}
+
 // ── ENROLMENT FORM MODAL ──
 function openEnrol() {
   const ov = document.getElementById('enrol-overlay');
