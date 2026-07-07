@@ -214,22 +214,46 @@ async function handleEnrolSubmit(e) {
   counters.forEach(el => obs.observe(el));
 })();
 
-// ── HERO WORD-BY-WORD REVEAL (Training hero tagline) ──
+// ── HERO LETTER-BY-LETTER, WORD-BY-WORD REVEAL (Training hero tagline) ──
+// Splits the tagline into words, each word into letters, then reveals
+// every letter in reading order (slow, deliberate pace) so it clarifies
+// letter after letter, word after word rather than all at once.
 (function(){
   const lines = document.querySelectorAll('.hero-word-line');
   if(!lines.length) return;
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(!entry.isIntersecting) return;
-      const line = entry.target;
-      obs.unobserve(line);
-      const words = line.querySelectorAll('.hero-word');
-      words.forEach((word, i) => {
-        setTimeout(() => word.classList.add('revealed'), i * 160);
+  const LETTER_SPEED = 70; // ms between letters — slow and captivating
+
+  lines.forEach(line => {
+    const textEl = line.querySelector('.hero-glow-text');
+    if(!textEl) return;
+    const full = textEl.textContent;
+    textEl.textContent = '';
+    const letters = [];
+    full.split(' ').forEach((word, wi, arr) => {
+      const wordSpan = document.createElement('span');
+      wordSpan.className = 'hero-word';
+      [...word].forEach(ch => {
+        const letterSpan = document.createElement('span');
+        letterSpan.className = 'hero-letter';
+        letterSpan.textContent = ch;
+        wordSpan.appendChild(letterSpan);
+        letters.push(letterSpan);
       });
+      textEl.appendChild(wordSpan);
+      if(wi < arr.length - 1) textEl.appendChild(document.createTextNode(' '));
     });
-  }, {threshold: 0.4});
-  lines.forEach(el => obs.observe(el));
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        obs.unobserve(line);
+        letters.forEach((letter, i) => {
+          setTimeout(() => letter.classList.add('revealed'), i * LETTER_SPEED);
+        });
+      });
+    }, {threshold: 0.4});
+    obs.observe(line);
+  });
 })();
 
 // ── CLARIFY REVEAL — blurred text sharpens into focus when scrolled into view ──
