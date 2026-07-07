@@ -214,44 +214,53 @@ async function handleEnrolSubmit(e) {
   counters.forEach(el => obs.observe(el));
 })();
 
-// ── HERO LETTER-BY-LETTER, WORD-BY-WORD REVEAL (Training hero tagline) ──
-// Splits the tagline into words, each word into letters, then reveals
-// every letter in reading order (slow, deliberate pace) so it clarifies
-// letter after letter, word after word rather than all at once.
+// ── HERO MYSTERIOUS REVEAL (Training hero tagline) ──
+// Same build-up mechanic as the Attendee Stories testimonials (blank,
+// then materialises character by character, each fading in from a
+// blur) but slower, and auto-looping: once fully revealed it holds for
+// 5 seconds, fades out, then reveals again — repeating indefinitely
+// rather than waiting for a hover.
 (function(){
   const lines = document.querySelectorAll('.hero-word-line');
   if(!lines.length) return;
-  const LETTER_SPEED = 70; // ms between letters — slow and captivating
+  const SPEED = 90; // ms between characters — slower than the testimonials' 45ms
+  const HOLD = 5000; // ms to hold fully revealed before looping
+  const FADE_OUT = 400; // ms fade-out transition
 
   lines.forEach(line => {
     const textEl = line.querySelector('.hero-glow-text');
     if(!textEl) return;
     const full = textEl.textContent;
     textEl.textContent = '';
-    const letters = [];
-    full.split(' ').forEach((word, wi, arr) => {
-      const wordSpan = document.createElement('span');
-      wordSpan.className = 'hero-word';
-      [...word].forEach(ch => {
-        const letterSpan = document.createElement('span');
-        letterSpan.className = 'hero-letter';
-        letterSpan.textContent = ch;
-        wordSpan.appendChild(letterSpan);
-        letters.push(letterSpan);
-      });
-      textEl.appendChild(wordSpan);
-      if(wi < arr.length - 1) textEl.appendChild(document.createTextNode(' '));
-    });
+    textEl.style.transition = `opacity ${FADE_OUT}ms ease`;
+
+    function cycle(){
+      textEl.style.opacity = '1';
+      textEl.textContent = '';
+      let i = 0;
+      const timer = setInterval(() => {
+        const span = document.createElement('span');
+        span.className = 'tq-ch';
+        span.textContent = full[i];
+        textEl.appendChild(span);
+        i++;
+        if(i >= full.length){
+          clearInterval(timer);
+          setTimeout(() => {
+            textEl.style.opacity = '0';
+            setTimeout(cycle, FADE_OUT);
+          }, HOLD);
+        }
+      }, SPEED);
+    }
 
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if(!entry.isIntersecting) return;
         obs.unobserve(line);
-        letters.forEach((letter, i) => {
-          setTimeout(() => letter.classList.add('revealed'), i * LETTER_SPEED);
-        });
+        cycle();
       });
-    }, {threshold: 0.4});
+    }, {threshold: 0.3});
     obs.observe(line);
   });
 })();
