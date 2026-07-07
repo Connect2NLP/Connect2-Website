@@ -1,4 +1,21 @@
-﻿// ── MOBILE NAV ──
+﻿// ── FOOTER CREDIT (every page, every footer variant) ──
+document.addEventListener('DOMContentLoaded', function() {
+  var CREDIT = '· Created and designed by @jovialjulian_';
+  document.querySelectorAll('.footer-copy').forEach(function(el) {
+    var credit = document.createElement('span');
+    credit.style.cssText = 'opacity:.6;margin-left:4px';
+    credit.textContent = CREDIT;
+    el.appendChild(document.createTextNode(' '));
+    el.appendChild(credit);
+  });
+  document.querySelectorAll('footer span').forEach(function(el) {
+    if (el.children.length === 0 && el.textContent.indexOf('All Rights Reserved') !== -1) {
+      el.textContent += ' ' + CREDIT;
+    }
+  });
+});
+
+// ── MOBILE NAV ──
 function toggleMobileNav() {
   const nav = document.querySelector('nav');
   const isOpen = nav.classList.toggle('nav-open');
