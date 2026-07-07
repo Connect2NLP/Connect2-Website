@@ -210,39 +210,64 @@ async function handleEnrolSubmit(e) {
 // Quote area is blank; hovering the card makes the quote materialise
 // character by character, each fading in from a blur. Leaving fades it
 // out so it reveals again on every hover. Tap triggers it on touch.
+// Quotes are grouped by their shared card so multi-paragraph testimonials
+// (e.g. Joshua Small) reveal one paragraph at a time, in sequence, rather
+// than all paragraphs typing out in parallel.
 (function(){
   const quotes = document.querySelectorAll('.type-quote');
   if(!quotes.length) return;
   const SPEED = 45; // ms between characters — unhurried
+
+  const groups = new Map();
   quotes.forEach(el => {
     const card = el.closest('.tc-card, .biz-testi') || el;
-    const full = el.textContent;
-    // Reserve the full height up front so the card never resizes
-    el.style.minHeight = el.offsetHeight + 'px';
-    el.textContent = '';
-    let timer = null;
-    const reveal = () => {
-      clearInterval(timer);
-      el.classList.remove('tq-fadeout');
+    if(!groups.has(card)) groups.set(card, []);
+    groups.get(card).push(el);
+  });
+
+  groups.forEach((els, card) => {
+    els.forEach(el => {
+      // Reserve the full height up front so the card never resizes
+      el.style.minHeight = el.offsetHeight + 'px';
+      el.dataset.fullText = el.textContent;
       el.textContent = '';
-      let i = 0;
-      timer = setInterval(() => {
-        const span = document.createElement('span');
-        span.className = 'tq-ch';
-        span.textContent = full[i];
-        el.appendChild(span);
-        i++;
-        if(i >= full.length) clearInterval(timer);
-      }, SPEED);
-    };
-    const clear = () => {
+    });
+    let timer = null;
+
+    const revealAll = () => {
       clearInterval(timer);
-      el.classList.add('tq-fadeout');
-      setTimeout(() => { el.textContent = ''; el.classList.remove('tq-fadeout'); }, 300);
+      els.forEach(el => { el.classList.remove('tq-fadeout'); el.textContent = ''; });
+      let index = 0;
+      const typeNext = () => {
+        if(index >= els.length) return;
+        const el = els[index];
+        const full = el.dataset.fullText;
+        let i = 0;
+        timer = setInterval(() => {
+          const span = document.createElement('span');
+          span.className = 'tq-ch';
+          span.textContent = full[i];
+          el.appendChild(span);
+          i++;
+          if(i >= full.length){
+            clearInterval(timer);
+            index++;
+            typeNext();
+          }
+        }, SPEED);
+      };
+      typeNext();
     };
-    card.addEventListener('mouseenter', reveal);
-    card.addEventListener('mouseleave', clear);
-    card.addEventListener('touchstart', reveal, {passive:true});
+
+    const clearAll = () => {
+      clearInterval(timer);
+      els.forEach(el => el.classList.add('tq-fadeout'));
+      setTimeout(() => { els.forEach(el => { el.textContent = ''; el.classList.remove('tq-fadeout'); }); }, 300);
+    };
+
+    card.addEventListener('mouseenter', revealAll);
+    card.addEventListener('mouseleave', clearAll);
+    card.addEventListener('touchstart', revealAll, {passive:true});
   });
 })();
 
