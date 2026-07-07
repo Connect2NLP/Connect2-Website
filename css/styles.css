@@ -1106,6 +1106,10 @@ textarea.ef-input{resize:vertical}
 .clarify.clarified{opacity:1;filter:blur(0)}
 #sec-nlp .nlp-body h3{font-weight:600!important}
 
+/* ── HERO WORD-BY-WORD REVEAL (Training hero tagline) ── */
+.hero-word{display:inline-block;opacity:0;filter:blur(6px);transition:opacity .6s ease,filter .6s ease}
+.hero-word.revealed{opacity:1;filter:blur(0)}
+
 /* ── TESTIMONIAL MYSTERIOUS REVEAL ── */
 @keyframes tqReveal{from{opacity:0;filter:blur(7px)}to{opacity:1;filter:blur(0)}}
 .tq-ch{opacity:0;animation:tqReveal .9s ease-out forwards}

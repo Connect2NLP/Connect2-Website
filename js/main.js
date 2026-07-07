@@ -214,6 +214,24 @@ async function handleEnrolSubmit(e) {
   counters.forEach(el => obs.observe(el));
 })();
 
+// ── HERO WORD-BY-WORD REVEAL (Training hero tagline) ──
+(function(){
+  const lines = document.querySelectorAll('.hero-word-line');
+  if(!lines.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+      const line = entry.target;
+      obs.unobserve(line);
+      const words = line.querySelectorAll('.hero-word');
+      words.forEach((word, i) => {
+        setTimeout(() => word.classList.add('revealed'), i * 160);
+      });
+    });
+  }, {threshold: 0.4});
+  lines.forEach(el => obs.observe(el));
+})();
+
 // ── CLARIFY REVEAL — blurred text sharpens into focus when scrolled into view ──
 (function(){
   const els = document.querySelectorAll('.clarify');
