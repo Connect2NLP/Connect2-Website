@@ -1,16 +1,26 @@
 ﻿// ── FOOTER CREDIT (every page, every footer variant) ──
 document.addEventListener('DOMContentLoaded', function() {
-  var CREDIT = '· Created and designed by @jovialjulian_';
+  function buildCredit() {
+    var wrap = document.createElement('span');
+    wrap.style.cssText = 'opacity:.6;margin-left:4px';
+    wrap.appendChild(document.createTextNode('· Created and designed by '));
+    var link = document.createElement('a');
+    link.href = 'https://www.instagram.com/jovialjulian_';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = '@jovialjulian_';
+    link.style.cssText = 'color:inherit;text-decoration:underline';
+    wrap.appendChild(link);
+    return wrap;
+  }
   document.querySelectorAll('.footer-copy').forEach(function(el) {
-    var credit = document.createElement('span');
-    credit.style.cssText = 'opacity:.6;margin-left:4px';
-    credit.textContent = CREDIT;
     el.appendChild(document.createTextNode(' '));
-    el.appendChild(credit);
+    el.appendChild(buildCredit());
   });
   document.querySelectorAll('footer span').forEach(function(el) {
     if (el.children.length === 0 && el.textContent.indexOf('All Rights Reserved') !== -1) {
-      el.textContent += ' ' + CREDIT;
+      el.appendChild(document.createTextNode(' '));
+      el.appendChild(buildCredit());
     }
   });
 });
