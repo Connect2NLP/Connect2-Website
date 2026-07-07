@@ -66,6 +66,53 @@ async function handleFreeDownload(e) {
   btn.disabled = false;
 }
 
+// ── ENROLMENT FORM MODAL ──
+function openEnrol() {
+  const ov = document.getElementById('enrol-overlay');
+  if (!ov) return;
+  ov.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  ov.scrollTop = 0;
+}
+function closeEnrol() {
+  const ov = document.getElementById('enrol-overlay');
+  if (!ov) return;
+  ov.classList.remove('open');
+  document.body.style.overflow = '';
+}
+async function handleEnrolSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const msg = document.getElementById('enrol-msg');
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
+
+  const emails = [
+    'info@connect2nlp.com',
+    'julian@connect2nlp.com',
+    'simon@connect2nlp.com'
+  ];
+
+  try {
+    await Promise.all(emails.map(email =>
+      fetch('https://formsubmit.co/ajax/' + email, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+    ));
+    if (msg) { msg.style.color = 'var(--blue2)'; msg.textContent = 'Thank you! Your enrolment has been received — we will be in touch shortly.'; msg.style.display = 'block'; }
+    form.reset();
+    setTimeout(closeEnrol, 3500);
+  } catch (err) {
+    if (msg) { msg.style.color = '#c62828'; msg.textContent = 'Something went wrong. Please try again or email info@connect2nlp.com.'; msg.style.display = 'block'; }
+  }
+
+  btn.textContent = 'Submit Enrolment →';
+  btn.disabled = false;
+}
+
 // ── COUNT-UP ANIMATION ──
 (function(){
   const counters = document.querySelectorAll('[data-count]');

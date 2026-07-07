@@ -45,7 +45,7 @@ body{font-family:var(--sans);background:var(--cream);color:var(--text);overflow-
 /* ══ NAV WITH DROPDOWNS ══ */
 nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-webkit-backdrop-filter:none;height:68px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid rgba(124,111,176,.25);box-shadow:0 2px 16px rgba(0,0,0,.08)}
 .logo-wrap{display:flex;align-items:center;gap:14px;text-decoration:none;cursor:pointer;flex-shrink:0;background:transparent}
-.logo-img{width:54px;height:54px;object-fit:contain;filter:drop-shadow(0 2px 10px rgba(200,189,232,.3));background:transparent}
+.logo-img{height:50px;width:auto;object-fit:contain;filter:drop-shadow(0 2px 10px rgba(200,189,232,.3));background:transparent}
 .logo-txt{display:inline-flex;flex-direction:column;align-items:stretch}
 .logo-name{display:block;font-family:var(--sans);font-size:32px;font-weight:300;letter-spacing:.045em;text-transform:uppercase;line-height:1;background:linear-gradient(135deg,#0f0f13 0%,#3c3c44 28%,#74747e 46%,#2e2e35 62%,#0c0c10 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .logo-sub{display:flex;justify-content:space-between;font-family:var(--sans);font-size:12px;font-weight:400;color:#101014;text-transform:uppercase;margin-top:4px}
@@ -852,7 +852,7 @@ footer{background:radial-gradient(70% 120% at 100% 0%,var(--cerise-glow-soft) 0%
 
   /* ── Nav ── */
   nav{padding:0 18px;height:60px}
-  .logo-img{width:42px;height:42px}
+  .logo-img{height:39px;width:auto}
   .logo-name{font-size:24px}
   .logo-sub{font-size:9px}
 
@@ -1067,6 +1067,30 @@ footer{background:radial-gradient(70% 120% at 100% 0%,var(--cerise-glow-soft) 0%
 .credits-roll p{font-family:var(--title);font-weight:300;font-size:clamp(17px,2.1vw,28px);color:#fff;letter-spacing:.045em;line-height:1.55;margin:0 0 36px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
 .credits-roll .credits-final{color:#e91e63;font-weight:400;text-shadow:0 2px 20px rgba(0,0,0,.6)}
 @keyframes creditsRoll{from{transform:translateY(0)}to{transform:translateY(calc(-100% - 72vh))}}
+
+/* ── ENROLMENT FORM MODAL ── */
+#enrol-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(14,10,26,.72);backdrop-filter:blur(6px);overflow-y:auto;padding:40px 20px}
+#enrol-overlay.open{display:block}
+.ef-modal{max-width:780px;margin:0 auto;background:#fff;border-radius:16px;border:1.5px solid rgba(233,30,99,.35);box-shadow:0 30px 90px rgba(0,0,0,.45);overflow:hidden}
+.ef-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:28px 36px;background:linear-gradient(135deg,var(--blue1),#362278)}
+.ef-close{font-size:30px;line-height:1;color:rgba(255,255,255,.7);cursor:pointer;transition:color .15s;user-select:none}
+.ef-close:hover{color:#fff}
+.ef-section{padding:26px 36px;border-bottom:1px solid var(--border)}
+.ef-stitle{font-family:var(--title);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#e91e63;margin-bottom:16px}
+.ef-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px}
+.ef-field{display:flex;flex-direction:column;gap:5px}
+.ef-field span{font-family:var(--title);font-size:12px;font-weight:500;color:var(--blue1)}
+.ef-input{font-family:var(--sans);font-size:14px;color:var(--black);padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;background:var(--cream);outline:none;transition:border-color .15s;width:100%}
+.ef-input:focus{border-color:#e91e63;background:#fff}
+select.ef-input{appearance:auto}
+textarea.ef-input{resize:vertical}
+.ef-checks{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:9px 18px}
+.ef-check{display:flex;align-items:flex-start;gap:9px;cursor:pointer;font-size:13.5px;color:var(--text-mid);line-height:1.5}
+.ef-check input{accent-color:#e91e63;width:16px;height:16px;margin-top:2px;flex-shrink:0;cursor:pointer}
+.ef-legal b{display:block;font-family:var(--title);font-size:13px;font-weight:600;color:var(--blue2);margin-bottom:6px}
+.ef-legal p{font-size:12.5px;color:var(--text-muted);line-height:1.75;margin:0 0 16px}
+.ef-foot{padding:24px 36px;background:var(--blue-pale);display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}
+@media(max-width:700px){.ef-grid{grid-template-columns:1fr}.ef-section,.ef-head,.ef-foot{padding-left:20px;padding-right:20px}}
 
 /* ── CLARIFY REVEAL — text sharpens into focus on scroll ── */
 .clarify{opacity:0;filter:blur(9px);transition:opacity 1.1s ease,filter 1.1s ease}
