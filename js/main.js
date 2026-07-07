@@ -206,16 +206,16 @@ async function handleEnrolSubmit(e) {
   els.forEach(el => obs.observe(el));
 })();
 
-// ── TESTIMONIAL MYSTERIOUS REVEAL (home page Attendee Stories) ──
+// ── TESTIMONIAL MYSTERIOUS REVEAL (Attendee Stories + other testimonials) ──
 // Quote area is blank; hovering the card makes the quote materialise
 // character by character, each fading in from a blur. Leaving fades it
 // out so it reveals again on every hover. Tap triggers it on touch.
 (function(){
-  const quotes = document.querySelectorAll('#sec-testi .type-quote');
+  const quotes = document.querySelectorAll('.type-quote');
   if(!quotes.length) return;
   const SPEED = 45; // ms between characters — unhurried
   quotes.forEach(el => {
-    const card = el.closest('.tc-card') || el;
+    const card = el.closest('.tc-card, .biz-testi') || el;
     const full = el.textContent;
     // Reserve the full height up front so the card never resizes
     el.style.minHeight = el.offsetHeight + 'px';
