@@ -1070,9 +1070,9 @@ footer .fg-grid,footer .footer-accred,footer .footer-bottom{position:relative;z-
 
 /* ── ABOUT US CINEMATIC HERO — movie-credits text roll ── */
 .credits-wrap{position:absolute;inset:0;overflow:hidden;display:flex;justify-content:center;z-index:2;pointer-events:none}
-.credits-roll{position:absolute;top:100%;width:100%;max-width:880px;text-align:center;padding:0 30px;animation:creditsRoll 42s linear infinite}
+.credits-roll{position:absolute;top:100%;width:100%;max-width:880px;text-align:center;padding:0 30px;animation:creditsRoll 54s linear infinite}
 .credits-roll p{font-family:var(--title);font-weight:300;font-size:clamp(17px,2.1vw,28px);color:#fff;letter-spacing:.045em;line-height:1.55;margin:0 0 36px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
-.credits-roll .credits-final{color:#e91e63;font-weight:400;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.credits-roll .credits-final{font-weight:500;background:linear-gradient(100deg,#e91e63 0%,#f7cfe0 20%,#e8e8ee 35%,#c8bde8 50%,#e8e8ee 65%,#f7cfe0 80%,#e91e63 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#e91e63;text-shadow:0 2px 20px rgba(0,0,0,.35);animation:ceriseShimmer 4s linear infinite}
 @keyframes creditsRoll{from{transform:translateY(0)}to{transform:translateY(calc(-100% - 72vh))}}
 
 /* ── ENROLMENT FORM MODAL ── */
