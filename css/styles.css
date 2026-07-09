@@ -335,6 +335,10 @@ nav{position:sticky;top:0;z-index:600;background:#ffffff;backdrop-filter:none;-w
 .btn-rerun-ghost{padding:10px 20px;border-radius:8px;font-family:var(--title);font-size:11px;font-weight:400;letter-spacing:.07em;text-transform:uppercase;background:transparent;border:1.5px solid rgba(79,61,140,.25);color:var(--blue2);text-decoration:none;white-space:nowrap;text-align:center;display:inline-block}
 
 /* TESTIMONIALS */
+.tvg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.tvg video{width:100%;display:block;aspect-ratio:9/16;object-fit:cover;background:#000}
+.tvg-card{border-radius:16px;overflow:hidden;border:1.5px solid var(--border);box-shadow:0 10px 30px rgba(26,16,48,.12)}
+.tvg-name{padding:12px 14px;font-family:var(--title);font-size:13px;font-weight:400;color:var(--black);background:var(--cream)}
 .tg{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:36px}
 .tc-card{background:var(--cream);border:1.5px solid var(--border);border-radius:16px;padding:40px 40px 32px;transition:all .26s;border-top:4px solid var(--border);position:relative;overflow:hidden}
 .tc-card:hover{border-top-color:var(--gold);box-shadow:0 10px 36px rgba(124,111,176,.1);transform:translateY(-3px)}
@@ -790,6 +794,7 @@ footer .fg-grid,footer .footer-accred,footer .footer-bottom{position:relative;z-
 .tpc-panel-section-label{font-family:var(--title);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,189,232,.4);margin-bottom:10px}
 .tpc-panel-certs{display:flex;flex-wrap:wrap;gap:7px}
 @media(max-width:1000px){.tpc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.tvg{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.tpc-grid{grid-template-columns:repeat(2,1fr)}.tpc-panel-inner{grid-template-columns:1fr}.tpc-panel{padding:28px 20px}}
 
 /* ── SCIENCE + MANDELA SIDE BY SIDE ── */
@@ -913,6 +918,7 @@ footer .fg-grid,footer .footer-accred,footer .footer-bottom{position:relative;z-
 
   /* ── Testimonials grid ── */
   .tg{grid-template-columns:1fr}
+  .tvg{grid-template-columns:1fr}
 
   /* ── Logo grid ── */
   .lg{grid-template-columns:repeat(3,1fr);gap:10px}
