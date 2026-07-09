@@ -848,9 +848,11 @@ function finderSubmit() {
     alert('Please fill in your name, email and phone number.');
     return;
   }
-  // Show success — replace with real form submission when backend is ready
   document.getElementById('finder-success').style.display = 'block';
   document.querySelector('#fstep-result .btn-join').style.display = 'none';
   document.getElementById('finder-back-btn').style.display = 'none';
+
+  const waMsg = encodeURIComponent(`Hello, my name is ${fname} ${lname}. I completed the course finder on the Connect2 NLP website and would like to book a call to discuss my recommended pathway. My email is ${email} and phone number is ${phone}. Thank you`);
+  window.open(`https://wa.me/27723034857?text=${waMsg}`, '_blank');
 }
 
