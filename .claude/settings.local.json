@@ -22,7 +22,22 @@
       "PowerShell(node --version)",
       "PowerShell(npx --version)",
       "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\nodejs\\\\\" -ErrorAction SilentlyContinue | Select-Object Name; Get-ChildItem \"$env:APPDATA\\\\npm\\\\\" -ErrorAction SilentlyContinue | Select-Object Name; Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\\\\nodejs\\\\\" -ErrorAction SilentlyContinue | Select-Object Name)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "WebFetch(domain:connect2nlp.com)",
+      "Bash(gh api *)",
+      "PowerShell(gh api repos/Connect2NLP/Connect2-Website/pages 2>&1)",
+      "WebFetch(domain:ifnlp.com)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Bitmap]::new\\(\"C:\\\\Users\\\\julia\\\\Downloads\\\\INTERNATIONAL.png\"\\); $rect = [System.Drawing.Rectangle]::new\\(32, 87, 110, 104\\); $crop = $img.Clone\\($rect, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb\\); for \\($x=0; $x -lt $crop.Width; $x++\\) { for \\($y=0; $y -lt $crop.Height; $y++\\) { $p = $crop.GetPixel\\($x,$y\\); if \\($p.R -gt 240 -and $p.G -gt 240 -and $p.B -gt 240\\) { $crop.SetPixel\\($x,$y,[System.Drawing.Color]::FromArgb\\(0,255,255,255\\)\\) } } }; $crop.Save\\(\"C:\\\\Users\\\\julia\\\\OneDrive\\\\Documents\\\\Desktop\\\\Connect2 Website Project\\\\images\\\\logo-mark-silver.png\"\\); $crop.Dispose\\(\\); $img.Dispose\\(\\); \"saved images/logo-mark-silver.png\")",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Bitmap]::new\\(\"C:\\\\Users\\\\julia\\\\Downloads\\\\INTERNATIONAL.png\"\\); $rect = [System.Drawing.Rectangle]::new\\(32, 87, 105, 104\\); $crop = $img.Clone\\($rect, [System.Drawing.Imaging.PixelFormat]::Format32bppArgb\\); for \\($x=0; $x -lt $crop.Width; $x++\\) { for \\($y=0; $y -lt $crop.Height; $y++\\) { $p = $crop.GetPixel\\($x,$y\\); if \\($p.R -gt 240 -and $p.G -gt 240 -and $p.B -gt 240\\) { $crop.SetPixel\\($x,$y,[System.Drawing.Color]::FromArgb\\(0,255,255,255\\)\\) } } }; $crop.Save\\(\"C:\\\\Users\\\\julia\\\\OneDrive\\\\Documents\\\\Desktop\\\\Connect2 Website Project\\\\images\\\\logo-mark-silver.png\"\\); $crop.Dispose\\(\\); $img.Dispose\\(\\); \"saved\")",
+      "PowerShell(git mv \"images/logo-mark-silver.png\" \"images/logo-mark-silver-v2.png\")",
+      "PowerShell(git add index.html)",
+      "PowerShell(git push origin master)",
+      "PowerShell($sp = \"C:\\\\Users\\\\julia\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-julia-OneDrive-Documents-Desktop-Connect2-Website-Project\\\\21f234fe-bf00-46e8-a9ca-663af544996a\\\\scratchpad\"; ffmpeg -y -i \"images\\\\affiliates-animated.mp4\" -vf \"select=eq\\(n\\\\,0\\)\" -frames:v 1 \"$sp\\\\frame0.png\" -loglevel error; ffmpeg -y -ss 2 -i \"images\\\\affiliates-animated.mp4\" -frames:v 1 \"$sp\\\\frame2s.png\" -loglevel error; ffprobe -v error -select_streams v:0 -show_entries stream=width,height,duration,nb_frames -of csv=p=0 \"images\\\\affiliates-animated.mp4\")",
+      "PowerShell($sp = \"C:\\\\Users\\\\julia\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-julia-OneDrive-Documents-Desktop-Connect2-Website-Project\\\\21f234fe-bf00-46e8-a9ca-663af544996a\\\\scratchpad\"; ffmpeg -y -i \"images\\\\logo-mark-silver-v2.png\" -vf \"format=rgba,crop=54:64:70:50,scale=432:512:flags=neighbor\" \"$sp\\\\corner-zoom.png\" -loglevel error; ffmpeg -y -i \"images\\\\logo-mark-silver-v2.png\" -vf \"format=rgba,crop=54:64:0:50,scale=432:512:flags=neighbor\" \"$sp\\\\corner-left-zoom.png\" -loglevel error)",
+      "PowerShell(ffmpeg -y -i \"C:\\\\Users\\\\julia\\\\Downloads\\\\Own your week.mp4\" -an -c:v libx264 -crf 27 -preset slow -movflags +faststart \"images\\\\own-your-week.mp4\" -loglevel error)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\julia\\\\Downloads\\\\SITE 1\\\\5.png\"\\); $enc = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders\\(\\) | Where-Object { $_.MimeType -eq 'image/jpeg' }; $p = New-Object System.Drawing.Imaging.EncoderParameters\\(1\\); $p.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter\\([System.Drawing.Imaging.Encoder]::Quality, [long]88\\); $img.Save\\(\"C:\\\\Users\\\\julia\\\\OneDrive\\\\Documents\\\\Desktop\\\\Connect2 Website Project\\\\images\\\\simon-hero.jpg\", $enc, $p\\); $img.Dispose\\(\\); Get-Item \"images\\\\simon-hero.jpg\" | Select-Object Name, Length)",
+      "PowerShell(git ls-remote --heads origin)",
+      "PowerShell($lines = [System.IO.File]::ReadAllLines\\(\"$PWD\\\\index.html\"\\); \"total: $\\($lines.Count\\)\"; $lines[\\($lines.Count-6\\)..\\($lines.Count-1\\)])"
     ]
   }
 }

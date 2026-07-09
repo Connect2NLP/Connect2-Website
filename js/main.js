@@ -655,13 +655,13 @@ const trainerData = {
     role: 'Certified Trainer of NLP, Hypnosis and Timeline',
     loc: 'Puerto Rico, USA',
     quote: '"My mission is to sow seeds of happiness that yield abundant fruit in the lives of individuals and organisations alike."',
-    bio: 'With over two decades of experience, Angela is a compassionate Happiness Life Coach dedicated to helping clients experience strength, courage and boldness. Her unique Transformation Destination Experience creates a safe space for exploring challenges. She incorporates Equine Assisted Learning and Therapy into her coaching, leveraging horses to provide authentic reflections. She collaborates with Dragon Fly Global DMC, Retention Strategies Puerto Rico and Carabali Rainforest Adventure Park.',
+    bio: 'Angela Lightfoot Redondo is a seasoned professional with over two decades of experience in coaching and development.\n\nShe is on a mission to foster deep, connected relationships and guide individuals on a transformative journey of self-discovery. Rooted in empathy, passion, and joy, Angela is a compassionate Happiness Life Coach dedicated to helping her clients experience strength, courage, and boldness in embracing life with body, mind, and spirit.\n\nHer unique Transformation Destination Experience program creates a safe and supportive space for exploring challenges, challenging thinking patterns, and addressing negative emotions. Angela skillfully incorporates Equine Assisted Learning and Therapy, using horses to provide authentic reflections of participants\' experiences, which promotes powerful self-awareness and personal growth.\n\nAs a Certified Trainer of NLP, Hypnosis, and Timeline Techniques, Angela empowers individuals to unlock their unique, authentic potential. Her diverse skill set includes leadership mastery, results coaching, and certifications in happiness coaching, mindfulness, and wellness. A martial artist and accomplished equestrian, Angela is deeply committed to giving back to the community, with a special focus on youth development.\n\nHonored to collaborate with respected Puerto Rican companies such as Dragon Fly Global DMC, Retention Strategies Puerto Rico, and Carabali Rainforest Adventure Park, Angela is dedicated to sowing seeds of happiness that yield abundant fruit in the lives of individuals and organizations alike.',
     email: 'angela@connect2nlp.com', phone: '+1 352 362 8969', phoneRaw: '+13523628969',
     certs: ['Certified Trainer of NLP','Certified Trainer of Hypnosis','Timeline Techniques Trainer','EAL/T Practitioner','Happiness Coaching'],
     passions: ['Equine Assisted Learning','Youth Development','Martial Arts','Wellness']
   },
   julian: {
-    photo: 'images/julian-new.webp',
+    photo: 'images/julian-bio-2.png',
     name: 'Julian Van Reenen',
     role: 'NLP Trainer, Master Coach and Public Speaker',
     loc: 'Cape Town, South Africa',
