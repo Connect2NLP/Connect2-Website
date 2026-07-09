@@ -25,6 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// ── TESTIMONIAL VIDEOS: only one plays at a time ──
+document.addEventListener('play', function(e) {
+  if (e.target.tagName !== 'VIDEO') return;
+  document.querySelectorAll('.tvg video').forEach(function(v) {
+    if (v !== e.target) v.pause();
+  });
+}, true);
+
 // ── MOBILE NAV ──
 function toggleMobileNav() {
   const nav = document.querySelector('nav');
