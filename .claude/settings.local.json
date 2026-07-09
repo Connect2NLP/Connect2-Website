@@ -37,7 +37,9 @@
       "PowerShell(ffmpeg -y -i \"C:\\\\Users\\\\julia\\\\Downloads\\\\Own your week.mp4\" -an -c:v libx264 -crf 27 -preset slow -movflags +faststart \"images\\\\own-your-week.mp4\" -loglevel error)",
       "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\julia\\\\Downloads\\\\SITE 1\\\\5.png\"\\); $enc = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders\\(\\) | Where-Object { $_.MimeType -eq 'image/jpeg' }; $p = New-Object System.Drawing.Imaging.EncoderParameters\\(1\\); $p.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter\\([System.Drawing.Imaging.Encoder]::Quality, [long]88\\); $img.Save\\(\"C:\\\\Users\\\\julia\\\\OneDrive\\\\Documents\\\\Desktop\\\\Connect2 Website Project\\\\images\\\\simon-hero.jpg\", $enc, $p\\); $img.Dispose\\(\\); Get-Item \"images\\\\simon-hero.jpg\" | Select-Object Name, Length)",
       "PowerShell(git ls-remote --heads origin)",
-      "PowerShell($lines = [System.IO.File]::ReadAllLines\\(\"$PWD\\\\index.html\"\\); \"total: $\\($lines.Count\\)\"; $lines[\\($lines.Count-6\\)..\\($lines.Count-1\\)])"
+      "PowerShell($lines = [System.IO.File]::ReadAllLines\\(\"$PWD\\\\index.html\"\\); \"total: $\\($lines.Count\\)\"; $lines[\\($lines.Count-6\\)..\\($lines.Count-1\\)])",
+      "Bash(gh run *)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }
