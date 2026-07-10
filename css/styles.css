@@ -35,7 +35,11 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--text);overflow-x:hidden}
 .page{display:none;min-height:100vh}
 .page.active{display:block}
-#music-toggle:hover{opacity:1 !important}
+#music-toggle{border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .25s ease}
+#music-toggle:hover{opacity:1}
+#music-toggle.music-cta{padding:12px 22px;gap:8px;border-radius:30px;background:linear-gradient(135deg,var(--cerise),var(--blue1));font-family:var(--title);font-size:12px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:musicPulse 2s ease-in-out infinite}
+#music-toggle.music-icon{width:26px;height:26px;border-radius:50%;background:rgba(20,14,36,.4);opacity:.35;animation:none;padding:0;box-shadow:none}
+@keyframes musicPulse{0%,100%{box-shadow:0 8px 24px rgba(0,0,0,.3),0 0 0 0 rgba(222,49,99,0)}50%{box-shadow:0 8px 24px rgba(0,0,0,.3),0 0 18px 6px rgba(222,49,99,.55)}}
 
 /* UTIL BAR */
 .util{background:var(--blue1);height:34px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;font-size:10px;letter-spacing:.08em;color:rgba(200,225,255,.6)}

@@ -385,8 +385,16 @@ document.addEventListener('click', () => {
 
 function toggleMusicWidget() {
   const panel = document.getElementById('music-panel');
+  const btn = document.getElementById('music-toggle');
   const opening = panel.style.display !== 'block';
   panel.style.display = opening ? 'block' : 'none';
+
+  // Once clicked, shrink the inviting CTA down to a small discreet icon for the rest of the visit
+  if (btn.classList.contains('music-cta')) {
+    btn.classList.remove('music-cta');
+    btn.classList.add('music-icon');
+    btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>';
+  }
 }
 
 function goPage(id) {
