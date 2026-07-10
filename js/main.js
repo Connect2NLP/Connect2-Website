@@ -358,35 +358,41 @@ async function handleEnrolSubmit(e) {
 })();
 
 // ── PAGE NAVIGATION ──
-const SPOTIFY_TRACK_URI = 'spotify:track:1tvs2IaBqXmSWQLu06COuc';
-let spotifyController = null;
-let spotifyAutoplayTried = false;
+const YOUTUBE_VIDEO_ID = 'n2rFPclR2xM';
+let ytPlayer = null;
+let ytReady = false;
+let musicAutoplayTried = false;
 
-function playSpotifyFromStart() {
-  if (!spotifyController) return;
-  spotifyController.seek(0);
-  spotifyController.play();
+function playMusicFromStart() {
+  if (!ytPlayer || !ytReady) return;
+  ytPlayer.seekTo(0, true);
+  ytPlayer.playVideo();
 }
 
-function trySpotifyAutoplay() {
-  playSpotifyFromStart();
+function tryMusicAutoplay() {
+  playMusicFromStart();
 }
 
-window.onSpotifyIframeApiReady = (IFrameAPI) => {
-  const element = document.getElementById('spotify-embed-target');
-  IFrameAPI.createController(element, { uri: SPOTIFY_TRACK_URI, width: '100%', height: '80' }, (controller) => {
-    spotifyController = controller;
-    controller.addListener('ready', () => {
-      // Best-effort autoplay — most browsers block unmuted audio on load with zero interaction,
-      // so this quietly does nothing for first-time visitors until they click anywhere.
-      trySpotifyAutoplay();
-    });
+window.onYouTubeIframeAPIReady = function() {
+  ytPlayer = new YT.Player('music-embed-target', {
+    videoId: YOUTUBE_VIDEO_ID,
+    width: '100%',
+    height: '130',
+    playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
+    events: {
+      onReady: function() {
+        ytReady = true;
+        // Best-effort autoplay — most browsers block unmuted audio on load with zero interaction,
+        // so this quietly does nothing for first-time visitors until they click anywhere.
+        tryMusicAutoplay();
+      }
+    }
   });
 };
 
 // A real user gesture anywhere on the page makes a subsequent play() call far more likely to succeed
 document.addEventListener('click', () => {
-  if (!spotifyAutoplayTried) { spotifyAutoplayTried = true; trySpotifyAutoplay(); }
+  if (!musicAutoplayTried) { musicAutoplayTried = true; tryMusicAutoplay(); }
 }, { once: true });
 
 function toggleMusicWidget() {
@@ -414,11 +420,11 @@ function goPage(id) {
   // Music widget only plays on the Home page — pause and collapse it the instant we navigate away
   const musicPanel = document.getElementById('music-panel');
   if (id !== 'page-home') {
-    if (spotifyController) spotifyController.pause();
+    if (ytPlayer && ytReady) ytPlayer.pauseVideo();
     if (musicPanel) musicPanel.style.display = 'none';
-  } else if (spotifyController) {
+  } else if (ytPlayer && ytReady) {
     // Returning to Home — always restart from the very beginning
-    playSpotifyFromStart();
+    playMusicFromStart();
   }
 }
 

@@ -151,7 +151,7 @@
 <!-- INSPIRATIONAL BACKGROUND MUSIC WIDGET (stops on page navigation, see goPage() in js/main.js) -->
 <div id="music-widget" style="position:fixed;bottom:16px;right:16px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:8px">
   <div id="music-panel" style="display:none;width:230px;border-radius:10px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.35)">
-    <div id="spotify-embed-target"></div>
+    <div id="music-embed-target"></div>
   </div>
   <button id="music-toggle" class="music-cta" onclick="toggleMusicWidget()" aria-label="Play the music" title="Play the music">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
@@ -5424,7 +5424,7 @@
 </footer>
 </div><!-- END COURSES PAGE -->
 
-<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+<script src="https://www.youtube.com/iframe_api"></script>
 <script src="js/main.js"></script>
 <script>
 // Keep hero video looping — recover from stalls
