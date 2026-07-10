@@ -362,8 +362,14 @@ const SPOTIFY_TRACK_URI = 'spotify:track:1tvs2IaBqXmSWQLu06COuc';
 let spotifyController = null;
 let spotifyAutoplayTried = false;
 
+function playSpotifyFromStart() {
+  if (!spotifyController) return;
+  spotifyController.seek(0);
+  spotifyController.play();
+}
+
 function trySpotifyAutoplay() {
-  if (spotifyController) spotifyController.play();
+  playSpotifyFromStart();
 }
 
 window.onSpotifyIframeApiReady = (IFrameAPI) => {
@@ -411,8 +417,8 @@ function goPage(id) {
     if (spotifyController) spotifyController.pause();
     if (musicPanel) musicPanel.style.display = 'none';
   } else if (spotifyController) {
-    // Returning to Home after any interaction — this play() call is now much more likely to succeed
-    spotifyController.play();
+    // Returning to Home — always restart from the very beginning
+    playSpotifyFromStart();
   }
 }
 
