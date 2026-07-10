@@ -358,6 +358,8 @@ async function handleEnrolSubmit(e) {
 })();
 
 // ── PAGE NAVIGATION ──
+const MUSIC_EMBED_SRC = "https://open.spotify.com/embed/track/1tvs2IaBqXmSWQLu06COuc?utm_source=generator&si=2821ee78eefd4046";
+
 function goPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active-nav'));
@@ -365,6 +367,16 @@ function goPage(id) {
   if (pg) { pg.classList.add('active'); window.scrollTo(0,0); }
   const nl = document.querySelector(`[data-page="${id}"]`);
   if (nl) nl.classList.add('active-nav');
+
+  // Music widget only plays on the Home page — stop it the instant we navigate away
+  const musicFrame = document.getElementById('music-embed-frame');
+  if (musicFrame) {
+    if (id === 'page-home') {
+      if (musicFrame.src === 'about:blank' || !musicFrame.src) musicFrame.src = MUSIC_EMBED_SRC;
+    } else {
+      musicFrame.src = 'about:blank';
+    }
+  }
 }
 
 // ── COURSE TABS ──
