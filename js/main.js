@@ -358,14 +358,35 @@ async function handleEnrolSubmit(e) {
 })();
 
 // ── PAGE NAVIGATION ──
-const MUSIC_EMBED_SRC = "https://open.spotify.com/embed/track/1tvs2IaBqXmSWQLu06COuc?utm_source=generator&si=2821ee78eefd4046";
+const SPOTIFY_TRACK_URI = 'spotify:track:1tvs2IaBqXmSWQLu06COuc';
+let spotifyController = null;
+let spotifyAutoplayTried = false;
+
+function trySpotifyAutoplay() {
+  if (spotifyController) spotifyController.play();
+}
+
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+  const element = document.getElementById('spotify-embed-target');
+  IFrameAPI.createController(element, { uri: SPOTIFY_TRACK_URI, width: '100%', height: '80' }, (controller) => {
+    spotifyController = controller;
+    controller.addListener('ready', () => {
+      // Best-effort autoplay — most browsers block unmuted audio on load with zero interaction,
+      // so this quietly does nothing for first-time visitors until they click anywhere.
+      trySpotifyAutoplay();
+    });
+  });
+};
+
+// A real user gesture anywhere on the page makes a subsequent play() call far more likely to succeed
+document.addEventListener('click', () => {
+  if (!spotifyAutoplayTried) { spotifyAutoplayTried = true; trySpotifyAutoplay(); }
+}, { once: true });
 
 function toggleMusicWidget() {
   const panel = document.getElementById('music-panel');
-  const frame = document.getElementById('music-embed-frame');
   const opening = panel.style.display !== 'block';
   panel.style.display = opening ? 'block' : 'none';
-  if (opening && frame.src !== MUSIC_EMBED_SRC) frame.src = MUSIC_EMBED_SRC;
 }
 
 function goPage(id) {
@@ -376,12 +397,14 @@ function goPage(id) {
   const nl = document.querySelector(`[data-page="${id}"]`);
   if (nl) nl.classList.add('active-nav');
 
-  // Music widget only plays on the Home page — stop it and collapse it the instant we navigate away
-  const musicFrame = document.getElementById('music-embed-frame');
+  // Music widget only plays on the Home page — pause and collapse it the instant we navigate away
   const musicPanel = document.getElementById('music-panel');
-  if (musicFrame && id !== 'page-home') {
-    musicFrame.src = 'about:blank';
-    musicPanel.style.display = 'none';
+  if (id !== 'page-home') {
+    if (spotifyController) spotifyController.pause();
+    if (musicPanel) musicPanel.style.display = 'none';
+  } else if (spotifyController) {
+    // Returning to Home after any interaction — this play() call is now much more likely to succeed
+    spotifyController.play();
   }
 }
 
