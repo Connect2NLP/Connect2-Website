@@ -35,6 +35,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--text);overflow-x:hidden}
 .page{display:none;min-height:100vh}
 .page.active{display:block}
+#music-toggle:hover{opacity:1 !important}
 
 /* UTIL BAR */
 .util{background:var(--blue1);height:34px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;font-size:10px;letter-spacing:.08em;color:rgba(200,225,255,.6)}
