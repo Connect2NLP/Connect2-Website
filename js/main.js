@@ -376,15 +376,20 @@ function tryMusicAutoplay() {
 window.onYouTubeIframeAPIReady = function() {
   ytPlayer = new YT.Player('music-embed-target', {
     videoId: YOUTUBE_VIDEO_ID,
-    width: '100%',
-    height: '130',
-    playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
+    width: '2',
+    height: '2',
+    playerVars: { rel: 0, controls: 0, playsinline: 1 },
     events: {
       onReady: function() {
         ytReady = true;
         // Best-effort autoplay — most browsers block unmuted audio on load with zero interaction,
         // so this quietly does nothing for first-time visitors until they click anywhere.
         tryMusicAutoplay();
+      },
+      onStateChange: function(e) {
+        // Drive the equalizer-bars visualizer off real play/pause state
+        const bars = document.querySelector('.eq-bars');
+        if (bars) bars.classList.toggle('playing', e.data === YT.PlayerState.PLAYING);
       }
     }
   });
