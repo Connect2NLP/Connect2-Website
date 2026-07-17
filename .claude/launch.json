@@ -7,6 +7,13 @@
       "runtimeArgs": ["serve", "-s", "."],
       "port": 3000,
       "autoPort": true
+    },
+    {
+      "name": "ifnlp-site",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\npx.cmd",
+      "runtimeArgs": ["serve", ".ifnlp-preview"],
+      "port": 3001,
+      "autoPort": true
     }
   ]
 }

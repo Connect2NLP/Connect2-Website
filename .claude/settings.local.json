@@ -39,7 +39,21 @@
       "PowerShell(git ls-remote --heads origin)",
       "PowerShell($lines = [System.IO.File]::ReadAllLines\\(\"$PWD\\\\index.html\"\\); \"total: $\\($lines.Count\\)\"; $lines[\\($lines.Count-6\\)..\\($lines.Count-1\\)])",
       "Bash(gh run *)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "PowerShell(gh run list --workflow=deploy.yml --limit 3 2>&1)",
+      "Bash(ffmpeg -version)",
+      "Bash(curl -sI https://connect2nlp.com)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3999/)",
+      "Bash(netstat -ano)",
+      "Bash(timeout 8 npx --yes serve -s \"../IFNLP Website Project\" -l 3999)",
+      "Bash(npx --yes serve -s \"../IFNLP Website Project\" -l 3999)",
+      "Bash(taskkill //F //IM node.exe //FI \"WINDOWTITLE eq *\")",
+      "Bash(taskkill //PID 12128 //F)",
+      "Bash(npx --yes serve -l 3999 .)",
+      "Bash(grep -n \"grayscale\\\\|object-fit\" \"/c/Users/julia/OneDrive/Documents/Desktop/IFNLP Website Project/css/styles.css\")",
+      "Bash(find \"/c/Users/julia/Downloads\" -maxdepth 2 -iname \"*IFNLP*HERO*44*\" 2>/dev/null)",
+      "Bash(ls -la \"/c/Users/julia/Downloads/IFNLP HERO 44.mp4\" *)",
+      "Bash(cp \"/c/Users/julia/Downloads/IFNLP HERO 44.mp4\" \"/c/Users/julia/OneDrive/Documents/Desktop/IFNLP Website Project/videos/hero-video.mp4\" *)"
     ]
   }
 }
