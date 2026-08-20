@@ -463,6 +463,17 @@ function goPage(id) {
     // Entering Results — always restart from the very beginning
     playMusicFromStart();
   }
+
+  // The webinar theme track only plays on the Home page — keep it mutually
+  // exclusive with the Results page's YouTube widget so they never overlap
+  const themeAudio = document.getElementById('change-is-calling-audio');
+  if (themeAudio) {
+    if (id !== 'page-home') {
+      themeAudio.pause();
+    } else {
+      themeAudio.play().catch(function() {});
+    }
+  }
 }
 
 // ── COURSE TABS ──
