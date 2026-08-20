@@ -180,6 +180,10 @@
 </style>
 <section id="change-is-calling" style="padding:72px;background:var(--blue1);position:relative;overflow:hidden">
   <audio id="change-is-calling-audio" src="audio/change-is-calling-theme.mp3" loop preload="auto"></audio>
+  <button id="theme-audio-toggle" onclick="(function(){var a=document.getElementById('change-is-calling-audio');if(a.paused){a.play().catch(function(){});}else{a.pause();}})()" aria-label="Pause music" title="Pause music" style="position:fixed;bottom:16px;right:16px;z-index:9999;width:38px;height:38px;border-radius:50%;border:none;background:rgba(20,14,36,.6);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:background .2s ease">
+    <svg id="theme-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="6,4 20,12 6,20"/></svg>
+    <svg id="theme-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16"/><rect x="14" y="4" width="5" height="16"/></svg>
+  </button>
   <script>
   (function() {
     // Plays for every visitor to the site (homepage or the direct #change-is-calling link).
@@ -199,6 +203,24 @@
         if (!started) tryPlay();
       }, { once: true, passive: true });
     });
+
+    // Toggle button icon and label always reflect the audio element's real state,
+    // whatever caused it to change (the toggle itself, autoplay, or page navigation)
+    var toggle = document.getElementById('theme-audio-toggle');
+    var playIcon = document.getElementById('theme-icon-play');
+    var pauseIcon = document.getElementById('theme-icon-pause');
+    function syncToggle() {
+      var isPlaying = !audio.paused;
+      if (playIcon) playIcon.style.display = isPlaying ? 'none' : 'block';
+      if (pauseIcon) pauseIcon.style.display = isPlaying ? 'block' : 'none';
+      if (toggle) {
+        toggle.setAttribute('aria-label', isPlaying ? 'Pause music' : 'Play music');
+        toggle.setAttribute('title', isPlaying ? 'Pause music' : 'Play music');
+      }
+    }
+    audio.addEventListener('play', syncToggle);
+    audio.addEventListener('pause', syncToggle);
+    syncToggle();
   })();
   </script>
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(200,189,232,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(200,189,232,.018) 1px,transparent 1px);background-size:66px 66px;pointer-events:none"></div>
