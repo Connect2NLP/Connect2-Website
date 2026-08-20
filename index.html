@@ -169,6 +169,7 @@
 <style>
 @keyframes ceriseShimmer{0%{background-position:0% 50%}100%{background-position:200% 50%}}
 @keyframes softFlash{0%,100%{opacity:1}50%{opacity:.62}}
+@keyframes toggleFlashStrong{0%,100%{transform:scale(1);box-shadow:0 8px 24px rgba(0,0,0,.3),0 0 0 0 rgba(222,49,99,0)}50%{transform:scale(1.15);box-shadow:0 8px 24px rgba(0,0,0,.3),0 0 22px 10px rgba(222,49,99,.7)}}
 .cerise-metallic{
   background:linear-gradient(100deg,#a91f4a 0%,#de3163 22%,#ff8fb3 40%,#ffe3ec 50%,#ff8fb3 60%,#de3163 78%,#a91f4a 100%);
   background-size:200% auto;
@@ -180,7 +181,7 @@
 </style>
 <section id="change-is-calling" style="padding:72px;background:var(--blue1);position:relative;overflow:hidden">
   <audio id="change-is-calling-audio" src="audio/change-is-calling-theme.mp3" loop preload="auto"></audio>
-  <button id="theme-audio-toggle" onclick="(function(){var a=document.getElementById('change-is-calling-audio');if(a.paused){a.play().catch(function(){});}else{a.pause();}})()" aria-label="Pause music" title="Pause music" style="position:fixed;bottom:16px;right:16px;z-index:9999;width:38px;height:38px;border-radius:50%;border:none;background:rgba(20,14,36,.6);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:background .2s ease">
+  <button id="theme-audio-toggle" onclick="(function(){var a=document.getElementById('change-is-calling-audio');if(a.paused){a.play().catch(function(){});}else{a.pause();}})()" aria-label="Pause music" title="Pause music" style="position:fixed;bottom:16px;right:16px;z-index:9999;width:38px;height:38px;border-radius:50%;border:none;background:rgba(20,14,36,.6);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:background .2s ease;animation:toggleFlashStrong 1.4s ease-in-out infinite">
     <svg id="theme-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="6,4 20,12 6,20"/></svg>
     <svg id="theme-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16"/><rect x="14" y="4" width="5" height="16"/></svg>
   </button>
