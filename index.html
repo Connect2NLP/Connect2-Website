@@ -183,25 +183,21 @@
   <script>
   (function() {
     // Plays for every visitor to the site (homepage or the direct #change-is-calling link).
-    // Browsers block audio-with-sound autoplay outright, so this starts muted immediately
-    // (always allowed) and unmutes on the very first sign of interaction.
+    // Browsers (iOS Safari especially) block audio autoplay — even muted — without a real
+    // user gesture, so this tries on load (works for some returning visitors) and reliably
+    // starts on the first genuine tap/click/keypress.
     var audio = document.getElementById('change-is-calling-audio');
     if (!audio) return;
-    var unmuted = false;
-    function startMuted() {
-      audio.muted = true;
-      audio.play().catch(function() {});
+    var started = false;
+    function tryPlay() {
+      audio.play().then(function() { started = true; }).catch(function() {});
     }
-    function unmute() {
-      if (unmuted) return;
-      unmuted = true;
-      audio.muted = false;
-      audio.play().catch(function() {});
-    }
-    startMuted();
-    window.addEventListener('load', startMuted);
-    ['click', 'touchstart', 'keydown', 'scroll', 'mousemove'].forEach(function(evt) {
-      document.addEventListener(evt, unmute, { once: true, passive: true });
+    tryPlay();
+    window.addEventListener('load', tryPlay);
+    ['click', 'touchstart', 'keydown'].forEach(function(evt) {
+      document.addEventListener(evt, function() {
+        if (!started) tryPlay();
+      }, { once: true, passive: true });
     });
   })();
   </script>
