@@ -12,6 +12,7 @@
   window.addEventListener('DOMContentLoaded', function() {
     setTimeout(attempt, 400);
     setTimeout(attempt, 1200);
+    setTimeout(attempt, 3000); // safety net for slow mobile connections
   });
   window.addEventListener('load', function() {
     setTimeout(attempt, 100);
