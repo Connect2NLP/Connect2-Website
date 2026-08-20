@@ -1,12 +1,22 @@
 ﻿// ── DEEP LINK: scroll to a section if the URL has a matching #hash on load ──
-window.addEventListener('DOMContentLoaded', function() {
+// A cold page load (hero video metadata still loading) can leave the page
+// shorter than the target position at first, so try a few times as layout
+// settles, including once after everything has fully loaded.
+(function() {
   var hash = window.location.hash.replace('#', '');
   if (!hash) return;
-  setTimeout(function() {
+  function attempt() {
     var el = document.getElementById(hash);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 350);
-});
+  }
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(attempt, 400);
+    setTimeout(attempt, 1200);
+  });
+  window.addEventListener('load', function() {
+    setTimeout(attempt, 100);
+  });
+})();
 
 // ── FOOTER CREDIT (every page, every footer variant) ──
 document.addEventListener('DOMContentLoaded', function() {
