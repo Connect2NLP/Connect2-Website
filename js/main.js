@@ -381,19 +381,10 @@ async function handleEnrolSubmit(e) {
 const YOUTUBE_VIDEO_ID = 'n2rFPclR2xM';
 let ytPlayer = null;
 let ytReady = false;
-let musicAutoplayTried = false;
-
 function playMusicFromStart() {
   if (!ytPlayer || !ytReady) return;
   ytPlayer.seekTo(0, true);
   ytPlayer.playVideo();
-}
-
-function tryMusicAutoplay() {
-  // The music widget now only lives on the Results page
-  var resultsPage = document.getElementById('page-results');
-  if (!resultsPage || !resultsPage.classList.contains('active')) return;
-  playMusicFromStart();
 }
 
 window.onYouTubeIframeAPIReady = function() {
@@ -405,9 +396,8 @@ window.onYouTubeIframeAPIReady = function() {
     events: {
       onReady: function() {
         ytReady = true;
-        // Best-effort autoplay — most browsers block unmuted audio on load with zero interaction,
-        // so this quietly does nothing for first-time visitors until they click anywhere.
-        tryMusicAutoplay();
+        // No autoplay — this widget only ever starts from an explicit click on its own
+        // toggle button (Results page), so it can never overlap with other page audio.
       },
       onStateChange: function(e) {
         // Drive the equalizer-bars visualizer and toggle icon off real play/pause state
@@ -419,11 +409,6 @@ window.onYouTubeIframeAPIReady = function() {
     }
   });
 };
-
-// A real user gesture anywhere on the page makes a subsequent play() call far more likely to succeed
-document.addEventListener('click', () => {
-  if (!musicAutoplayTried) { musicAutoplayTried = true; tryMusicAutoplay(); }
-}, { once: true });
 
 function toggleMusicWidget() {
   if (!ytPlayer || !ytReady) return;
@@ -454,14 +439,12 @@ function goPage(id) {
   const nl = document.querySelector(`[data-page="${id}"]`);
   if (nl) nl.classList.add('active-nav');
 
-  // Music widget only plays on the Results page — pause and collapse it the instant we navigate away
+  // Music widget only lives on the Results page — pause it the instant we navigate away.
+  // It never auto-starts; visitors start it themselves via its toggle button.
   const musicPanel = document.getElementById('music-panel');
   if (id !== 'page-results') {
     if (ytPlayer && ytReady) ytPlayer.pauseVideo();
     if (musicPanel) musicPanel.style.display = 'none';
-  } else if (ytPlayer && ytReady) {
-    // Entering Results — always restart from the very beginning
-    playMusicFromStart();
   }
 
   // The webinar theme track only plays on the Home page — keep it mutually
