@@ -390,6 +390,8 @@ function playMusicFromStart() {
 }
 
 function tryMusicAutoplay() {
+  // Don't compete with the webinar's own theme track when visitors land via that share link
+  if (window.location.hash.replace('#', '') === 'change-is-calling') return;
   playMusicFromStart();
 }
 
