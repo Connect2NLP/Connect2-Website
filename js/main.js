@@ -1,4 +1,14 @@
-﻿// ── FOOTER CREDIT (every page, every footer variant) ──
+﻿// ── DEEP LINK: scroll to a section if the URL has a matching #hash on load ──
+window.addEventListener('DOMContentLoaded', function() {
+  var hash = window.location.hash.replace('#', '');
+  if (!hash) return;
+  setTimeout(function() {
+    var el = document.getElementById(hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 350);
+});
+
+// ── FOOTER CREDIT (every page, every footer variant) ──
 document.addEventListener('DOMContentLoaded', function() {
   function buildCredit() {
     var wrap = document.createElement('span');
