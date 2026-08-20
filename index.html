@@ -179,17 +179,30 @@
 .flash-soft{animation:softFlash 2.6s ease-in-out infinite}
 </style>
 <section id="change-is-calling" style="padding:72px;background:var(--blue1);position:relative;overflow:hidden">
-  <audio id="change-is-calling-audio" src="audio/change-is-calling-theme.mp3" loop preload="none"></audio>
+  <audio id="change-is-calling-audio" src="audio/change-is-calling-theme.mp3" loop preload="auto"></audio>
   <script>
   (function() {
-    // Plays for every visitor to the site (homepage or the direct #change-is-calling link)
+    // Plays for every visitor to the site (homepage or the direct #change-is-calling link).
+    // Browsers block audio-with-sound autoplay outright, so this starts muted immediately
+    // (always allowed) and unmutes on the very first sign of interaction.
     var audio = document.getElementById('change-is-calling-audio');
     if (!audio) return;
-    function tryPlay() { audio.play().catch(function() {}); }
-    window.addEventListener('load', function() { setTimeout(tryPlay, 500); });
-    // Most browsers block autoplay with sound until a user gesture — retry on the first click/tap
-    document.addEventListener('click', tryPlay, { once: true });
-    document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
+    var unmuted = false;
+    function startMuted() {
+      audio.muted = true;
+      audio.play().catch(function() {});
+    }
+    function unmute() {
+      if (unmuted) return;
+      unmuted = true;
+      audio.muted = false;
+      audio.play().catch(function() {});
+    }
+    startMuted();
+    window.addEventListener('load', startMuted);
+    ['click', 'touchstart', 'keydown', 'scroll', 'mousemove'].forEach(function(evt) {
+      document.addEventListener(evt, unmute, { once: true, passive: true });
+    });
   })();
   </script>
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(200,189,232,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(200,189,232,.018) 1px,transparent 1px);background-size:66px 66px;pointer-events:none"></div>
