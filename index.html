@@ -3328,18 +3328,6 @@
 <!-- ══════════════ RESULTS PAGE ══════════════ -->
 <div id="page-results" class="page" style="background:var(--cream);min-height:100vh">
 
-<!-- INSPIRATIONAL BACKGROUND MUSIC WIDGET (stops on page navigation, see goPage() in js/main.js) -->
-<div id="music-widget" style="position:fixed;bottom:16px;right:16px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:8px">
-  <div id="music-panel" style="display:none;padding:14px 18px;border-radius:14px;background:linear-gradient(135deg,var(--blue1),#241a3d);box-shadow:0 10px 28px rgba(0,0,0,.35)">
-    <div class="eq-bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-  </div>
-  <div id="music-embed-target" style="position:absolute;left:-9999px;top:-9999px;width:2px;height:2px;overflow:hidden"></div>
-  <button id="music-toggle" class="music-flash" onclick="toggleMusicWidget()" aria-label="Play music" title="Play music">
-    <svg id="music-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"/></svg>
-    <svg id="music-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="5" y="4" width="5" height="16"/><rect x="14" y="4" width="5" height="16"/></svg>
-  </button>
-</div>
-
 <!-- HERO -->
 <div style="background:linear-gradient(145deg,var(--blue1),#362278);padding:88px 72px 72px;position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(200,189,232,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(200,189,232,.018) 1px,transparent 1px);background-size:66px 66px;pointer-events:none"></div>
@@ -5000,7 +4988,6 @@
 </footer>
 </div><!-- END COURSES PAGE -->
 
-<script src="https://www.youtube.com/iframe_api"></script>
 <script src="js/main.js"></script>
 <script>
 // Keep hero video looping — recover from stalls

@@ -378,59 +378,6 @@ async function handleEnrolSubmit(e) {
 })();
 
 // ── PAGE NAVIGATION ──
-const YOUTUBE_VIDEO_ID = 'n2rFPclR2xM';
-let ytPlayer = null;
-let ytReady = false;
-function playMusicFromStart() {
-  if (!ytPlayer || !ytReady) return;
-  ytPlayer.seekTo(0, true);
-  ytPlayer.playVideo();
-}
-
-window.onYouTubeIframeAPIReady = function() {
-  ytPlayer = new YT.Player('music-embed-target', {
-    videoId: YOUTUBE_VIDEO_ID,
-    width: '2',
-    height: '2',
-    playerVars: { rel: 0, controls: 0, playsinline: 1 },
-    events: {
-      onReady: function() {
-        ytReady = true;
-        // No autoplay — this widget only ever starts from an explicit click on its own
-        // toggle button (Results page), so it can never overlap with other page audio.
-      },
-      onStateChange: function(e) {
-        // Drive the equalizer-bars visualizer and toggle icon off real play/pause state
-        const isPlaying = e.data === YT.PlayerState.PLAYING;
-        const bars = document.querySelector('.eq-bars');
-        if (bars) bars.classList.toggle('playing', isPlaying);
-        syncMusicUI(isPlaying);
-      }
-    }
-  });
-};
-
-function toggleMusicWidget() {
-  if (!ytPlayer || !ytReady) return;
-  if (ytPlayer.getPlayerState() === YT.PlayerState.PLAYING) {
-    ytPlayer.pauseVideo();
-  } else {
-    playMusicFromStart();
-  }
-}
-
-// Single source of truth for the toggle icon, panel, and flash — driven off real player state
-function syncMusicUI(isPlaying) {
-  const panel = document.getElementById('music-panel');
-  const btn = document.getElementById('music-toggle');
-  const playIcon = document.getElementById('music-icon-play');
-  const pauseIcon = document.getElementById('music-icon-pause');
-  if (panel) panel.style.display = isPlaying ? 'block' : 'none';
-  if (btn) btn.classList.toggle('music-flash', !isPlaying);
-  if (playIcon) playIcon.style.display = isPlaying ? 'none' : 'block';
-  if (pauseIcon) pauseIcon.style.display = isPlaying ? 'block' : 'none';
-}
-
 function goPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active-nav'));
@@ -439,16 +386,7 @@ function goPage(id) {
   const nl = document.querySelector(`[data-page="${id}"]`);
   if (nl) nl.classList.add('active-nav');
 
-  // Music widget only lives on the Results page — pause it the instant we navigate away.
-  // It never auto-starts; visitors start it themselves via its toggle button.
-  const musicPanel = document.getElementById('music-panel');
-  if (id !== 'page-results') {
-    if (ytPlayer && ytReady) ytPlayer.pauseVideo();
-    if (musicPanel) musicPanel.style.display = 'none';
-  }
-
-  // The webinar theme track only plays on the Home page — keep it mutually
-  // exclusive with the Results page's YouTube widget so they never overlap
+  // The webinar theme track only plays on the Home page
   const themeAudio = document.getElementById('change-is-calling-audio');
   if (themeAudio) {
     if (id !== 'page-home') {
