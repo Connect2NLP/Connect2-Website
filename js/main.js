@@ -390,8 +390,9 @@ function playMusicFromStart() {
 }
 
 function tryMusicAutoplay() {
-  // Don't compete with the webinar's own theme track when visitors land via that share link
-  if (window.location.hash.replace('#', '') === 'change-is-calling') return;
+  // The music widget now only lives on the Results page
+  var resultsPage = document.getElementById('page-results');
+  if (!resultsPage || !resultsPage.classList.contains('active')) return;
   playMusicFromStart();
 }
 
@@ -409,9 +410,11 @@ window.onYouTubeIframeAPIReady = function() {
         tryMusicAutoplay();
       },
       onStateChange: function(e) {
-        // Drive the equalizer-bars visualizer off real play/pause state
+        // Drive the equalizer-bars visualizer and toggle icon off real play/pause state
+        const isPlaying = e.data === YT.PlayerState.PLAYING;
         const bars = document.querySelector('.eq-bars');
-        if (bars) bars.classList.toggle('playing', e.data === YT.PlayerState.PLAYING);
+        if (bars) bars.classList.toggle('playing', isPlaying);
+        syncMusicUI(isPlaying);
       }
     }
   });
@@ -423,17 +426,24 @@ document.addEventListener('click', () => {
 }, { once: true });
 
 function toggleMusicWidget() {
+  if (!ytPlayer || !ytReady) return;
+  if (ytPlayer.getPlayerState() === YT.PlayerState.PLAYING) {
+    ytPlayer.pauseVideo();
+  } else {
+    playMusicFromStart();
+  }
+}
+
+// Single source of truth for the toggle icon, panel, and flash — driven off real player state
+function syncMusicUI(isPlaying) {
   const panel = document.getElementById('music-panel');
   const btn = document.getElementById('music-toggle');
-  const opening = panel.style.display !== 'block';
-  panel.style.display = opening ? 'block' : 'none';
-
-  // Once clicked, shrink the inviting CTA down to a small discreet icon for the rest of the visit
-  if (btn.classList.contains('music-cta')) {
-    btn.classList.remove('music-cta');
-    btn.classList.add('music-icon');
-    btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>';
-  }
+  const playIcon = document.getElementById('music-icon-play');
+  const pauseIcon = document.getElementById('music-icon-pause');
+  if (panel) panel.style.display = isPlaying ? 'block' : 'none';
+  if (btn) btn.classList.toggle('music-flash', !isPlaying);
+  if (playIcon) playIcon.style.display = isPlaying ? 'none' : 'block';
+  if (pauseIcon) pauseIcon.style.display = isPlaying ? 'block' : 'none';
 }
 
 function goPage(id) {
@@ -444,13 +454,13 @@ function goPage(id) {
   const nl = document.querySelector(`[data-page="${id}"]`);
   if (nl) nl.classList.add('active-nav');
 
-  // Music widget only plays on the Home page — pause and collapse it the instant we navigate away
+  // Music widget only plays on the Results page — pause and collapse it the instant we navigate away
   const musicPanel = document.getElementById('music-panel');
-  if (id !== 'page-home') {
+  if (id !== 'page-results') {
     if (ytPlayer && ytReady) ytPlayer.pauseVideo();
     if (musicPanel) musicPanel.style.display = 'none';
   } else if (ytPlayer && ytReady) {
-    // Returning to Home — always restart from the very beginning
+    // Entering Results — always restart from the very beginning
     playMusicFromStart();
   }
 }

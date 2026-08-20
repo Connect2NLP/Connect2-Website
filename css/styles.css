@@ -35,10 +35,10 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--text);overflow-x:hidden}
 .page{display:none;min-height:100vh}
 .page.active{display:block}
-#music-toggle{border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .25s ease}
-#music-toggle:hover{opacity:1}
-#music-toggle.music-cta{padding:12px 22px;gap:8px;border-radius:30px;background:linear-gradient(135deg,var(--cerise),var(--blue1));font-family:var(--title);font-size:12px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;animation:musicPulse 1.6s ease-in-out infinite}
-#music-toggle.music-icon{width:26px;height:26px;border-radius:50%;background:rgba(20,14,36,.4);opacity:.35;animation:none;padding:0;box-shadow:none}
+#music-toggle{border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .25s ease,background .2s ease;width:34px;height:34px;border-radius:50%;background:rgba(20,14,36,.55);padding:0;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+#music-toggle:hover{opacity:1;background:rgba(20,14,36,.75)}
+#music-toggle.music-flash{animation:musicPulse 1.6s ease-in-out infinite}
+#music-toggle svg{display:block}
 .eq-bars{display:flex;align-items:flex-end;gap:4px;height:28px}
 .eq-bars span{display:block;width:4px;height:6px;border-radius:2px;background:linear-gradient(180deg,var(--gold-bright),var(--cerise));animation-play-state:paused}
 .eq-bars.playing span{animation:eqBounce 0.9s ease-in-out infinite}
