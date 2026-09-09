@@ -194,15 +194,33 @@
     var audio = document.getElementById('change-is-calling-audio');
     if (!audio) return;
     var started = false;
+
+    // Mobile browsers block audio autoplay until the visitor interacts with the
+    // page, so we keep listening across EVERY early interaction type (not just the
+    // first one) and stop only once playback has actually begun.
+    var gestureEvents = ['pointerdown', 'touchstart', 'touchend', 'click', 'keydown', 'scroll'];
+    function removeGestureListeners() {
+      gestureEvents.forEach(function(evt) {
+        document.removeEventListener(evt, onGesture, true);
+      });
+    }
+    function onGesture() {
+      if (!started) tryPlay();
+    }
     function tryPlay() {
-      audio.play().then(function() { started = true; }).catch(function() {});
+      var p = audio.play();
+      if (p && p.then) {
+        p.then(function() { started = true; removeGestureListeners(); })
+         .catch(function() { /* still blocked — keep waiting for the next gesture */ });
+      }
     }
     tryPlay();
     window.addEventListener('load', tryPlay);
-    ['click', 'touchstart', 'keydown'].forEach(function(evt) {
-      document.addEventListener(evt, function() {
-        if (!started) tryPlay();
-      }, { once: true, passive: true });
+    document.addEventListener('visibilitychange', function() {
+      if (!started && document.visibilityState === 'visible') tryPlay();
+    });
+    gestureEvents.forEach(function(evt) {
+      document.addEventListener(evt, onGesture, { capture: true, passive: true });
     });
 
     // Toggle button icon and label always reflect the audio element's real state,
