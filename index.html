@@ -264,10 +264,9 @@
     <div class="pt-label" style="display:inline-flex;align-items:center;gap:8px;padding:9px 26px;border-radius:100px;border:1px solid rgba(255,143,179,.6);font-family:var(--title);font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright)">Connect2 Live Online Training</div>
   </div>
   <div style="max-width:1100px;margin:0 auto 44px;position:relative;z-index:1">
-    <video id="pt-video" autoplay muted loop playsinline preload="auto" poster="images/practitioner-poster.jpg" style="width:100%;height:auto;max-height:420px;object-fit:cover;display:block;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.35)">
-      <source src="images/pr-training.mp4" type="video/mp4"/>
+    <video autoplay muted loop playsinline preload="auto" poster="images/practitioner-poster.jpg" style="width:100%;height:auto;max-height:420px;object-fit:cover;display:block;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.35)">
+      <source src="images/hero-new.mp4" type="video/mp4"/>
     </video>
-    <button id="pt-video-sound" type="button" aria-pressed="false" style="position:absolute;right:16px;bottom:16px;z-index:2;display:flex;align-items:center;gap:8px;padding:10px 18px;border-radius:100px;border:1px solid rgba(255,143,179,.6);background:rgba(20,14,36,.72);color:#fff;font-family:var(--title);font-size:12px;letter-spacing:.06em;cursor:pointer;animation:ptGlow 2s ease-in-out infinite"><span id="pt-video-sound-icon">&#128263;</span><span id="pt-video-sound-label">Tap for sound</span></button>
   </div>
   <div style="max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1">
     <h2 class="cerise-metallic" style="font-family:var(--title);font-size:clamp(26px,4.4vw,54px);font-weight:400;line-height:1.08;margin-bottom:6px">2 Part Online Certification Practitioner Training</h2>
@@ -337,14 +336,6 @@
     </div>
   </div>
   <script>
-  (function(){
-    var v=document.getElementById("pt-video"),b=document.getElementById("pt-video-sound"),ic=document.getElementById("pt-video-sound-icon"),lb=document.getElementById("pt-video-sound-label"),theme=document.getElementById("change-is-calling-audio");
-    if(!v||!b)return;
-    function render(){var on=!v.muted;window.c2VideoSoundOn=on;b.setAttribute("aria-pressed",on);ic.innerHTML=on?"&#128266;":"&#128263;";lb.textContent=on?"Sound on":"Tap for sound";}
-    b.addEventListener("click",function(e){e.stopPropagation();v.muted=!v.muted;if(!v.muted){window.c2UnmutedAt=Date.now();v.volume=1;if(theme)theme.pause();v.play().catch(function(){});}render();});
-    if(theme)theme.addEventListener("play",function(){if(!v.muted&&Date.now()-(window.c2UnmutedAt||0)>1500){v.muted=true;render();}});
-    render();
-  })();
   (function(){
     (function(){var box=document.querySelector('#change-is-calling .pt-sparkles');if(!box)return;var cls=['','','c','c','g','f','f'];for(var i=0;i<42;i++){var s=document.createElement('i'),z=6+Math.random()*16;s.style.cssText='left:'+(Math.random()*100)+'%;top:'+(Math.random()*100)+'%;width:'+z+'px;height:'+z+'px;--d:'+(2.4+Math.random()*3.2)+'s;--delay:'+(Math.random()*5)+'s';var c=cls[Math.floor(Math.random()*cls.length)];if(c)s.className=c;box.appendChild(s);}})();
     var start = new Date('2026-11-12T15:00:00-05:00').getTime();
